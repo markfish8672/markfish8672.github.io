@@ -23,7 +23,6 @@
       gap: 16px;
     }
 
-    /* 返回 */
     .back {
       display: inline-flex;
       align-items: center;
@@ -36,7 +35,6 @@
     }
     .back:hover { color: #333; }
 
-    /* 標題區 */
     .header {
       display: flex;
       align-items: center;
@@ -73,30 +71,25 @@
       box-shadow: 0 1px 4px rgba(0,0,0,0.06);
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
 
     .project-header {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
       gap: 12px;
     }
-
     .project-emoji {
       font-size: 1.6rem;
       line-height: 1;
       margin-top: 2px;
     }
-
     .project-title-block { flex: 1; }
-
     .project-title {
       font-size: 1rem;
       font-weight: 700;
       color: #111;
     }
-
     .project-desc {
       font-size: 0.83rem;
       color: #555;
@@ -117,6 +110,69 @@
       border-radius: 20px;
       background: #f0f0f5;
       color: #555;
+    }
+
+    /* 更新歷程 */
+    .changelog-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px 14px;
+      background: #fafafa;
+      border: 1px solid #ebebeb;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #444;
+      transition: background 0.15s;
+    }
+    .changelog-toggle:hover { background: #f3f3f5; }
+    .changelog-toggle .arrow {
+      transition: transform 0.2s;
+      color: #999;
+    }
+    .changelog-toggle.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .changelog {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 4px 0 0 0;
+    }
+    .changelog.open { display: flex; }
+
+    .log-item {
+      display: flex;
+      gap: 12px;
+      padding: 9px 4px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .log-item:last-child { border-bottom: none; }
+
+    .log-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #9ca3af;
+      white-space: nowrap;
+      padding-top: 1px;
+      min-width: 36px;
+    }
+    .log-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d1d5db;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    .log-text {
+      font-size: 0.82rem;
+      color: #444;
+      line-height: 1.5;
     }
 
     /* 連結列 */
@@ -147,7 +203,6 @@
       color: #fff;
     }
 
-    /* 頁尾 */
     .footer {
       text-align: center;
       font-size: 0.75rem;
@@ -187,6 +242,44 @@
       <span class="tag">D1 SQLite</span>
       <span class="tag">JavaScript</span>
     </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增給廠商的匯整頁面，可依樓層查看各餐點數量</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台增加付款確認功能，可逐筆或整人一鍵標記收款</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台訂單依 5F／2F 分開顯示，同一訂餐者合併（如牛肉麵×2），並顯示應收款</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增菜單分類管理，後台可切換今日菜單（如牛肉麵店、燒臘店）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">樓層選擇改為按鈕式（5F／2F），新增每道菜的 +/- 數量控制</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初始建立：部門改為 5F／2F，訂餐頁面上線</span>
+      </div>
+    </div>
+
     <div class="project-links">
       <a class="proj-link github" href="https://github.com/markfish8672/lunch-order" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
@@ -215,6 +308,24 @@
       <span class="tag">Claude API</span>
       <span class="tag">Railway</span>
     </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">整合午餐訂餐系統，可用自然語言訂餐（如「我是5F小陳，訂1個牛肉麵」）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初始建立：Claude AI 客服、真人轉接、對話記憶功能上線</span>
+      </div>
+    </div>
+
     <div class="project-links">
       <a class="proj-link github" href="https://github.com/markfish8672/line-bot" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
@@ -226,6 +337,14 @@
   <div class="footer">© 2026 Markfish8672</div>
 
 </div>
+
+<script>
+  function toggleLog(btn) {
+    btn.classList.toggle('open');
+    const log = btn.nextElementSibling;
+    log.classList.toggle('open');
+  }
+</script>
 
 </body>
 </html>
