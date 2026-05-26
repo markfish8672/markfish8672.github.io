@@ -159,7 +159,7 @@
       color: #9ca3af;
       white-space: nowrap;
       padding-top: 1px;
-      min-width: 36px;
+      min-width: 80px;
     }
     .log-dot {
       width: 7px;
@@ -501,7 +501,7 @@
       <div class="project-emoji">📄</div>
       <div class="project-title-block">
         <div class="project-title">奧爾瑪報價單系統</div>
-        <div class="project-desc">公司內部報價單管理系統。支援客戶範本儲存、報價參數設定、品項選擇，並可一鍵產出 Excel 或 PDF 報價單。</div>
+        <div class="project-desc">公司內部報價單管理系統。支援自製品與外購品報價、客戶範本儲存、Admin 資料維護，可一鍵產出 Excel 或 PDF 報價單。</div>
       </div>
     </div>
     <div class="tags">
@@ -516,6 +516,41 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">5/26 v1.9.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 JS const 重複宣告導致頁面無法載入（登入按鈕失效）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.9.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增外購品功能：品項選單、進貨/KG 公式、Admin 上傳管理、報價確認頁與 Excel/PDF 全格式支援</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.11</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正品項個別毛利率未正確帶入報價確認頁（原先會回退為全域預設值）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.10</span>
+        <div class="log-dot"></div>
+        <span class="log-text">步留＋人工分類篩選改依品號資料庫匯入順序排列</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增訂單備註快填按鈕，可自訂快填文字（localStorage 管理，各 browser 獨立）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認頁新增「單價無條件進位」選項，預設啟用</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料成本下載格式改為報價品名+價格（可直接重新上傳），上傳後同步更新上次匯入價格</span>
+      </div>
       <div class="log-item">
         <span class="log-date">5/22</span>
         <div class="log-dot"></div>
