@@ -427,6 +427,26 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">5/28 V1.6.3</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正班別小結與關帳按「列印」無反應的 bug（printShiftResult 在 closeShiftResult 後讀取 null.type 導致 TypeError，頁面未跳轉）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 V1.6.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增 pendingShiftPrint 旗標，印表機就緒後自動觸發班別小結列印，無需手動補印；清點錢盤頁面隱藏系統現金與短溢，確認後才顯示；各幣別列新增 ＋／－ 快速調整按鈕</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 V1.6.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">班別小結新增清點錢盤功能：輸入各面額（2000~1元）張數，即時計算實點合計，確認後顯示短溢，結果列印於班結收據</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 V1.6.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增班別小結（每日多次）與關帳（每日一次）功能；後台「班結」頁籤顯示當日班別紀錄與狀態；支援補印班結單與關帳報表</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">5/26 V1.5.5</span>
         <div class="log-dot"></div>
         <span class="log-text">修正後台刪單確認視窗「確認刪除並退款」按鈕被 CSS display:none 隱藏的問題</span>
