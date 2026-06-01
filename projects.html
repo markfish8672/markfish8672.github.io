@@ -587,6 +587,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/1 v1.10.23</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增原料成本匯入還原端點（/api/admin/raw-costs/reset-import），修正上傳錯誤檔案後頁面無法載入的問題；修正 _PAGE_VER 未同步導致登入頁無限重新載入</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">5/29 v1.10.17</span>
         <div class="log-dot"></div>
         <span class="log-text">原料成本大幅改善：手動品項與混合商品專用原料分開標示（紫色「混合」badge）；Excel 上傳隔離手動品項（tombstone 機制，刪除後重新上傳不復原，全新品項可自動匯入）；下載 Excel 包含手動品項；原料品名可透過 Excel 回傳更新；品號資料庫下載修正混合商品 KeyError 及比例小數點截斷問題</span>
@@ -699,6 +704,51 @@
         GitHub
       </a>
       <a class="proj-link live" href="https://quotation-web.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
+      </a>
+    </div>
+  </div>
+
+  <!-- 採購估算系統 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">🛒</div>
+      <div class="project-title-block">
+        <div class="project-title">奧爾瑪採購估算系統</div>
+        <div class="project-desc">公司內部採購物料估算系統。依訂單自動計算週原料需求、對比庫存快照，產出每日缺口與請購量，支援預計到貨登記。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/1 v0.6.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">採購週報完成：每日請購量 Pivot 表（依生產日分欄）、預計到貨登記（自動儲存）、上下週切換快捷鈕；訂單匯入改標示到貨日、時間顯示修正（UTC→本地）、排序改用接單日；到貨日-1 自動推算生產日（遇週日跳週六）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/1 v0.3.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">建立初始架構：庫存快照匯入（P1 Excel）、訂單匯入（P2 Excel）、原料群組管理、採購估算核心計算（原料需求 ÷ 步留率 × 安全係數 − 庫存）</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/purchase-web" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-link live" href="https://purchase-web.up.railway.app" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         上線版本
       </a>
