@@ -602,6 +602,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/5 v1.10.41</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增月表單 Admin 分頁：上傳製令時自動按月份建立步留歷史快照（yield_monthly_history），月表單下載優先從歷史表讀取對應月份步留率並填入「生管步留率」欄；品號資料庫新增手動新增與刪除功能；刪除混合商品時自動清除品號表中的孤立品項；移除臨時功能「匯入報價步留」</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">6/1 v1.10.23</span>
         <div class="log-dot"></div>
         <span class="log-text">新增原料成本匯入還原端點（/api/admin/raw-costs/reset-import），修正上傳錯誤檔案後頁面無法載入的問題；修正 _PAGE_VER 未同步導致登入頁無限重新載入</span>
@@ -750,6 +755,11 @@
         <span class="log-date">6/2 v0.9.9</span>
         <div class="log-dot"></div>
         <span class="log-text">安全係數頁重構：報價品名×ERP品名×品規品種三階設定，新增 ERP進貨彙總表 Excel 匯入，供應商末欄佈局修正；每日進貨備註欄有品規時自動換下拉式選單；每日請購量格子可點擊查看來源訂單明細（含步留）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/5 v1.2.30</span>
+        <div class="log-dot"></div>
+        <span class="log-text">採購彙總表改為獨立 card + 單一下單日期（到貨日 = 下單日+1天）+ 新視窗列印；庫存邏輯修正：snap_date 嚴格小於生產起始日（D日收盤庫存=D+1日開盤）；進銷存明細 Modal 重大修正：快照顯示於次日欄，無快照日期補顯灰色理論值，有快照時顯示藍色實際值與差異</span>
       </div>
       <div class="log-item">
         <span class="log-date">6/4 v1.2.17</span>
