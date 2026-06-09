@@ -159,7 +159,7 @@
       color: #9ca3af;
       white-space: nowrap;
       padding-top: 1px;
-      min-width: 36px;
+      min-width: 80px;
     }
     .log-dot {
       width: 7px;
@@ -376,6 +376,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">5/19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">中止專案：自動化流程無法穩定通過測試，整體耗費時間遠超預估，決定停止開發</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">5/18</span>
         <div class="log-dot"></div>
         <span class="log-text">新增單價欄位讀取與輸入；修正 Tab 順序為品號→庫別(304)→數量→Tab×6→單價；單據日期改用 Enter 跳欄，出貨廠別改用雙擊進入編輯</span>
@@ -389,11 +394,6 @@
         <span class="log-date">5/18</span>
         <div class="log-dot"></div>
         <span class="log-text">初始建立：自動讀取 Excel 並批次建立 ERP 銷售訂單</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/19</span>
-        <div class="log-dot"></div>
-        <span class="log-text">中止專案：自動化流程無法穩定通過測試，整體耗費時間遠超預估，決定停止開發</span>
       </div>
     </div>
 
@@ -427,6 +427,131 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/1 V1.12.5</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增 ⛶ 離開全螢幕按鈕（版號旁）；修正 iframe admin 重複開啟的載入延遲（保留 iframe 不重載）；修正拖曳排序 pointercancel 未處理造成頁面卡死的 bug；移除 admin iframe 內多餘的 fullscreen trigger</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/1 V1.12.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">商品大類、口味選項新增「線上顯示／隱藏」切換功能，可個別控制線上點餐頁的顯示；D1 migration 新增對應欄位</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/1 V1.12.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">改用 iframe overlay 方案讓後台管理在 POS 全螢幕內開啟，解決切換後台導致全螢幕失效的問題；修正返回 POS 及補印／退款等跳頁邏輯</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 V1.6.3</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正班別小結與關帳按「列印」無反應的 bug（printShiftResult 在 closeShiftResult 後讀取 null.type 導致 TypeError，頁面未跳轉）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 V1.6.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增 pendingShiftPrint 旗標，印表機就緒後自動觸發班別小結列印，無需手動補印；清點錢盤頁面隱藏系統現金與短溢，確認後才顯示；各幣別列新增 ＋／－ 快速調整按鈕</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 V1.6.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">班別小結新增清點錢盤功能：輸入各面額（2000~1元）張數，即時計算實點合計，確認後顯示短溢，結果列印於班結收據</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 V1.6.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增班別小結（每日多次）與關帳（每日一次）功能；後台「班結」頁籤顯示當日班別紀錄與狀態；支援補印班結單與關帳報表</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 V1.5.5</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正後台刪單確認視窗「確認刪除並退款」按鈕被 CSS display:none 隱藏的問題</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 V1.5.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台刪單新增確認視窗（含交易編號與金額），防止誤按直接觸發退款</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 V1.5.3</span>
+        <div class="log-dot"></div>
+        <span class="log-text">刪單改為軟刪除（voided 欄位），保留品項明細；後台標示「已刪單」灰底劃線，統計報表自動排除已刪單資料</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 V1.5.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台「銷售紀錄」刪除按鈕改為跳至 POS 退款確認頁，確認後自動退款並列印收據，完成後返回後台</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 V1.5.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修改已結帳交易支援差額收付—加點補收差額、刪點退款差額、品項調整金額不變；收據只印差異品項，並支援「已刪除整張訂單」全額退款流程</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 V1.4.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台「銷售紀錄」編輯按鈕改為跳至 POS 頁面並帶入原始品項，結帳後 PUT 更新原交易（非新增），完成後返回後台；修正品項名稱含引號造成 JS 全頁崩潰的問題</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 V1.4.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">銷售紀錄支援品項修改（加點/減量），直接在後台調整已結帳訂單的品項數量</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/24</span>
+        <div class="log-dot"></div>
+        <span class="log-text">前台 topbar 新增「訂單管理」「銷售紀錄」快捷按鈕，直接跳轉後台對應分頁</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/24</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台管理新增「銷售紀錄」分頁，可按日期查詢 POS 交易，並支援刪除與修改（付款方式、桌號）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/24 V1.4.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">POS 前台加入桌號/外帶選擇畫面，點餐前先選桌號，結帳時自動帶入 table_ref，結帳完成後返回桌號選擇</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/23</span>
+        <div class="log-dot"></div>
+        <span class="log-text">建立 android-bridge 子專案（Sunmi T2 原生 Android App）：修復 Gradle 建置環境（Gradle 8.6 wrapper、AndroidX 設定、AIDL 編譯），成功產生 debug APK</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/21</span>
+        <div class="log-dot"></div>
+        <span class="log-text">口味選項支援三種模式：單選、多選（各1次）、多選（數量可大於1）；後台可設定每組上限並隨時修改規則</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/21</span>
+        <div class="log-dot"></div>
+        <span class="log-text">口味選擇 Modal 加入數量選擇器，同商品不同口味組合可並存於購物車，收據品名帶口味標示</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/21</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台新增口味管理分頁：建立口味大分類（甜度、冰量、加料等）與底下選項（含加價設定），並可為每個商品勾選適用分類</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">線上點餐新增付款方式選擇（現金臨櫃付款／LINE Pay），儲存於訂單並帶入銷售記錄</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">銷售明細新增「訂單來源」欄位，區分臨櫃／線上點餐／外送平台，CSV/Excel 同步匯出</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台將線上訂單標記完成時自動寫入銷售報表（日報表、明細、商品總表皆包含）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">線上點餐互動邏輯改版：點選商品 → 底部顯示數量控制與「加入訂單」，操作邏輯與前台 POS 一致</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">5/17</span>
         <div class="log-dot"></div>
         <span class="log-text">串接 WebUSB 熱感印表機，結帳後可列印 58mm ESC/POS 收據並自動切紙</span>
@@ -455,13 +580,13 @@
     </div>
   </div>
 
-  <!-- HR 人事系統 -->
+  <!-- 報價單系統 -->
   <div class="project-card">
     <div class="project-header">
-      <div class="project-emoji">👥</div>
+      <div class="project-emoji">📄</div>
       <div class="project-title-block">
-        <div class="project-title">HR 人事系統</div>
-        <div class="project-desc">中小企業人事管理 Web 系統。支援員工資料管理、GPS 打卡、請假申請與審核、薪資自動計算（底薪＋職級津貼＋管理津貼）、勞健保試算，以及部門／門店設定。</div>
+        <div class="project-title">奧爾瑪報價單系統</div>
+        <div class="project-desc">公司內部報價單管理系統。支援自製品與外購品報價、客戶範本儲存、Admin 資料維護，可一鍵產出 Excel 或 PDF 報價單。</div>
       </div>
     </div>
     <div class="tags">
@@ -477,29 +602,284 @@
     </div>
     <div class="changelog">
       <div class="log-item">
-        <span class="log-date">6/09</span>
+        <span class="log-date">6/9 v1.10.65</span>
         <div class="log-dot"></div>
-        <span class="log-text">V1.3.2 修正資料持久化問題（Railway Volume 設定說明）、補齊新欄位 migration</span>
+        <span class="log-text">步留+人工分頁：點擊「生管最近步留」→彈出該品號最近月份領料/產出明細；點擊「月品規步留」→彈出該品規最新月所有品號明細（含合計列）；點擊「YTD品規步留」→彈出品規逐月彙總及 YTD 加權平均，三種來源共用同一 Modal</span>
       </div>
       <div class="log-item">
-        <span class="log-date">6/09</span>
+        <span class="log-date">6/8 v1.10.54</span>
         <div class="log-dot"></div>
-        <span class="log-text">V1.3.1 打卡頁新增地點下拉選單（必選後才能打卡）；修正基本工資為 2026 年正確值 29,500／196 元</span>
+        <span class="log-text">新增品規步留歷史快照：上傳製令時自動從品名解析品規（去除重量/包裝後綴，支援括號全形/半形混用），彙整同品規各月份領料與產出並計算步留率，月份列表可點擊開啟明細 Modal；修正欄位比對（欄名去除內部空白、精確比對優先避免誤中原料品名）；品規照品號排序；Python 版本鎖定 3.11 防止 Railway 構建 504 錯誤</span>
       </div>
       <div class="log-item">
-        <span class="log-date">6/09</span>
+        <span class="log-date">6/5 v1.10.41</span>
         <div class="log-dot"></div>
-        <span class="log-text">V1.3.0 系統設定新增部門／門店管理；員工表單部門欄位改為下拉選單</span>
+        <span class="log-text">新增月表單 Admin 分頁：上傳製令時自動按月份建立步留歷史快照（yield_monthly_history），月表單下載優先從歷史表讀取對應月份步留率並填入「生管步留率」欄；品號資料庫新增手動新增與刪除功能；刪除混合商品時自動清除品號表中的孤立品項；移除臨時功能「匯入報價步留」</span>
       </div>
       <div class="log-item">
-        <span class="log-date">6/09</span>
+        <span class="log-date">6/1 v1.10.23</span>
         <div class="log-dot"></div>
-        <span class="log-text">V1.2.1 系統設定基本工資新增時薪欄位</span>
+        <span class="log-text">新增原料成本匯入還原端點（/api/admin/raw-costs/reset-import），修正上傳錯誤檔案後頁面無法載入的問題；修正 _PAGE_VER 未同步導致登入頁無限重新載入</span>
       </div>
       <div class="log-item">
-        <span class="log-date">6/09</span>
+        <span class="log-date">5/29 v1.10.17</span>
         <div class="log-dot"></div>
-        <span class="log-text">V1.2.0 員工表單改為三段式（個人基本資料／公司職務資料／薪資資料）；薪資結構改為底薪＋職級津貼＋管理津貼；FT 不設時薪；系統設定新增基本工資調整</span>
+        <span class="log-text">原料成本大幅改善：手動品項與混合商品專用原料分開標示（紫色「混合」badge）；Excel 上傳隔離手動品項（tombstone 機制，刪除後重新上傳不復原，全新品項可自動匯入）；下載 Excel 包含手動品項；原料品名可透過 Excel 回傳更新；品號資料庫下載修正混合商品 KeyError 及比例小數點截斷問題</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 v1.9.45</span>
+        <div class="log-dot"></div>
+        <span class="log-text">混合商品：清單全寬佈局（開啟編輯時切雙欄）、新增明確編輯按鈕、修正 row 被 grid CSS 壓縮問題；步留率全面上限 100%；原料成本移除清除維護價格按鈕</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/27 v1.9.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">訂單備註多行分列輸出（Excel 每行獨立列、PDF 正確分行）；新增「清除備註」快捷按鈕</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.9.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 JS const 重複宣告導致頁面無法載入（登入按鈕失效）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.9.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增外購品功能：品項選單、進貨/KG 公式、Admin 上傳管理、報價確認頁與 Excel/PDF 全格式支援</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.11</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正品項個別毛利率未正確帶入報價確認頁（原先會回退為全域預設值）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.10</span>
+        <div class="log-dot"></div>
+        <span class="log-text">步留＋人工分類篩選改依品號資料庫匯入順序排列</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增訂單備註快填按鈕，可自訂快填文字（localStorage 管理，各 browser 獨立）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認頁新增「單價無條件進位」選項，預設啟用</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料成本下載格式改為報價品名+價格（可直接重新上傳），上傳後同步更新上次匯入價格</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">解決瀏覽器快取問題：URL 版本號重導向 + no-cache header + 頁面自動偵測版本</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正打樣品項無法存入範本的問題；範本載入時正確還原打樣品項所有欄位</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認資料月份欄位對打樣品項顯示「打樣」標示</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">單價/包 改為最多 2 位小數、尾零不顯示，報價確認頁同步套用</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 JavaScript 重複宣告錯誤，登入功能恢復正常；確認 Excel 與 PDF 產出皆正常</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初始部署至 Railway，設定 Volume 掛載確保 SQLite 資料持久化</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 Railway 找不到 uvicorn 指令的部署問題（改用 python -m uvicorn）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增 PDF 格式報價單產出（reportlab + STSong-Light 中文字型）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">範本改為各使用者獨立管理；資料來源改由管理者統一上傳共用</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">改版為 FastAPI Web 介面，新增 JWT 多使用者登入、管理者／一般使用者角色管理</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">建立初始架構：報價計算核心、Excel 資料匯入、報價單 Excel 匯出</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/quotation-web" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-link live" href="https://quotation-web.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
+      </a>
+    </div>
+  </div>
+
+  <!-- 採購估算系統 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">🛒</div>
+      <div class="project-title-block">
+        <div class="project-title">奧爾瑪採購估算系統</div>
+        <div class="project-desc">公司內部採購物料估算系統。依訂單自動計算週原料需求、對比庫存快照，產出每日缺口與請購量，支援預計到貨登記。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/2 v0.9.9</span>
+        <div class="log-dot"></div>
+        <span class="log-text">安全係數頁重構：報價品名×ERP品名×品規品種三階設定，新增 ERP進貨彙總表 Excel 匯入，供應商末欄佈局修正；每日進貨備註欄有品規時自動換下拉式選單；每日請購量格子可點擊查看來源訂單明細（含步留）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/5 v1.2.30</span>
+        <div class="log-dot"></div>
+        <span class="log-text">採購彙總表改為獨立 card + 單一下單日期（到貨日 = 下單日+1天）+ 新視窗列印；庫存邏輯修正：snap_date 嚴格小於生產起始日（D日收盤庫存=D+1日開盤）；進銷存明細 Modal 重大修正：快照顯示於次日欄，無快照日期補顯灰色理論值，有快照時顯示藍色實際值與差異</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/4 v1.2.17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">預估量改為逐日輸入（方案A）：預估表單拆成週一至週六六欄，每欄各自輸入，小計即時顯示；「套用上週量/月均」改為均分到各日；Excel 匯出/匯入格式同步更新為逐日欄位；每日請購量核心計算改為直接對應生產日，不再週平均分攤；請購量來源明細移除冗餘的「週預估 kg」欄</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/3 v1.0.6</span>
+        <div class="log-dot"></div>
+        <span class="log-text">採購進貨新增運送方式欄位（全日/宅配/自送/自載/其它）；預採購量功能上線，五色進貨狀態追蹤（灰/藍/橘/黃/綠）；庫存滾動改用 max(實際進貨, 預採購量)；報價品名排序對齊 quotation-web；訂單單位換算修正（非公斤單位統一用品規重量）；修正過濾關鍵字刪除後重啟復原的問題</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/1 v0.6.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">採購週報完成：每日請購量 Pivot 表（依生產日分欄）、預計到貨登記（自動儲存）、上下週切換快捷鈕；訂單匯入改標示到貨日、時間顯示修正（UTC→本地）、排序改用接單日；到貨日-1 自動推算生產日（遇週日跳週六）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/1 v0.3.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">建立初始架構：庫存快照匯入（P1 Excel）、訂單匯入（P2 Excel）、原料群組管理、採購估算核心計算（原料需求 ÷ 步留率 × 安全係數 − 庫存）</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/purchase-web" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-link live" href="https://purchase-web.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
+      </a>
+    </div>
+  </div>
+
+  <!-- HR 系統 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">👥</div>
+      <div class="project-title-block">
+        <div class="project-title">HR 人資系統</div>
+        <div class="project-desc">公司內部人資管理系統。支援 GPS 定位打卡、線上請假審核（台灣勞基法全假別）、薪資計算（加班費、勞健保）、正職／兼職員工分流管理，以及多種 HR 報表匯出。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/09 V1.3.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正資料持久化問題（Railway Volume 設定說明）、補齊新欄位 migration</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/09 V1.3.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">打卡頁新增地點下拉選單（必選後才能打卡）；修正基本工資為 2026 年正確值 29,500／196 元</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/09 V1.3.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">系統設定新增部門／門店管理；員工表單部門欄位改為下拉選單</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/09 V1.2.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">系統設定基本工資新增時薪欄位</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/09 V1.2.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">員工表單改為三段式（個人基本資料／公司職務資料／薪資資料）；薪資結構改為底薪＋職級津貼＋管理津貼；FT 不設時薪；系統設定新增基本工資調整</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/8 V1.1.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增員工編號自動產生：正職 FT→F001、兼職 PT→P001</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/8 V1.1.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增正職（FT）／兼職（PT）員工類型區分：時薪制、工時門檻勞健保投保、假別按比例計算</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/8 V1.0.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正登入迴圈：JWT sub 改以字串儲存防 float 解碼錯誤；錯誤訊息透過 ?msg= 傳遞；Admin 登入後導向正確 dashboard</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/8 V1.0.3</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 TOKEN 無效：全域 401/403 例外攔截改為重導向 /login；Railway HTTPS 環境補上 Secure Cookie 旗標</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/8 V1.0.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 Railway 無法連線：DB 目錄自動建立（os.makedirs）；登入頁顯示版本號</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/8 V1.0.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初始建立：GPS 定位打卡、線上請假審核、薪資計算（勞基法加班費§24）、勞健保試算、Excel 報表匯出、Admin／員工雙介面</span>
       </div>
     </div>
 
