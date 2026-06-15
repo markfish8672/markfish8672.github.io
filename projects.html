@@ -946,6 +946,71 @@
     </div>
   </div>
 
+  <!-- 生產管理系統 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">🏭</div>
+      <div class="project-title-block">
+        <div class="project-title">奧爾瑪生產管理系統</div>
+        <div class="project-desc">公司內部生產管理系統，ERP 製令單 + 訂單總表匯入，自動產出原料需求總表與前處理／清洗截切／內包裝／原件四份 ISO 日報表，取代人工 Excel 作業。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/15 v0.2.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">產品主檔按品號排序；篩選欄位改為品項文字搜尋；步留率改為可編輯；修正儲存時品名被清空的 bug</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.2.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">品名與步留率加入編輯模式；API yield_rate 欄位補齊；修正 editMode 選取器殘留 .pm-brand</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.1.8</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正步留率同步解析錯誤（quotation-web 回傳 {yield_rate, labor_cost} dict，之前直接存入 SQLite 導致 InterfaceError）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.1.6</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料需求總表改為頁面可編輯表格（預計生產KG 可調整、原料需求KG 即時重算）；新增今日／D+1／D+2 日期快捷鍵；修正日報表下載</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.1.5</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 ERP 上傳失敗（production_lines 缺 product_name 欄位，補 ALTER TABLE migration）；移除 __pycache__ 與 data/ 出 git</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.1.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初版建立：產品主檔、ERP製令單上傳、訂單總表上傳、原料需求計算、四份日報表 Excel 產出、使用者管理、步留率同步</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/production-web" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-link live" href="https://production-web.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
+      </a>
+    </div>
+  </div>
+
   <div class="footer">© 2026 Markfish8672</div>
 
 </div>
