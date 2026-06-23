@@ -228,104 +228,20 @@
     </div>
   </div>
 
-  <!-- 午餐訂餐系統 -->
+  <!-- 連鎖餐飲 ERP -->
   <div class="project-card">
     <div class="project-header">
-      <div class="project-emoji">🍱</div>
+      <div class="project-emoji">🏪</div>
       <div class="project-title-block">
-        <div class="project-title">午餐訂餐系統</div>
-        <div class="project-desc">公司內部午餐訂餐管理系統。支援多樓層點餐、菜單分類管理、後台統計與繳費確認，另提供業者匯整頁面。</div>
+        <div class="project-title">連鎖餐飲 ERP</div>
+        <div class="project-desc">連鎖餐飲業內部管理系統。支援品項雙價格（直營／加盟）、門市線上下單、訂購單一鍵轉出貨單，會計可修改出貨單，角色分流：admin／直營店／加盟店／會計。</div>
       </div>
     </div>
     <div class="tags">
-      <span class="tag">Cloudflare Workers</span>
-      <span class="tag">D1 SQLite</span>
-      <span class="tag">JavaScript</span>
-    </div>
-
-    <div class="changelog-toggle" onclick="toggleLog(this)">
-      <span>📋 更新歷程</span>
-      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-    </div>
-    <div class="changelog">
-      <div class="log-item">
-        <span class="log-date">5/18</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正跨日訂餐統計問題：開放預訂隔日時，後台統計日期自動切換為隔天</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/18</span>
-        <div class="log-dot"></div>
-        <span class="log-text">後台新增時間設定，可設定今日結單時間與明日預訂開放時間（預設 09:30 結單、15:00 開放）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/18</span>
-        <div class="log-dot"></div>
-        <span class="log-text">後台新增密碼保護，需登入才可進入後台，並可登出</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/18</span>
-        <div class="log-dot"></div>
-        <span class="log-text">後台新增刪除訂單功能，可逐筆刪除指定人員的訂單</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增給廠商的匯整頁面，可依樓層查看各餐點數量</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">後台增加付款確認功能，可逐筆或整人一鍵標記收款</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">後台訂單依 5F／2F 分開顯示，同一訂餐者合併（如牛肉麵×2），並顯示應收款</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增菜單分類管理，後台可切換今日菜單（如牛肉麵店、燒臘店）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">樓層選擇改為按鈕式（5F／2F），新增每道菜的 +/- 數量控制</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">初始建立：部門改為 5F／2F，訂餐頁面上線</span>
-      </div>
-    </div>
-
-    <div class="project-links">
-      <a class="proj-link github" href="https://github.com/markfish8672/lunch-order" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-        GitHub
-      </a>
-      <a class="proj-link live" href="https://lunch-order.markfish8672.workers.dev" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        上線版本
-      </a>
-    </div>
-  </div>
-
-  <!-- LINE AI 客服機器人 -->
-  <div class="project-card">
-    <div class="project-header">
-      <div class="project-emoji">🤖</div>
-      <div class="project-title-block">
-        <div class="project-title">LINE AI 客服機器人</div>
-        <div class="project-desc">結合 Claude AI 的 LINE 官方帳號機器人。支援自然語言訂餐、真人客服轉接、對話記憶，以及午餐訂餐系統整合。</div>
-      </div>
-    </div>
-    <div class="tags">
-      <span class="tag">Python</span>
-      <span class="tag">FastAPI</span>
-      <span class="tag">LINE Bot SDK v3</span>
-      <span class="tag">Claude API</span>
+      <span class="tag">Next.js 16</span>
+      <span class="tag">TypeScript</span>
+      <span class="tag">Prisma</span>
+      <span class="tag">PostgreSQL</span>
       <span class="tag">Railway</span>
     </div>
 
@@ -335,39 +251,38 @@
     </div>
     <div class="changelog">
       <div class="log-item">
-        <span class="log-date">5/17</span>
+        <span class="log-date">6/23 v0.1.0</span>
         <div class="log-dot"></div>
-        <span class="log-text">整合午餐訂餐系統，可用自然語言訂餐（如「我是5F小陳，訂1個牛肉麵」）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">初始建立：Claude AI 客服、真人轉接、對話記憶功能上線</span>
+        <span class="log-text">初版建立：品項管理（直營／加盟雙價格）、銷售訂購單（門市下單／修改草稿）、出貨單（訂購單一鍵轉出貨、會計修改）、角色分流（admin／直營店／加盟店／會計），部署至 Railway + Neon PostgreSQL</span>
       </div>
     </div>
 
     <div class="project-links">
-      <a class="proj-link github" href="https://github.com/markfish8672/line-bot" target="_blank" rel="noopener">
+      <a class="proj-link github" href="https://github.com/markfish8672/web-erp" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
         GitHub
+      </a>
+      <a class="proj-link live" href="https://web-erp-production.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
       </a>
     </div>
   </div>
 
-  <!-- ERP 訂單自動化 -->
+  <!-- 生產管理系統 -->
   <div class="project-card">
     <div class="project-header">
-      <div class="project-emoji">🤖</div>
+      <div class="project-emoji">🏭</div>
       <div class="project-title-block">
-        <div class="project-title">ERP 訂單自動化</div>
-        <div class="project-desc">讀取 Excel 訂單，自動操作 ERP 系統建立銷售訂單。以 pyautogui 模擬滑鼠與鍵盤，支援品號、庫別、數量、單價欄位填寫，省去逐筆手動輸入。</div>
+        <div class="project-title">奧爾瑪生產管理系統</div>
+        <div class="project-desc">公司內部生產管理系統，ERP 製令單 + 訂單總表匯入，自動產出原料需求總表與前處理／清洗截切／內包裝／原件四份 ISO 日報表，取代人工 Excel 作業。</div>
       </div>
     </div>
     <div class="tags">
       <span class="tag">Python</span>
-      <span class="tag">pyautogui</span>
-      <span class="tag">pandas</span>
-      <span class="tag">openpyxl</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Railway</span>
     </div>
 
     <div class="changelog-toggle" onclick="toggleLog(this)">
@@ -376,31 +291,335 @@
     </div>
     <div class="changelog">
       <div class="log-item">
-        <span class="log-date">5/19</span>
+        <span class="log-date">6/23 v0.3.46</span>
         <div class="log-dot"></div>
-        <span class="log-text">中止專案：自動化流程無法穩定通過測試，整體耗費時間遠超預估，決定停止開發</span>
+        <span class="log-text">新增「生產主管」角色（supervisor）：可看生產儀表板、下載報表、填報，製令單與產品主檔唯讀；admin/生管保留建立工作日、上傳ERP/訂單、啟動投產等寫入權限</span>
       </div>
       <div class="log-item">
-        <span class="log-date">5/18</span>
+        <span class="log-date">6/23 v0.3.45</span>
         <div class="log-dot"></div>
-        <span class="log-text">新增單價欄位讀取與輸入；修正 Tab 順序為品號→庫別(304)→數量→Tab×6→單價；單據日期改用 Enter 跳欄，出貨廠別改用雙擊進入編輯</span>
+        <span class="log-text">已有填報資料時禁止上傳製令單覆蓋（防呆）；生管人員可編輯產品主檔（原本 admin 限定）</span>
       </div>
       <div class="log-item">
-        <span class="log-date">5/18</span>
+        <span class="log-date">6/23 v0.3.44</span>
         <div class="log-dot"></div>
-        <span class="log-text">修正單據日期輸入：三連點清除預設值，改輸入 8 位數字（YYYYMMDD）</span>
+        <span class="log-text">日報表 Excel 人數欄字體改為 size 14（與時間欄一致）；多次生產的人數欄正確顯示每次記錄；填報看板（多品項同時計時）、導航守衛、中斷恢復功能完成</span>
       </div>
       <div class="log-item">
-        <span class="log-date">5/18</span>
+        <span class="log-date">6/22 v0.3.33</span>
         <div class="log-dot"></div>
-        <span class="log-text">初始建立：自動讀取 Excel 並批次建立 ERP 銷售訂單</span>
+        <span class="log-text">包裝袋領用表：合計欄改為「合計/領料數-批號」，新增「餘數」欄；排除非真空袋規格（含cm單位）；規格與合計欄按群組合併儲存格</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/22 v0.3.30</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「包裝袋領用表」報表：按 bag_spec 分組列出品名與包數，排除原件，報表頁新增下載按鈕</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/22 v0.3.29</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原件日報表：品名含「酪梨」且不含「未催熟」者獨立為酪梨 sheet，其餘留在原件 sheet，同一 Excel 輸出</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/22 v0.3.27</span>
+        <div class="log-dot"></div>
+        <span class="log-text">產品主檔新增4個生管欄位（清洗後%、前處理/清洗截切/內包裝投料KG人時），Tab ①基本 / ②生管切換顯示，快速鍵 1/2；留樣+機器耗損與包裝容許增加量移至第二頁；匯入正規化內部空格</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/22 v0.3.26</span>
+        <div class="log-dot"></div>
+        <span class="log-text">製令單預計生產KG改為唯讀＋編輯按鈕，修改後直接同步儀表板與報表數字</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/18 v0.3.25</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正記錄表格「人數」欄：多次生產時改為逐行顯示每次各自人數，與起始/結束時間對齊</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/18 v0.3.24</span>
+        <div class="log-dot"></div>
+        <span class="log-text">製造角色登入後自動全螢幕（隱藏瀏覽器列），ESC 離開後自動重新請求；相容 webkit</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/18 v0.3.23</span>
+        <div class="log-dot"></div>
+        <span class="log-text">儀表板篩選快速鍵：「未完成」改「未開始」，「產量不足」改「未完成」</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/17 v0.2.26</span>
+        <div class="log-dot"></div>
+        <span class="log-text">填報 UI 精修：返回按鈕深色高對比（#374151 底白字）；生產中資訊放大至半版（42vh，品項 30px、預計產量 44px 置中）；內包裝訂單量（包）改顯示一位小數（toFixed(1)）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/17 v0.2.25</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「製造」角色：登入後直接跳填報頁、隱藏所有導覽選單；計時畫面加入生產中資訊（品名/預計產量，前處理/清洗截切顯示品項）；首/末件分為兩個獨立步驟（首件 → 末件）；返回按鈕改為全寬大按鈕</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/17 v0.2.24</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增日報表填報 UI（平板觸控設計）：選日期→選類別→選製令→OK/NG 啟動檢查→人數（1-10 快捷鍵）→開始計時→結束計時→首件/末件→多次生產→總生產量→完成；資料儲存至 daily_report_entries + daily_report_runs</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/17 v0.2.21</span>
+        <div class="log-dot"></div>
+        <span class="log-text">前處理/清洗截切 E欄改 12pt；內包裝 F欄改 12pt；原件 E欄改 12pt；修正登入轉圈圈（_PAGE_VER 未與 VERSION 同步）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/16 v0.2.20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">產品主檔新增品項下拉式快速篩選，選項從資料自動產生；可搭配品號／品名搜尋框同時使用</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/16 v0.2.17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">四份日報表 ISO 版次更新至 2.0；前處理/清洗/內包裝制修日 2026.05.08；表頭「修訂日」更正為「制修日」</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/16 v0.2.16</span>
+        <div class="log-dot"></div>
+        <span class="log-text">前處理/清洗截切 B欄欄寬 12；內包裝訂單量改保留一位小數（不四捨五入整數）；原件 C/D欄 14pt、E欄 12pt、F欄 18pt、C欄寬 14</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/16 v0.2.15</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正前處理/清洗截切在勾選合併時，單筆製單號仍顯示「#01奇美」（無換行）的 bug；改為正確顯示「#01 換行 奇美」格式</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/16 v0.2.14</span>
+        <div class="log-dot"></div>
+        <span class="log-text">製單號格式統一：單筆顯示「#01（換行）奇美」，合併多筆時顯示「#01奇美 ／ #02即食」並自動縮小字型（14-n pt）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/16 v0.2.9～v0.2.13</span>
+        <div class="log-dot"></div>
+        <span class="log-text">三個系統（quotation/purchase/production）登入頁統一中英文公司名置中；四份日報表大幅格式調整：製單號加 # 前綴/字型16/置中換行、各欄欄寬與字型微調、L/M欄清除或刪除、col_styles 架構重構</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/16 v0.2.7～v0.2.8</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增合併相同品項規格製單功能（前處理/清洗截切，checkbox 選擇）；合併鍵改為 (生產類別, 品項, 規格) tuple，製單號全部列出並換行顯示</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.2.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">產品主檔按品號排序；篩選欄位改為品項文字搜尋；步留率改為可編輯；修正儲存時品名被清空的 bug</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.2.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">品名與步留率加入編輯模式；API yield_rate 欄位補齊；修正 editMode 選取器殘留 .pm-brand</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.1.8</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正步留率同步解析錯誤（quotation-web 回傳 {yield_rate, labor_cost} dict，之前直接存入 SQLite 導致 InterfaceError）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.1.6</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料需求總表改為頁面可編輯表格（預計生產KG 可調整、原料需求KG 即時重算）；新增今日／D+1／D+2 日期快捷鍵；修正日報表下載</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.1.5</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 ERP 上傳失敗（production_lines 缺 product_name 欄位，補 ALTER TABLE migration）；移除 __pycache__ 與 data/ 出 git</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/15 v0.1.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初版建立：產品主檔、ERP製令單上傳、訂單總表上傳、原料需求計算、四份日報表 Excel 產出、使用者管理、步留率同步</span>
       </div>
     </div>
 
     <div class="project-links">
-      <a class="proj-link github" href="https://github.com/markfish8672/erp-auto" target="_blank" rel="noopener">
+      <a class="proj-link github" href="https://github.com/markfish8672/production-web" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
         GitHub
+      </a>
+      <a class="proj-link live" href="https://production-web.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
+      </a>
+    </div>
+  </div>
+
+  <!-- 報價單系統 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">📄</div>
+      <div class="project-title-block">
+        <div class="project-title">奧爾瑪報價單系統</div>
+        <div class="project-desc">公司內部報價單管理系統。支援自製品與外購品報價、客戶範本儲存、Admin 資料維護，可一鍵產出 Excel 或 PDF 報價單。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/17 v1.11.37</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增 AI OCR 報價匯入匯出功能：Admin 新增「AI OCR 匯出」Tab（supervisor/admin），選擇生效日（報價區間起始日）即可彙整同日期所有報價單品項，自動計算最終報價（含運費物流籃），從 production-web 補入截切規格/包裝說明/訂購單位，輸出符合 AI OCR 軟體匯入格式的 Excel</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/12 v1.11.30</span>
+        <div class="log-dot"></div>
+        <span class="log-text">審核詳情顯示完整費用明細表格（成本價/毛利/出廠價等 23 欄，Modal 加寬至 96vw）；報價送審防呆（未存檔時阻擋並提示先儲存）；選品牌後自動帶入公司名稱/統編/聯絡人/電話/傳真/地址/Email；允許同一帳號同時送多張報價審核（審核狀態改依報價單名稱精確比對）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/12 v1.11.25</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價單加開新報價/儲存/另存新檔工具列（檔案列顯示當前檔名）；另存新檔自動加序號 (2)(3)；修正開新報價後自動名稱只帶品牌無日期；修正新報價誤顯示前一張的審核狀態</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/12 v1.11.22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認顯示審核狀態並在通過後鎖定；步留+人工/原料成本預設唯讀加編輯防誤按；審核列表加類型篩選（原料/步留+人工/報價單）；審核詳情顯示報價區間與品項資料；全系統時間統一台北時區；修正專案品項載入範本後步留/人工空白</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/9 v1.10.65</span>
+        <div class="log-dot"></div>
+        <span class="log-text">步留+人工分頁：點擊「生管最近步留」→彈出該品號最近月份領料/產出明細；點擊「月品規步留」→彈出該品規最新月所有品號明細（含合計列）；點擊「YTD品規步留」→彈出品規逐月彙總及 YTD 加權平均，三種來源共用同一 Modal</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/8 v1.10.54</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增品規步留歷史快照：上傳製令時自動從品名解析品規（去除重量/包裝後綴，支援括號全形/半形混用），彙整同品規各月份領料與產出並計算步留率，月份列表可點擊開啟明細 Modal；修正欄位比對（欄名去除內部空白、精確比對優先避免誤中原料品名）；品規照品號排序；Python 版本鎖定 3.11 防止 Railway 構建 504 錯誤</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/5 v1.10.41</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增月表單 Admin 分頁：上傳製令時自動按月份建立步留歷史快照（yield_monthly_history），月表單下載優先從歷史表讀取對應月份步留率並填入「生管步留率」欄；品號資料庫新增手動新增與刪除功能；刪除混合商品時自動清除品號表中的孤立品項；移除臨時功能「匯入報價步留」</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/1 v1.10.23</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增原料成本匯入還原端點（/api/admin/raw-costs/reset-import），修正上傳錯誤檔案後頁面無法載入的問題；修正 _PAGE_VER 未同步導致登入頁無限重新載入</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/29 v1.10.17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料成本大幅改善：手動品項與混合商品專用原料分開標示（紫色「混合」badge）；Excel 上傳隔離手動品項（tombstone 機制，刪除後重新上傳不復原，全新品項可自動匯入）；下載 Excel 包含手動品項；原料品名可透過 Excel 回傳更新；品號資料庫下載修正混合商品 KeyError 及比例小數點截斷問題</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/28 v1.9.45</span>
+        <div class="log-dot"></div>
+        <span class="log-text">混合商品：清單全寬佈局（開啟編輯時切雙欄）、新增明確編輯按鈕、修正 row 被 grid CSS 壓縮問題；步留率全面上限 100%；原料成本移除清除維護價格按鈕</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/27 v1.9.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">訂單備註多行分列輸出（Excel 每行獨立列、PDF 正確分行）；新增「清除備註」快捷按鈕</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.9.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 JS const 重複宣告導致頁面無法載入（登入按鈕失效）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.9.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增外購品功能：品項選單、進貨/KG 公式、Admin 上傳管理、報價確認頁與 Excel/PDF 全格式支援</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.11</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正品項個別毛利率未正確帶入報價確認頁（原先會回退為全域預設值）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.10</span>
+        <div class="log-dot"></div>
+        <span class="log-text">步留＋人工分類篩選改依品號資料庫匯入順序排列</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增訂單備註快填按鈕，可自訂快填文字（localStorage 管理，各 browser 獨立）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認頁新增「單價無條件進位」選項，預設啟用</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/26 v1.8.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料成本下載格式改為報價品名+價格（可直接重新上傳），上傳後同步更新上次匯入價格</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">解決瀏覽器快取問題：URL 版本號重導向 + no-cache header + 頁面自動偵測版本</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正打樣品項無法存入範本的問題；範本載入時正確還原打樣品項所有欄位</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認資料月份欄位對打樣品項顯示「打樣」標示</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">單價/包 改為最多 2 位小數、尾零不顯示，報價確認頁同步套用</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 JavaScript 重複宣告錯誤，登入功能恢復正常；確認 Excel 與 PDF 產出皆正常</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初始部署至 Railway，設定 Volume 掛載確保 SQLite 資料持久化</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正 Railway 找不到 uvicorn 指令的部署問題（改用 python -m uvicorn）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增 PDF 格式報價單產出（reportlab + STSong-Light 中文字型）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">範本改為各使用者獨立管理；資料來源改由管理者統一上傳共用</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">改版為 FastAPI Web 介面，新增 JWT 多使用者登入、管理者／一般使用者角色管理</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/20</span>
+        <div class="log-dot"></div>
+        <span class="log-text">建立初始架構：報價計算核心、Excel 資料匯入、報價單 Excel 匯出</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/quotation-web" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-link live" href="https://quotation-web.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
       </a>
     </div>
   </div>
@@ -610,186 +829,6 @@
     </div>
   </div>
 
-  <!-- 報價單系統 -->
-  <div class="project-card">
-    <div class="project-header">
-      <div class="project-emoji">📄</div>
-      <div class="project-title-block">
-        <div class="project-title">奧爾瑪報價單系統</div>
-        <div class="project-desc">公司內部報價單管理系統。支援自製品與外購品報價、客戶範本儲存、Admin 資料維護，可一鍵產出 Excel 或 PDF 報價單。</div>
-      </div>
-    </div>
-    <div class="tags">
-      <span class="tag">Python</span>
-      <span class="tag">FastAPI</span>
-      <span class="tag">SQLite</span>
-      <span class="tag">Railway</span>
-    </div>
-
-    <div class="changelog-toggle" onclick="toggleLog(this)">
-      <span>📋 更新歷程</span>
-      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-    </div>
-    <div class="changelog">
-      <div class="log-item">
-        <span class="log-date">6/17 v1.11.37</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增 AI OCR 報價匯入匯出功能：Admin 新增「AI OCR 匯出」Tab（supervisor/admin），選擇生效日（報價區間起始日）即可彙整同日期所有報價單品項，自動計算最終報價（含運費物流籃），從 production-web 補入截切規格/包裝說明/訂購單位，輸出符合 AI OCR 軟體匯入格式的 Excel</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/12 v1.11.30</span>
-        <div class="log-dot"></div>
-        <span class="log-text">審核詳情顯示完整費用明細表格（成本價/毛利/出廠價等 23 欄，Modal 加寬至 96vw）；報價送審防呆（未存檔時阻擋並提示先儲存）；選品牌後自動帶入公司名稱/統編/聯絡人/電話/傳真/地址/Email；允許同一帳號同時送多張報價審核（審核狀態改依報價單名稱精確比對）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/12 v1.11.25</span>
-        <div class="log-dot"></div>
-        <span class="log-text">報價單加開新報價/儲存/另存新檔工具列（檔案列顯示當前檔名）；另存新檔自動加序號 (2)(3)；修正開新報價後自動名稱只帶品牌無日期；修正新報價誤顯示前一張的審核狀態</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/12 v1.11.22</span>
-        <div class="log-dot"></div>
-        <span class="log-text">報價確認顯示審核狀態並在通過後鎖定；步留+人工/原料成本預設唯讀加編輯防誤按；審核列表加類型篩選（原料/步留+人工/報價單）；審核詳情顯示報價區間與品項資料；全系統時間統一台北時區；修正專案品項載入範本後步留/人工空白</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/9 v1.10.65</span>
-        <div class="log-dot"></div>
-        <span class="log-text">步留+人工分頁：點擊「生管最近步留」→彈出該品號最近月份領料/產出明細；點擊「月品規步留」→彈出該品規最新月所有品號明細（含合計列）；點擊「YTD品規步留」→彈出品規逐月彙總及 YTD 加權平均，三種來源共用同一 Modal</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/8 v1.10.54</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增品規步留歷史快照：上傳製令時自動從品名解析品規（去除重量/包裝後綴，支援括號全形/半形混用），彙整同品規各月份領料與產出並計算步留率，月份列表可點擊開啟明細 Modal；修正欄位比對（欄名去除內部空白、精確比對優先避免誤中原料品名）；品規照品號排序；Python 版本鎖定 3.11 防止 Railway 構建 504 錯誤</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/5 v1.10.41</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增月表單 Admin 分頁：上傳製令時自動按月份建立步留歷史快照（yield_monthly_history），月表單下載優先從歷史表讀取對應月份步留率並填入「生管步留率」欄；品號資料庫新增手動新增與刪除功能；刪除混合商品時自動清除品號表中的孤立品項；移除臨時功能「匯入報價步留」</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/1 v1.10.23</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增原料成本匯入還原端點（/api/admin/raw-costs/reset-import），修正上傳錯誤檔案後頁面無法載入的問題；修正 _PAGE_VER 未同步導致登入頁無限重新載入</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/29 v1.10.17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">原料成本大幅改善：手動品項與混合商品專用原料分開標示（紫色「混合」badge）；Excel 上傳隔離手動品項（tombstone 機制，刪除後重新上傳不復原，全新品項可自動匯入）；下載 Excel 包含手動品項；原料品名可透過 Excel 回傳更新；品號資料庫下載修正混合商品 KeyError 及比例小數點截斷問題</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/28 v1.9.45</span>
-        <div class="log-dot"></div>
-        <span class="log-text">混合商品：清單全寬佈局（開啟編輯時切雙欄）、新增明確編輯按鈕、修正 row 被 grid CSS 壓縮問題；步留率全面上限 100%；原料成本移除清除維護價格按鈕</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/27 v1.9.2</span>
-        <div class="log-dot"></div>
-        <span class="log-text">訂單備註多行分列輸出（Excel 每行獨立列、PDF 正確分行）；新增「清除備註」快捷按鈕</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/26 v1.9.1</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正 JS const 重複宣告導致頁面無法載入（登入按鈕失效）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/26 v1.9.0</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增外購品功能：品項選單、進貨/KG 公式、Admin 上傳管理、報價確認頁與 Excel/PDF 全格式支援</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/26 v1.8.11</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正品項個別毛利率未正確帶入報價確認頁（原先會回退為全域預設值）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/26 v1.8.10</span>
-        <div class="log-dot"></div>
-        <span class="log-text">步留＋人工分類篩選改依品號資料庫匯入順序排列</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/26 v1.8.7</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增訂單備註快填按鈕，可自訂快填文字（localStorage 管理，各 browser 獨立）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/26 v1.8.4</span>
-        <div class="log-dot"></div>
-        <span class="log-text">報價確認頁新增「單價無條件進位」選項，預設啟用</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/26 v1.8.0</span>
-        <div class="log-dot"></div>
-        <span class="log-text">原料成本下載格式改為報價品名+價格（可直接重新上傳），上傳後同步更新上次匯入價格</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/22</span>
-        <div class="log-dot"></div>
-        <span class="log-text">解決瀏覽器快取問題：URL 版本號重導向 + no-cache header + 頁面自動偵測版本</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/22</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正打樣品項無法存入範本的問題；範本載入時正確還原打樣品項所有欄位</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/22</span>
-        <div class="log-dot"></div>
-        <span class="log-text">報價確認資料月份欄位對打樣品項顯示「打樣」標示</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/22</span>
-        <div class="log-dot"></div>
-        <span class="log-text">單價/包 改為最多 2 位小數、尾零不顯示，報價確認頁同步套用</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/20</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正 JavaScript 重複宣告錯誤，登入功能恢復正常；確認 Excel 與 PDF 產出皆正常</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/20</span>
-        <div class="log-dot"></div>
-        <span class="log-text">初始部署至 Railway，設定 Volume 掛載確保 SQLite 資料持久化</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/20</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正 Railway 找不到 uvicorn 指令的部署問題（改用 python -m uvicorn）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/20</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增 PDF 格式報價單產出（reportlab + STSong-Light 中文字型）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/20</span>
-        <div class="log-dot"></div>
-        <span class="log-text">範本改為各使用者獨立管理；資料來源改由管理者統一上傳共用</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/20</span>
-        <div class="log-dot"></div>
-        <span class="log-text">改版為 FastAPI Web 介面，新增 JWT 多使用者登入、管理者／一般使用者角色管理</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">5/20</span>
-        <div class="log-dot"></div>
-        <span class="log-text">建立初始架構：報價計算核心、Excel 資料匯入、報價單 Excel 匯出</span>
-      </div>
-    </div>
-
-    <div class="project-links">
-      <a class="proj-link github" href="https://github.com/markfish8672/quotation-web" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-        GitHub
-      </a>
-      <a class="proj-link live" href="https://quotation-web.up.railway.app" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        上線版本
-      </a>
-    </div>
-  </div>
-
   <!-- 採購估算系統 -->
   <div class="project-card">
     <div class="project-header">
@@ -981,19 +1020,155 @@
     </div>
   </div>
 
-  <!-- 生產管理系統 -->
+  <!-- 午餐訂餐系統 -->
   <div class="project-card">
     <div class="project-header">
-      <div class="project-emoji">🏭</div>
+      <div class="project-emoji">🍱</div>
       <div class="project-title-block">
-        <div class="project-title">奧爾瑪生產管理系統</div>
-        <div class="project-desc">公司內部生產管理系統，ERP 製令單 + 訂單總表匯入，自動產出原料需求總表與前處理／清洗截切／內包裝／原件四份 ISO 日報表，取代人工 Excel 作業。</div>
+        <div class="project-title">午餐訂餐系統</div>
+        <div class="project-desc">公司內部午餐訂餐管理系統。支援多樓層點餐、菜單分類管理、後台統計與繳費確認，另提供業者匯整頁面。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Cloudflare Workers</span>
+      <span class="tag">D1 SQLite</span>
+      <span class="tag">JavaScript</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">5/18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正跨日訂餐統計問題：開放預訂隔日時，後台統計日期自動切換為隔天</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台新增時間設定，可設定今日結單時間與明日預訂開放時間（預設 09:30 結單、15:00 開放）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台新增密碼保護，需登入才可進入後台，並可登出</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台新增刪除訂單功能，可逐筆刪除指定人員的訂單</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增給廠商的匯整頁面，可依樓層查看各餐點數量</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台增加付款確認功能，可逐筆或整人一鍵標記收款</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">後台訂單依 5F／2F 分開顯示，同一訂餐者合併（如牛肉麵×2），並顯示應收款</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增菜單分類管理，後台可切換今日菜單（如牛肉麵店、燒臘店）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">樓層選擇改為按鈕式（5F／2F），新增每道菜的 +/- 數量控制</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初始建立：部門改為 5F／2F，訂餐頁面上線</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/lunch-order" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-link live" href="https://lunch-order.markfish8672.workers.dev" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
+      </a>
+    </div>
+  </div>
+
+  <!-- ERP 訂單自動化 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">🤖</div>
+      <div class="project-title-block">
+        <div class="project-title">ERP 訂單自動化</div>
+        <div class="project-desc">讀取 Excel 訂單，自動操作 ERP 系統建立銷售訂單。以 pyautogui 模擬滑鼠與鍵盤，支援品號、庫別、數量、單價欄位填寫，省去逐筆手動輸入。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">pyautogui</span>
+      <span class="tag">pandas</span>
+      <span class="tag">openpyxl</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">5/19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">中止專案：自動化流程無法穩定通過測試，整體耗費時間遠超預估，決定停止開發</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增單價欄位讀取與輸入；修正 Tab 順序為品號→庫別(304)→數量→Tab×6→單價；單據日期改用 Enter 跳欄，出貨廠別改用雙擊進入編輯</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正單據日期輸入：三連點清除預設值，改輸入 8 位數字（YYYYMMDD）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">5/18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初始建立：自動讀取 Excel 並批次建立 ERP 銷售訂單</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/erp-auto" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+
+  <!-- LINE AI 客服機器人 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">🤖</div>
+      <div class="project-title-block">
+        <div class="project-title">LINE AI 客服機器人</div>
+        <div class="project-desc">結合 Claude AI 的 LINE 官方帳號機器人。支援自然語言訂餐、真人客服轉接、對話記憶，以及午餐訂餐系統整合。</div>
       </div>
     </div>
     <div class="tags">
       <span class="tag">Python</span>
       <span class="tag">FastAPI</span>
-      <span class="tag">SQLite</span>
+      <span class="tag">LINE Bot SDK v3</span>
+      <span class="tag">Claude API</span>
       <span class="tag">Railway</span>
     </div>
 
@@ -1003,155 +1178,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
-        <span class="log-date">6/17 v0.2.26</span>
+        <span class="log-date">5/17</span>
         <div class="log-dot"></div>
-        <span class="log-text">填報 UI 精修：返回按鈕深色高對比（#374151 底白字）；生產中資訊放大至半版（42vh，品項 30px、預計產量 44px 置中）；內包裝訂單量（包）改顯示一位小數（toFixed(1)）</span>
+        <span class="log-text">整合午餐訂餐系統，可用自然語言訂餐（如「我是5F小陳，訂1個牛肉麵」）</span>
       </div>
       <div class="log-item">
-        <span class="log-date">6/17 v0.2.25</span>
+        <span class="log-date">5/17</span>
         <div class="log-dot"></div>
-        <span class="log-text">新增「製造」角色：登入後直接跳填報頁、隱藏所有導覽選單；計時畫面加入生產中資訊（品名/預計產量，前處理/清洗截切顯示品項）；首/末件分為兩個獨立步驟（首件 → 末件）；返回按鈕改為全寬大按鈕</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/17 v0.2.24</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增日報表填報 UI（平板觸控設計）：選日期→選類別→選製令→OK/NG 啟動檢查→人數（1-10 快捷鍵）→開始計時→結束計時→首件/末件→多次生產→總生產量→完成；資料儲存至 daily_report_entries + daily_report_runs</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/17 v0.2.21</span>
-        <div class="log-dot"></div>
-        <span class="log-text">前處理/清洗截切 E欄改 12pt；內包裝 F欄改 12pt；原件 E欄改 12pt；修正登入轉圈圈（_PAGE_VER 未與 VERSION 同步）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/16 v0.2.20</span>
-        <div class="log-dot"></div>
-        <span class="log-text">產品主檔新增品項下拉式快速篩選，選項從資料自動產生；可搭配品號／品名搜尋框同時使用</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/23 v0.3.46</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增「生產主管」角色（supervisor）：可看生產儀表板、下載報表、填報，製令單與產品主檔唯讀；admin/生管保留建立工作日、上傳ERP/訂單、啟動投產等寫入權限</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/23 v0.3.45</span>
-        <div class="log-dot"></div>
-        <span class="log-text">已有填報資料時禁止上傳製令單覆蓋（防呆）；生管人員可編輯產品主檔（原本 admin 限定）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/23 v0.3.44</span>
-        <div class="log-dot"></div>
-        <span class="log-text">日報表 Excel 人數欄字體改為 size 14（與時間欄一致）；多次生產的人數欄正確顯示每次記錄；填報看板（多品項同時計時）、導航守衛、中斷恢復功能完成</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/22 v0.3.33</span>
-        <div class="log-dot"></div>
-        <span class="log-text">包裝袋領用表：合計欄改為「合計/領料數-批號」，新增「餘數」欄；排除非真空袋規格（含cm單位）；規格與合計欄按群組合併儲存格</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/22 v0.3.30</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增「包裝袋領用表」報表：按 bag_spec 分組列出品名與包數，排除原件，報表頁新增下載按鈕</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/22 v0.3.29</span>
-        <div class="log-dot"></div>
-        <span class="log-text">原件日報表：品名含「酪梨」且不含「未催熟」者獨立為酪梨 sheet，其餘留在原件 sheet，同一 Excel 輸出</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/22 v0.3.27</span>
-        <div class="log-dot"></div>
-        <span class="log-text">產品主檔新增4個生管欄位（清洗後%、前處理/清洗截切/內包裝投料KG人時），Tab ①基本 / ②生管切換顯示，快速鍵 1/2；留樣+機器耗損與包裝容許增加量移至第二頁；匯入正規化內部空格</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/22 v0.3.26</span>
-        <div class="log-dot"></div>
-        <span class="log-text">製令單預計生產KG改為唯讀＋編輯按鈕，修改後直接同步儀表板與報表數字</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/18 v0.3.25</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正記錄表格「人數」欄：多次生產時改為逐行顯示每次各自人數，與起始/結束時間對齊</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/18 v0.3.24</span>
-        <div class="log-dot"></div>
-        <span class="log-text">製造角色登入後自動全螢幕（隱藏瀏覽器列），ESC 離開後自動重新請求；相容 webkit</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/18 v0.3.23</span>
-        <div class="log-dot"></div>
-        <span class="log-text">儀表板篩選快速鍵：「未完成」改「未開始」，「產量不足」改「未完成」</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/16 v0.2.17</span>
-        <div class="log-dot"></div>
-        <span class="log-text">四份日報表 ISO 版次更新至 2.0；前處理/清洗/內包裝制修日 2026.05.08；表頭「修訂日」更正為「制修日」</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/16 v0.2.16</span>
-        <div class="log-dot"></div>
-        <span class="log-text">前處理/清洗截切 B欄欄寬 12；內包裝訂單量改保留一位小數（不四捨五入整數）；原件 C/D欄 14pt、E欄 12pt、F欄 18pt、C欄寬 14</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/16 v0.2.15</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正前處理/清洗截切在勾選合併時，單筆製單號仍顯示「#01奇美」（無換行）的 bug；改為正確顯示「#01 換行 奇美」格式</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/16 v0.2.14</span>
-        <div class="log-dot"></div>
-        <span class="log-text">製單號格式統一：單筆顯示「#01（換行）奇美」，合併多筆時顯示「#01奇美 ／ #02即食」並自動縮小字型（14-n pt）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/16 v0.2.9～v0.2.13</span>
-        <div class="log-dot"></div>
-        <span class="log-text">三個系統（quotation/purchase/production）登入頁統一中英文公司名置中；四份日報表大幅格式調整：製單號加 # 前綴/字型16/置中換行、各欄欄寬與字型微調、L/M欄清除或刪除、col_styles 架構重構</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/16 v0.2.7～v0.2.8</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增合併相同品項規格製單功能（前處理/清洗截切，checkbox 選擇）；合併鍵改為 (生產類別, 品項, 規格) tuple，製單號全部列出並換行顯示</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/15 v0.2.1</span>
-        <div class="log-dot"></div>
-        <span class="log-text">產品主檔按品號排序；篩選欄位改為品項文字搜尋；步留率改為可編輯；修正儲存時品名被清空的 bug</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/15 v0.2.0</span>
-        <div class="log-dot"></div>
-        <span class="log-text">品名與步留率加入編輯模式；API yield_rate 欄位補齊；修正 editMode 選取器殘留 .pm-brand</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/15 v0.1.8</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正步留率同步解析錯誤（quotation-web 回傳 {yield_rate, labor_cost} dict，之前直接存入 SQLite 導致 InterfaceError）</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/15 v0.1.6</span>
-        <div class="log-dot"></div>
-        <span class="log-text">原料需求總表改為頁面可編輯表格（預計生產KG 可調整、原料需求KG 即時重算）；新增今日／D+1／D+2 日期快捷鍵；修正日報表下載</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/15 v0.1.5</span>
-        <div class="log-dot"></div>
-        <span class="log-text">修正 ERP 上傳失敗（production_lines 缺 product_name 欄位，補 ALTER TABLE migration）；移除 __pycache__ 與 data/ 出 git</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">6/15 v0.1.0</span>
-        <div class="log-dot"></div>
-        <span class="log-text">初版建立：產品主檔、ERP製令單上傳、訂單總表上傳、原料需求計算、四份日報表 Excel 產出、使用者管理、步留率同步</span>
+        <span class="log-text">初始建立：Claude AI 客服、真人轉接、對話記憶功能上線</span>
       </div>
     </div>
 
     <div class="project-links">
-      <a class="proj-link github" href="https://github.com/markfish8672/production-web" target="_blank" rel="noopener">
+      <a class="proj-link github" href="https://github.com/markfish8672/line-bot" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
         GitHub
-      </a>
-      <a class="proj-link live" href="https://production-web.up.railway.app" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        上線版本
       </a>
     </div>
   </div>
