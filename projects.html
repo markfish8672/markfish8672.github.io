@@ -291,6 +291,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/24 v0.3.58</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正生產儀表板合併顯示與下載報表不一致問題：已填報 entries 從製令行重建完整 merged_seq_no，確保儀表板也正確合併前處理/清洗截切品項</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/24 v0.3.57</span>
+        <div class="log-dot"></div>
+        <span class="log-text">fill_review 已填報 entries 套用合併邏輯（中間版本）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/24 v0.3.56</span>
+        <div class="log-dot"></div>
+        <span class="log-text">生產儀表板合併 key 改為 (product_category, spec)，移除 production_category，使前處理與清洗截切的同品項正確合併</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">6/23 v0.3.46</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「生產主管」角色（supervisor）：可看生產儀表板、下載報表、填報，製令單與產品主檔唯讀；admin/生管保留建立工作日、上傳ERP/訂單、啟動投產等寫入權限</span>
@@ -465,6 +480,21 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/24 v1.11.75</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正原料成本品名含單引號等特殊字元時，刪除/改名/查看原料按鈕無反應問題（onclick 改用 esc+JSON.stringify 正確轉義）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/24 v1.11.73</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正原料成本匯入 Excel 後，品號資料庫已設定的品項仍不出現問題：匯入時清除對應 tombstone 並刪除舊 raw_costs_visible 篩選清單</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/24 v1.11.72</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料成本手動品項新增改名功能（✎ 按鈕）；刪除按鈕對手動品項也正常顯示</span>
+      </div>
       <div class="log-item">
         <span class="log-date">6/17 v1.11.37</span>
         <div class="log-dot"></div>
