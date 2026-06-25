@@ -481,6 +481,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/25 v1.11.87</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認頁新增「顯示單價/KG」checkbox（預設勾選）：取消勾選時 modal 表格隱藏單價/KG 欄，下載的 Excel/PDF 也同步合併；釐清三份下載文件（報價確認／報價單／大宗報價單）各自的表頭與檔名邏輯：報價確認加入品牌+報價區間表頭，三份檔名統一為「類型_品牌_報價區間」</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">6/24 v1.11.75</span>
         <div class="log-dot"></div>
         <span class="log-text">修正原料成本品名含單引號等特殊字元時，刪除/改名/查看原料按鈕無反應問題（onclick 改用 esc+JSON.stringify 正確轉義）</span>
@@ -1207,6 +1212,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/25</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正群組 @mention highlight 不顯示問題：改用 TextMessageV2 + MentionSubstitutionObject（{placeholder} 語法），LINE 自動渲染帶 highlight 的 @名字；新增通知採購主管（target=procurement）功能</span>
+      </div>
       <div class="log-item">
         <span class="log-date">5/17</span>
         <div class="log-dot"></div>
