@@ -316,6 +316,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/26 v0.3.6</span>
+        <div class="log-dot"></div>
+        <span class="log-text">商品主檔新增刪除功能（限 admin，有關聯單據時阻擋）；溫層欄位改為下拉選單（常溫／冷藏／冷凍）；自製品成本價改為唯讀並預留 BOM 自動計算；商品分類改為獨立主檔（FK），匯入時自動建立不存在的分類</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">6/24 v0.3.58</span>
         <div class="log-dot"></div>
         <span class="log-text">修正生產儀表板合併顯示與下載報表不一致問題：已填報 entries 從製令行重建完整 merged_seq_no，確保儀表板也正確合併前處理/清洗截切品項</span>
@@ -505,6 +510,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/26 v1.11.98</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正原料成本匯入 0 值誤存為「申請價 0」bug（Excel 空格或格式帶出 0 被當成異動）；開放客服(cs)下載原料成本 Excel；修正版號未同步導致登入頁無限重載問題</span>
+      </div>
       <div class="log-item">
         <span class="log-date">6/25 v1.11.87</span>
         <div class="log-dot"></div>
