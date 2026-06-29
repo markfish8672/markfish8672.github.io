@@ -361,6 +361,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/29 v0.3.90</span>
+        <div class="log-dot"></div>
+        <span class="log-text">標籤列印內容物改用產品主檔「品項」欄位，移除多餘的獨立內容物欄位</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/29 v0.3.89</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「標籤列印」頁面：串接芯燁 XP420B（USB），80×60mm 標籤紙，從製令單自動帶入品項與建議張數，生產日期選定後自動計算有效日期（保質期-1天），Code128 條碼，CSS rotate(180°) 修正出紙上下顛倒；product_master 新增 usage_instructions 欄位</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/29 v0.3.88</span>
+        <div class="log-dot"></div>
+        <span class="log-text">移除產品主檔診斷用功能鍵（🔍診斷拆料、🔎查原料品名）及對應後端 endpoint</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">6/26 v0.3.6</span>
         <div class="log-dot"></div>
         <span class="log-text">商品主檔新增刪除功能（限 admin，有關聯單據時阻擋）；溫層欄位改為下拉選單（常溫／冷藏／冷凍）；自製品成本價改為唯讀並預留 BOM 自動計算；商品分類改為獨立主檔（FK），匯入時自動建立不存在的分類</span>
@@ -555,6 +570,21 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">6/29 v1.12.8</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正報價確認表下載：原料價格欄誤讀含步留原料格（cells[9] → g('.col-raw')）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/29 v1.12.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正報價確認表下載：水電欄誤讀管銷格（cells[15] → g('.col-util')，固定顯示 1.00 元/KG）；補 _PAGE_VER 未同步 bug</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/29 v1.12.6</span>
+        <div class="log-dot"></div>
+        <span class="log-text">移除 composite-ingredients-debug 診斷 endpoint</span>
+      </div>
       <div class="log-item">
         <span class="log-date">6/26 v1.11.98</span>
         <div class="log-dot"></div>
