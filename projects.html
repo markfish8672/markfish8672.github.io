@@ -366,6 +366,31 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/30 v0.4.12～v0.4.15</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修復包裝紀錄 Excel 下載失敗（Content-Disposition 中文檔名未做 percent-encode 造成 500）；新增庫存期初建立（生果期初/催熟中期初/熟果期初，直接注入對應狀態）；包裝紀錄新增刪除功能（同步清除關聯扣庫記錄）；日報表 Excel 邊界全部歸零、資料列高改 61.5</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/30 v0.4.11</span>
+        <div class="log-dot"></div>
+        <span class="log-text">採後處理新增庫存管理功能：#48 / #60 兩種規格 × 生果庫存 / 催熟中 / 熟果庫存三態帳本；手動登錄（生果進貨/催熟入庫/催熟出庫，生果進貨/催熟入庫需填批號）；從已匯入的銷售訂單自動扣庫（未催熟→扣生果，其餘→扣熟果，防重複執行）；完整異動帳本視圖；採後處理 tab 拆成「包裝紀錄」/「庫存管理」sub-tabs</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/29 v0.4.5～v0.4.10</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「採後處理」角色與功能頁：匯入訂單總表 Excel 自動解析酪梨品項（依 unit 欄位分類袋裝/箱裝，排除「未催熟」，含半熟與無綴字）；品項合併加總；包裝時間（分鐘）輸入、重量自動換算（袋裝 1KG/箱裝 10.6KG）、工時成本設定（250 元/H）、人工成本/單位成本/KG 成本即時計算；歷史工作日選擇；日期欄；Excel 下載</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/29 v0.4.0～v0.4.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">標籤品名自動去除括號規格綴字（KG/G/公斤/公克/ML 等）；奇美尾數自動補印特殊標籤（155KG÷10=15 整箱+5KG 尾數）；預作調整（advance balance）納入標籤包數/張數計算；移除產品主檔「使用說明」欄位；標籤淨重 ≥1KG 改顯示 kg/包 單位；預覽固定正向顯示，180 度旋轉僅影響列印輸出</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/29 v0.3.91～v0.3.99</span>
+        <div class="log-dot"></div>
+        <span class="log-text">標籤列印大幅改版：改為依製令單選取工作日；使用說明改為依生產類別各別設定；label_settings 表持久化所有設定；佈局改版（左文右欄、絕對定位座標、須冷藏去框線、LOGO 留白區）；製造商/地址/電話/過敏原欄位可編輯；新增即時預覽面板（iframe 側欄，設定變動自動更新）；包數欄位 + 180 度旋轉 checkbox</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">6/29 v0.3.90</span>
         <div class="log-dot"></div>
         <span class="log-text">標籤列印內容物改用產品主檔「品項」欄位，移除多餘的獨立內容物欄位</span>
