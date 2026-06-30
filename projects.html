@@ -251,6 +251,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">6/30 v0.4.79</span>
+        <div class="log-dot"></div>
+        <span class="log-text">直營店損益報表（/finance/direct-pl）：依門市＋月份顯示 POS 營收、食材成本（AR）、其他成本、成本調減（行銷回補/報廢回補）、毛利、費用明細、淨利，含 Excel 匯出；廠商月結整合（/finance/ap/vendor-monthly）：同廠商央廚 AP ＋門市費用合併列示，一鍵全部標記已付</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/30 v0.4.78</span>
+        <div class="log-dot"></div>
+        <span class="log-text">固定費用範本（RecurringExpense）：設定後每月一鍵套用，自動產生入帳記錄；套用前檢查重複，已套用月份不重複建立</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">6/30 v0.4.77</span>
+        <div class="log-dot"></div>
+        <span class="log-text">費用 & 成本入帳功能：新增費用科目主檔（admin）含預設科目補建；入帳 CRUD（admin/accounting）支援直營店/央廚/總部三單位、費用/成本/成本調減三類型（含廠商連結）；成本調減科目包含行銷回補、報廢回補</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">6/29 v0.4.76</span>
         <div class="log-dot"></div>
         <span class="log-text">直營 POS 收入匯入：修正大型 CSV（3 萬列）無法上傳問題（改為瀏覽器端解析）；修正 POS 收入顯示為空（yearMonth 時區偏移）；系統時間全面改為台北時間 UTC+8（新增 datetime.ts 工具，更新 25 支檔案）；POS 匯入月份不符時改為確認對話框並自動切換月份；yearMonth 優先從檔名解析，避免跨日凌晨訂單誤判月份</span>
