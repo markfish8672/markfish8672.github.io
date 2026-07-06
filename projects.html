@@ -396,6 +396,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/6 v0.4.92</span>
+        <div class="log-dot"></div>
+        <span class="log-text">損益計算 PDF 改為後端 reportlab 生成（STSong-Light CID 字型，A4 橫向，損益欄紅/綠色、合計列），直接下載不再跳列印視窗；requirements.txt 補 reportlab 與 tzdata（Windows 自建伺服器相容性）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/6 v0.4.91</span>
+        <div class="log-dot"></div>
+        <span class="log-text">採後損益計算新增 Excel 與 PDF 下載按鈕；後端提取 _compute_pnl() 共用函式；Excel 含標頭/資料/合計列（損益欄紅/綠色）；PDF 透過 reportlab 後端生成</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/6 v0.4.68～v0.4.90</span>
+        <div class="log-dot"></div>
+        <span class="log-text">外箱標籤功能：外箱白名單管理（含每箱公斤設定）、80×60mm 五列標籤格式、內/外箱預覽切換；酪梨箱裝第三列自動解析顆數（如「48顆/每箱」）；白名單改 CONTAINS LIKE 模糊比對；品名自動去除重量規格括號、客戶名去除後綴括號；非奇美客戶改顯示包數/箱；單位換算修正（依 unit 欄 CASE WHEN）；過濾外購非生產品項；修正品名字串替換 bug；內包裝尾數重量顯示修正；列距可調整</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/3 v0.4.61～v0.4.67</span>
         <div class="log-dot"></div>
         <span class="log-text">採後損益收入欄加 Modal（顯示各 session 銷貨明細組成）；損益快照功能（儲存/查看/刪除計算結果，快照/計算兩種模式有視覺區分）；產品主檔新增內容物名稱欄位（標籤列印用）；標籤 API 改用 contents 欄位；包裝袋領用表 E 欄寬調整為 20、邊界清零；產品主檔 Excel 匯出/匯入含內容物名稱；修正熟果庫存出現負數（batch_totals 聚合 key 不含 qty_unit，數量統一換算成箱再驗證）</span>
