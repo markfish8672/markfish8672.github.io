@@ -401,6 +401,16 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/8 v0.6.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">填報離線模式（現場 WiFi/訊號不佳對策）：分類頁「下載離線包」一次抓五類待填項目存 localStorage，飛航模式下照常填報（開始/結束計時、首件末件、產量全寫本機），恢復網路後一鍵批次上傳（同品項接續附加生產次、筆數不符警告不擋、checklist 僅補空、total_qty 重算）；離線中斷生產次重開頁面可續填；新增 Service Worker（network-first 快取，斷網可重開頁面）與 /sw.js 路由</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/8 v0.5.0～v0.5.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">方案B UI 統一：CSS 變數系統、modal/按鈕樣式統一、Toast 通知取代部分 alert；產品主檔新增「標籤品名」欄位（Excel 匯出匯入同步），標籤列印標頭與品名優先採用、空白回退原品名；修正主檔匯入時既有品項的食品添加物被清空的 bug</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/7 v0.4.93～v0.4.97</span>
         <div class="log-dot"></div>
         <span class="log-text">採後處理 UX 優化：歷史記錄加月份篩選器（預設最新月份，清空顯示全部）、select 改以 optgroup 年月分組顯示；庫存管理字體放大（11→12/13px）；字體大小滑桿（標題列 A⊸A 滑桿，11–18px，localStorage 記憶偏好）；包裝紀錄新增生果（未催熟）訂單唯讀區塊（後端 raw_fruit 欄位）；數量格點擊開訂單明細 Modal（raw-order-lines 輕量 API、依 category 過濾、單顆顆數還原修正）；新增使用者手冊 PDF（reportlab＋微軟正黑體，14 頁 A4）</span>
