@@ -926,6 +926,16 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/8 V1.18.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">全站 API 加入 PIN/Token 認證：內部頁面（POS／後台／QR／報表）首次開啟輸入 PIN 即記住，線上點餐維持免登入；會員查詢匿名只回遮罩資料（王○明），下單勾「使用會員資料」由伺服器端帶入真實姓名地址，完整個資不經過匿名客戶端；匿名對既有會員只能補空欄位、不可覆寫（經獨立安全審查修正）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/8 V1.17.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">效能與交易一致性優化：所有金流寫入改用 D1 batch 原子交易（杜絕半寫入的空交易／掉品項）、結帳加冪等防護防重複交易；消除類別查詢 N+1、新增 4 條索引、日期查詢改 BETWEEN 走索引；會員清單分頁；HTML 頁面快取語意明確化（動態菜單頁 no-store）</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">6/17 V1.16.0</span>
         <div class="log-dot"></div>
         <span class="log-text">銷售明細報表全面重構：口味改為分行儲存（transaction_items 新增 category_name／is_flavor／parent_item_id）；報表改為 15 欄 Excel 格式（訂單編號 YYMMDD+###、餐點序號 01/01-1、商品類別、數量、單價、小計、訂單金額、收款、找零）；來源判斷新增「電話」（POS 臨櫃選外送）</span>
