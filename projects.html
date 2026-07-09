@@ -936,6 +936,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/9 V1.19.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">程式架構模組化：5,422 行單檔 index.js 拆分為 14 個 ES module（index 只留路由、lib 共用常數與工具、db 依領域拆五檔、pages 每頁一檔），純搬移零邏輯變更，wrangler 打包驗證通過；另修正外送單使用會員資料時，無地址會員造成欄位卡唯讀的問題</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/8 V1.18.1</span>
         <div class="log-dot"></div>
         <span class="log-text">全站 API 加入 PIN/Token 認證：內部頁面（POS／後台／QR／報表）首次開啟輸入 PIN 即記住，線上點餐維持免登入；會員查詢匿名只回遮罩資料（王○明），下單勾「使用會員資料」由伺服器端帶入真實姓名地址，完整個資不經過匿名客戶端；匿名對既有會員只能補空欄位、不可覆寫（經獨立安全審查修正）</span>
