@@ -401,6 +401,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/10 v0.6.1～v0.6.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">前端拆檔（index.html 拆出 static/app.js，改 __APP_VER__ 伺服器注入 cache-busting，並移除硬編碼版本檢查防無限重載）；JWT 滑動續期：token 使用超過 30 分鐘自動換發新 24h token（X-Refresh-Token header），持續操作不再被登出；標籤表新增「無訂單製令」區段（客戶欄顯示製令類別、同品號合併、自動扣除前期預作餘額、排除原件）；填報品項作業畫面常駐「目前階段」橫幅、生產看板卡片加工站色塊標籤（五階段五色）；內包與外箱標籤全面支援字距調整（pt，可負值，即時預覽）</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/8 v0.6.0</span>
         <div class="log-dot"></div>
         <span class="log-text">填報離線模式（現場 WiFi/訊號不佳對策）：分類頁「下載離線包」一次抓五類待填項目存 localStorage，飛航模式下照常填報（開始/結束計時、首件末件、產量全寫本機），恢復網路後一鍵批次上傳（同品項接續附加生產次、筆數不符警告不擋、checklist 僅補空、total_qty 重算）；離線中斷生產次重開頁面可續填；新增 Service Worker（network-first 快取，斷網可重開頁面）與 /sw.js 路由</span>
