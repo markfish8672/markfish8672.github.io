@@ -401,6 +401,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/13 v0.6.8～v0.6.34</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「列印管制表」功能（v0.6.8），並大量格式調整（flexbox 等高黏貼格、生產數量橫排 4 格格線、表頭改為原始紙本格式）；全域「管制表用標籤張數」欄位（預設 3），標籤總數與管制表列印均自動加總；製標欄顯示操作者姓名；標籤表一般品項改依品牌彙總（透過 quotation-web API 對應）；新增「訂單異動」頁籤——追加匯入改為以新取代舊，自動記錄品項增刪與數量前後對比，含日期選擇、客戶簡稱、捲軸、正負突顯（綠/紅）</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/10 v0.6.1～v0.6.7</span>
         <div class="log-dot"></div>
         <span class="log-text">前端拆檔（index.html 拆出 static/app.js，改 __APP_VER__ 伺服器注入 cache-busting，並移除硬編碼版本檢查防無限重載）；JWT 滑動續期：token 使用超過 30 分鐘自動換發新 24h token（X-Refresh-Token header），持續操作不再被登出；標籤表新增「無訂單製令」區段（客戶欄顯示製令類別、同品號合併、自動扣除前期預作餘額、排除原件）；填報品項作業畫面常駐「目前階段」橫幅、生產看板卡片加工站色塊標籤（五階段五色）；內包與外箱標籤全面支援字距調整（pt，可負值，即時預覽）</span>
@@ -700,6 +705,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">7/13 v1.14.7～v1.14.9</span>
+        <div class="log-dot"></div>
+        <span class="log-text">支援酪梨半月報價：原料成本表每月新增「上旬」「下旬」兩欄（預設收合，點「展開上旬/下旬」展開），報價區間 1～15 日優先抓上旬價、16 日後抓下旬價，均回落整月；Excel 匯入/匯出同步支援 YYYY-MM上/下 欄名；報價區間快速鍵移除「下下月」，改為「本月下旬」（16日～月底）與「下月上旬」（1日～15日）</span>
+      </div>
       <div class="log-item">
         <span class="log-date">7/9 v1.14.0～v1.14.1</span>
         <div class="log-dot"></div>
