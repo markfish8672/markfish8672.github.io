@@ -406,6 +406,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/15 v0.6.35～v0.6.47</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增角色權限矩陣（管理者可在 Admin 使用者頁查閱各角色預設權限）；新增個人權限覆蓋：每位使用者可獨立開關 11 項功能（⚙ 按鈕展開面板，Reset 可還原角色預設）；登入與 /api/me 均回傳有效權限物件，前端 nav 與編輯按鈕依實際權限顯示；外箱標籤管制表：新增管制表列印功能，預設張數 3（無 Sample）；修正外箱標籤 r3/r4 資料對調 bug（r3=包裝數量、r4=有效日期）；新增 startup migration 自動修正 DB 內 r3/r4 Y 位置補償值對調問題</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/13 v0.6.8～v0.6.34</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「列印管制表」功能（v0.6.8），並大量格式調整（flexbox 等高黏貼格、生產數量橫排 4 格格線、表頭改為原始紙本格式）；全域「管制表用標籤張數」欄位（預設 3），標籤總數與管制表列印均自動加總；製標欄顯示操作者姓名；標籤表一般品項改依品牌彙總（透過 quotation-web API 對應）；新增「訂單異動」頁籤——追加匯入改為以新取代舊，自動記錄品項增刪與數量前後對比，含日期選擇、客戶簡稱、捲軸、正負突顯（綠/紅）</span>
