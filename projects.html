@@ -406,6 +406,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/15 v0.6.48</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增 Line-Bot 內部查詢端點（API Key 保護）：近期生產場次概況、酪梨庫存彙總（生果/催熟中/熟果）、各批號剩餘量，供 LINE 智慧助理以自然語言查詢</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/15 v0.6.35～v0.6.47</span>
         <div class="log-dot"></div>
         <span class="log-text">新增角色權限矩陣（管理者可在 Admin 使用者頁查閱各角色預設權限）；新增個人權限覆蓋：每位使用者可獨立開關 11 項功能（⚙ 按鈕展開面板，Reset 可還原角色預設）；登入與 /api/me 均回傳有效權限物件，前端 nav 與編輯按鈕依實際權限顯示；外箱標籤管制表：新增管制表列印功能，預設張數 3（無 Sample）；修正外箱標籤 r3/r4 資料對調 bug（r3=包裝數量、r4=有效日期）；新增 startup migration 自動修正 DB 內 r3/r4 Y 位置補償值對調問題</span>
@@ -1481,6 +1486,53 @@
       <a class="proj-link live" href="https://lunch-order.markfish8672.workers.dev" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         上線版本
+      </a>
+    </div>
+  </div>
+
+  <!-- LINE 智慧助理 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">💬</div>
+      <div class="project-title-block">
+        <div class="project-title">LINE 智慧助理（Line-Bot）</div>
+        <div class="project-desc">公司內部 LINE 機器人。整合 Claude AI 對話、午餐訂餐、審核流程推播通知（群組 @mention），並支援白名單用戶以自然語言查詢報價系統與生管系統的即時資料（品牌、品號、步留率、酪梨庫存、生產場次）。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">Claude API</span>
+      <span class="tag">LINE Messaging API</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">7/15</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增內部系統查詢（Claude Tool Use）：白名單用戶可用自然語言查 quotation-web（品牌主檔/品號/步留率/混合BOM/原料對應）與 production-web（生產場次/酪梨庫存）即時資料；群組訊息改為只在 Bot 被 @tag 時回應，日常對話不觸發；恢復 1 對 1 智慧對話功能</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/12～7/14</span>
+        <div class="log-dot"></div>
+        <span class="log-text">建立審核流程推播通知：/internal/push-mention 端點供 quotation-web 呼叫，以 TextMessageV2 + MentionSubstitutionObject 在群組正確 @mention 主管/採購/客服；新增角色 User ID 設定（主管/採購/CS 分流通知）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/10</span>
+        <div class="log-dot"></div>
+        <span class="log-text">整合午餐訂餐：自然語言點餐（Claude 解析樓層/姓名/餐點）串接午餐訂餐系統 API；AI 客服對話與轉真人客服模式</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/line-bot" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
       </a>
     </div>
   </div>
