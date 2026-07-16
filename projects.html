@@ -406,6 +406,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/16 v0.6.49～v0.6.57</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增奇美週訂單轉檔：傳真照片上傳 → Gemini 視覺辨識全部品項/日期/數量（含手寫更正判讀）→ 逐列核對編輯 → 一鍵下載與原格式相同的 Excel（含公式與彙總區塊），預計生產日自動帶入交貨日前一天；新增自訂查詢端點——管理區定義唯讀 SQL 即自動成為 /api/internal/query/* API（金鑰驗證、僅 SELECT、200 筆上限），並加內部端點一覽頁（admin）；客戶品號對照新增「印於標籤」開關；外箱標籤加流水號（1~3 張空白、第 4 張起 3 位數，無 Sample 張）；新增外箱品項覆寫表（客戶＋品號 → 每箱公斤數/外箱品名，支援 8 包裝與「進口酪梨#48」等特例）；網路狀態指示燈改權限控管</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/15 v0.6.48</span>
         <div class="log-dot"></div>
         <span class="log-text">新增 Line-Bot 內部查詢端點（API Key 保護）：近期生產場次概況、酪梨庫存彙總（生果/催熟中/熟果）、各批號剩餘量，供 LINE 智慧助理以自然語言查詢</span>
@@ -721,6 +726,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/16 v1.14.32～v1.14.35</span>
+        <div class="log-dot"></div>
+        <span class="log-text">管理區新增內部查詢端點一覽（僅 admin），修復新版 Starlette 端點清單回空問題；原料成本審核修正：送審前自動合併草稿、草稿改只存異動儲存格（修復「存草稿後送審漏件」）；通知維護完成的異動品項改在送審/儲存當下記錄</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/15 v1.14.29～v1.14.31</span>
+        <div class="log-dot"></div>
+        <span class="log-text">使用者管理頁加入角色權限矩陣＋個人權限覆蓋（含 product_edit 功能開關）；通知維護完成自動列出修改品項</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/14 v1.14.13～v1.14.28</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增銷貨單統計報表（ERP Tab）：上傳 ERP Excel 自動彙整，BY 品牌 × 日期/週次樞紐，支援 KG 與包數單位自動換算（依品號主檔為準，找不到顯示 0 不猜測），日期可點擊檢視當日明細並刪除，已上傳資料可逐日或整月刪除；Excel 下載含雙列合併表頭與凍結窗格，報表日期/星期欄 sticky 凍結；權限開放 admin/supervisor/cs；品號資料庫開放客服編輯；審核流程修正：送審不再覆蓋舊 pending 件（允許多份同時等審）、通知路由改 approve→客服/reject→送審人</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/13 v1.14.7～v1.14.9</span>
         <div class="log-dot"></div>
         <span class="log-text">支援酪梨半月報價：原料成本表每月新增「上旬」「下旬」兩欄（預設收合，點「展開上旬/下旬」展開），報價區間 1～15 日優先抓上旬價、16 日後抓下旬價，均回落整月；Excel 匯入/匯出同步支援 YYYY-MM上/下 欄名；報價區間快速鍵移除「下下月」，改為「本月下旬」（16日～月底）與「下月上旬」（1日～15日）</span>
@@ -759,11 +779,6 @@
         <span class="log-date">6/29 v1.12.6</span>
         <div class="log-dot"></div>
         <span class="log-text">移除 composite-ingredients-debug 診斷 endpoint</span>
-      </div>
-      <div class="log-item">
-        <span class="log-date">7/14 v1.14.28</span>
-        <div class="log-dot"></div>
-        <span class="log-text">新增銷貨單統計報表（ERP Tab）：上傳 ERP Excel 自動彙整，BY 品牌 × 日期/週次樞紐，支援 KG 與包數單位自動換算，日期可點擊檢視當日明細並刪除，月份摘要管理舊資料；Excel 下載含雙列合併表頭與凍結窗格；報表日期欄與星期欄 CSS sticky 凍結（捲動不跑位）；權限開放 admin / supervisor / cs</span>
       </div>
       <div class="log-item">
         <span class="log-date">6/26 v1.11.98</span>
