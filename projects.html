@@ -406,6 +406,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/17 v0.6.58～v0.6.66</span>
+        <div class="log-dot"></div>
+        <span class="log-text">管制表表頭改「標籤列印管制表」；追加匯入改以備註「YYYYMMDD到貨」分組取代（修復週四兩張訂單總表互蓋客戶資料）；標籤字體可設定（預設微軟正黑體）＋各文字區塊粗體開關、內文冒號改半形；訂單異動新增「依品項」彙總檢視（跨門店合計數量變動）；標籤表新增品牌分列例外設定（例外品牌不合併、以客戶簡稱分列）；新增 /api/internal/chimei/import-image 內部端點——外部通路（LINE 等）傳訂單影像即自動 Gemini 辨識建立奇美訂單草稿待核對</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/16 v0.6.49～v0.6.57</span>
         <div class="log-dot"></div>
         <span class="log-text">新增奇美週訂單轉檔：傳真照片上傳 → Gemini 視覺辨識全部品項/日期/數量（含手寫更正判讀）→ 逐列核對編輯 → 一鍵下載與原格式相同的 Excel（含公式與彙總區塊），預計生產日自動帶入交貨日前一天；新增自訂查詢端點——管理區定義唯讀 SQL 即自動成為 /api/internal/query/* API（金鑰驗證、僅 SELECT、200 筆上限），並加內部端點一覽頁（admin）；客戶品號對照新增「印於標籤」開關；外箱標籤加流水號（1~3 張空白、第 4 張起 3 位數，無 Sample 張）；新增外箱品項覆寫表（客戶＋品號 → 每箱公斤數/外箱品名，支援 8 包裝與「進口酪梨#48」等特例）；網路狀態指示燈改權限控管</span>
@@ -1527,6 +1532,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">7/17</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增訂單影像自動匯入：白名單用戶私訊傳圖 → 自動抓取影像轉發生管系統 Gemini 辨識 → 建立奇美訂單草稿並推播結果（先回「辨識中」、背景處理完成後推播；POC 實測 36 列全對）</span>
+      </div>
       <div class="log-item">
         <span class="log-date">7/15</span>
         <div class="log-dot"></div>
