@@ -416,6 +416,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/20 v0.6.67～v0.6.77</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正標籤保存期限天數改為生產日不計（shelf_life_days－1）；混合品項標籤：內容物名稱與產地逗號對應並允許換行，品主檔新增第三分頁標籤預覽 Modal；外箱標籤三卡合一：白名單／品項覆寫／版型設定整合為 BY 客戶可展開清單，每位客戶各有獨立版型 Modal（5 列＋流水號，各自設定顯示/XY位置/字型/粗體）含即時 76% 縮放預覽，並將流水號位置設定從全域移至 per-customer；標籤列表與管制表排序改為依品號；內包裝與外箱標籤表新增欄位排序鍵（品號/品名/客戶），排序後保留 checkbox 選取狀態</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/17 v0.6.58～v0.6.66</span>
         <div class="log-dot"></div>
         <span class="log-text">管制表表頭改「標籤列印管制表」；追加匯入改以備註「YYYYMMDD到貨」分組取代（修復週四兩張訂單總表互蓋客戶資料）；標籤字體可設定（預設微軟正黑體）＋各文字區塊粗體開關、內文冒號改半形；訂單異動新增「依品項」彙總檢視（跨門店合計數量變動）；標籤表新增品牌分列例外設定（例外品牌不合併、以客戶簡稱分列）；新增 /api/internal/chimei/import-image 內部端點——外部通路（LINE 等）傳訂單影像即自動 Gemini 辨識建立奇美訂單草稿待核對</span>
