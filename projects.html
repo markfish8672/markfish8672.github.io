@@ -421,6 +421,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/23 v0.6.92</span>
+        <div class="log-dot"></div>
+        <span class="log-text">填報流程簡化：Step 1 啟動前檢查預設所有項目為 OK（可手動改 NG），下一步立即可按；Step 5 首件＋末件檢查合併為一個頁面，預設皆 OK，一鍵下一步完成並送出兩筆紀錄，移除原本的逐項強制確認流程</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/22 v0.6.86～v0.6.91</span>
         <div class="log-dot"></div>
         <span class="log-text">品項主檔P3新增「包裝日期」Checkbox（原件類別專用，勾選後標籤以包裝日期取代保存期限＋有效日期）；新增「N包/箱」per-item Checkbox，外箱標籤可切換顯示包裝數量；外箱模板查詢改用子字串比對修正客戶名稱無法匹配問題；管制表簽名欄格線改用 table/border-collapse 修正列印時格子消失；原料需求總表 D計品項保質期改直接顯示 N+1 數字（Excel 同步）；內包裝日報表有效日期修正 D計品項加1天</span>
@@ -760,6 +765,16 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">7/22～7/23 v1.14.40～v1.14.43</span>
+        <div class="log-dot"></div>
+        <span class="log-text">外購品 Excel 匯入修正：自動偵測 header 列位置（相容前置空白列），欄名比對移除內部空白（相容「品　　名」格式），補加 xlrd>=2.0.1 依賴修正 Railway .xls 上傳失敗；新增外購品價格快照——每次上傳自動從檔名解析月份存快照，外購品頁下方新增月份×品名交叉表（漲▲紅/跌▼綠）；新增門店叫貨頻率分析——銷貨單報表下方可選品牌+期間，交叉表顯示每家門店每月叫貨天數、平均叫貨間隔、距上次叫貨天數（超30天標紅）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/20 v1.14.36～v1.14.39</span>
+        <div class="log-dot"></div>
+        <span class="log-text">銷貨單上傳卡住與金額不見修正（強化數字解析與前端錯誤處理）；銷貨單金額 0 修正（小計公式 fallback 改用 qty×unit_price）；銷貨單統計報表防誤刪（需按「編輯」才顯示刪除按鈕）；新增「修清原料試算」工具頁（工耗量測）</span>
+      </div>
       <div class="log-item">
         <span class="log-date">7/16 v1.14.32～v1.14.35</span>
         <div class="log-dot"></div>
@@ -1311,6 +1326,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">7/23 v0.1.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正下載錄音後重新上傳只得最後兩句的問題：MediaRecorder 產生的 webm 缺少 SeekHead 與 Duration，Gemini 重傳時 fallback 只讀最後一個 Cluster；改為上傳後先用 ffmpeg copy-remux 補齊標頭再送 Gemini，不重新編碼、ffmpeg 不可用時自動 fallback 原始格式</span>
+      </div>
       <div class="log-item">
         <span class="log-date">7/9 v0.1.0</span>
         <div class="log-dot"></div>
