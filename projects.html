@@ -256,6 +256,11 @@
         <span class="log-text">出貨單編輯加入品項新增/刪除（原本只能改既有品項數量/單價）；訂購單/出貨單詳情頁新增「最後編輯」欄位（姓名+時間）；順帶修正資料庫從未被Prisma Migrate正式追蹤的問題（11個既有migration補做baseline）跟railway.json/railway.toml雙設定衝突（保留含migrate deploy的railway.json，刪除舊的toml）；出貨單列印品項名稱字體從12px放大到16px、拿掉數量後面的單位小灰字</span>
       </div>
       <div class="log-item">
+        <span class="log-date">8/2 v0.8.3～v0.8.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">盤點模組擴充：會計角色可建立直營店／總部盤點單並在後台查看；盤點單填寫頁新增可編輯單位成本欄位（admin／會計可直接輸入，系統即時計算庫存金額）；商品主檔加入「盤點計算方式」（數量／重量），重量品項在盤點表允許輸入小數並顯示標記</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/20 v0.7.2～v0.7.3</span>
         <div class="log-dot"></div>
         <span class="log-text">新增庫存盤點模組（第一版）：商品主檔加中廚／總部／門市盤點勾選；桌機端 /inventory/counts 支援 admin／會計／中廚角色，可建立盤點單、填寫實際數量、確認完成，系統自動帶入單位成本（CK/HQ 用最後進價，直營店用直營售價）；手機版 /store/inventory 供直營店登入填寫與確認；修正刪除盤點單的外鍵約束錯誤（先刪子項目再刪主單）</span>
@@ -374,6 +379,11 @@
         <span class="log-date">6/25 V0.3.0</span>
         <div class="log-dot"></div>
         <span class="log-text">商品主檔新增組入數欄位（預設 1），訂貨需為倍數；列表顯示「N 入」badge；Excel 匯入/匯出同步支援</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/1 V0.8.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">出貨單格位改用倉位分組、每列 4 欄，全空倉位不顯示，header 壓縮為單列；訂購單/出貨單新增通路 radio（直營/加盟）與客戶下拉聯動篩選；價格維護新增通路 checkbox（直營/加盟/通用）篩選品項</span>
       </div>
       <div class="log-item">
         <span class="log-date">6/25 V0.2.9</span>
