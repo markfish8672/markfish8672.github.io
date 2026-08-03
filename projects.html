@@ -251,6 +251,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">8/3～8/4 v0.8.5～v0.8.9</span>
+        <div class="log-dot"></div>
+        <span class="log-text">出貨單編輯加入品項新增/刪除（原本只能改既有品項數量/單價）；訂購單/出貨單詳情頁新增「最後編輯」欄位（姓名+時間）；順帶修正資料庫從未被Prisma Migrate正式追蹤的問題（11個既有migration補做baseline）跟railway.json/railway.toml雙設定衝突（保留含migrate deploy的railway.json，刪除舊的toml）；出貨單列印品項名稱字體從12px放大到16px、拿掉數量後面的單位小灰字</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/20 v0.7.2～v0.7.3</span>
         <div class="log-dot"></div>
         <span class="log-text">新增庫存盤點模組（第一版）：商品主檔加中廚／總部／門市盤點勾選；桌機端 /inventory/counts 支援 admin／會計／中廚角色，可建立盤點單、填寫實際數量、確認完成，系統自動帶入單位成本（CK/HQ 用最後進價，直營店用直營售價）；手機版 /store/inventory 供直營店登入填寫與確認；修正刪除盤點單的外鍵約束錯誤（先刪子項目再刪主單）</span>
@@ -420,6 +425,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">8/3～8/4 v0.7.50～v0.7.53</span>
+        <div class="log-dot"></div>
+        <span class="log-text">外箱標籤預作尾數改逐到貨日各自算箱數/尾數（不再先加總，避免不同批次尾數併成一張）；修正「補登製令項目」沒有出貨日期欄位，導致預作排除邏輯失效重複疊加的 bug（改用數量比對排除）；內包裝標籤新增客戶指定產地覆寫（客戶貨號對照 modal 加產地欄位），同品號不同客戶要求不同產地時自動拆成不同標籤行分別統計；產線網路測試工具地圖標記同時顯示編號＋平均延遲、新增下載標註圖（canvas 合成 PNG）、匯出清單加 # 編號</span>
+      </div>
       <div class="log-item">
         <span class="log-date">7/24 v0.6.98～v0.7.1</span>
         <div class="log-dot"></div>
@@ -775,6 +785,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">8/3 v1.14.54～v1.14.59</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正原料成本審核LINE通知直接列出送審整批品項（例如88筆），跟審核詳情頁「只顯示真正有異動」邏輯不一致的問題，改用同一套比對邏輯；新增Mail訂單抓取工具：IMAP直連Mail2000（不透過Outlook），依寄件人白名單抓Excel/圖片附件存檔，供客服下載後手動上傳訂單系統；新增LINE群組訂單收單：客戶在白名單群組tag機器人開始收單，時間窗內（分鐘數可自行調整）的文字/圖片/檔案訊息由line-bot轉發存進同一頁面，跟Mail共用同一套審核UI</span>
+      </div>
       <div class="log-item">
         <span class="log-date">7/23～7/24 v1.14.44～v1.14.49</span>
         <div class="log-dot"></div>
@@ -1597,6 +1612,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">8/3</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增LINE群組tag收單：白名單群組（quotation-web管理）被@tag時開一個收單批次，時間窗內該群組的文字/圖片/檔案訊息即時轉發存進quotation-web；新增FileMessageContent handler（原本只接得到圖片，PDF/Excel這類「檔案」訊息現在也接得到）；新增診斷指令——tag機器人說「群組ID」直接回傳該群組ID，方便設定白名單不用去挖Railway log</span>
+      </div>
       <div class="log-item">
         <span class="log-date">7/17</span>
         <div class="log-dot"></div>
