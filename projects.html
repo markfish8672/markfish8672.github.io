@@ -436,6 +436,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">8/5～8/7 v0.7.54～v0.7.84</span>
+        <div class="log-dot"></div>
+        <span class="log-text">ERP製令單新增追加匯入（8/7再加碼：既有製令號碼改量時直接更新而非略過，不再略過不處理）；填報新增暫停功能（休息時間不計工時）、中途加人／減人改分段記錄；機切工站改用「完成此製令」按鈕結束（不秤重）；品項主檔新增「合併群組」支援跨規格合併生產、「不合併」開關強制排除、前處理／機切／清洗截切各自可設免站別；新增製令單/訂購單勾稽看板（含奇美週訂單預作對應）；標籤原件白名單、客戶貨號對照與產地覆寫改子字串模糊比對（品牌名可涵蓋所有分店）；外購品項清單改從 quotation-web 同步，取代不可靠的品名字首比對；生產儀表板/日報表逐段呈現暫停恢復紀錄，避免看不出中途休息過；修正多筆既有 bug（內包裝標籤張數誤把 KG 當包數加總、工站彙總報表漏算機切耗時、追加上傳訂單整批洗掉未異動品項等）</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/3～8/4 v0.7.50～v0.7.53</span>
         <div class="log-dot"></div>
         <span class="log-text">外箱標籤預作尾數改逐到貨日各自算箱數/尾數（不再先加總，避免不同批次尾數併成一張）；修正「補登製令項目」沒有出貨日期欄位，導致預作排除邏輯失效重複疊加的 bug（改用數量比對排除）；內包裝標籤新增客戶指定產地覆寫（客戶貨號對照 modal 加產地欄位），同品號不同客戶要求不同產地時自動拆成不同標籤行分別統計；產線網路測試工具地圖標記同時顯示編號＋平均延遲、新增下載標註圖（canvas 合成 PNG）、匯出清單加 # 編號</span>
@@ -795,6 +800,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">8/4～8/7 v1.14.60～v1.14.72</span>
+        <div class="log-dot"></div>
+        <span class="log-text">Mail訂單抓取加啟用/停用開關、失敗通知開關、可調整抓信天數，架構改由內網代理機器連Mail2000（quotation-web不再直接持有信箱密碼）、「立即抓信」改觸發旗標＋輪詢；訂單抓取頁改雙欄排版（左Mail右LINE），長列表加捲軸；訂單上傳時檢查客戶代號是否已建品牌主檔，未建立跳警示提醒（避免銷貨單統計報表因對不到而整批消失卻沒人發現）；新增「通知生產」功能，客服可請生產提供新品步留/人工成本（LINE群組mention，跟既有通知採購同一套架構）；新增自助修改密碼功能（原本系統完全沒有改密碼的路徑）；原料成本頁加搜尋品名格子</span>
+      </div>
       <div class="log-item">
         <span class="log-date">8/3 v1.14.54～v1.14.59</span>
         <div class="log-dot"></div>
@@ -1367,6 +1377,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">7/29～8/7 v0.1.8～v0.1.22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">AI自動整理會議紀錄改預設關閉（省token成本），逐字稿照樣產生供貼到 NotebookLM 另外整理；出席人員從單一文字欄位改成姓/名/職稱結構化多列表單，並可存成多份具名清單跨裝置套用；修復卡在「片段上傳中」的孤兒會議點不進去的問題；逐字稿AI幻覺清洗機制歷經多輪修正——從跨多行整句反覆偵測、到時間戳格式偶爾漏印左括號導致偵測失效、到8/5發現Gemini對聽不懂的台語會自己編中文字硬翻並改prompt明確禁止、再到8/7新增單行異常過長偵測（攔截整段重複＋離題內容塞進同一行的新型幻覺，例如幻覺出跟會議完全無關的內容）</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">7/23 v0.1.7</span>
         <div class="log-dot"></div>
         <span class="log-text">修正下載錄音後重新上傳只得最後兩句的問題：MediaRecorder 產生的 webm 缺少 SeekHead 與 Duration，Gemini 重傳時 fallback 只讀最後一個 Cluster；改為上傳後先用 ffmpeg copy-remux 補齊標頭再送 Gemini，不重新編碼、ffmpeg 不可用時自動 fallback 原始格式</span>
@@ -1622,6 +1637,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">8/7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">push-mention 新增 production target，支援 quotation-web 新的「通知生產」功能，客服請生產提供新品步留/人工成本時發送LINE群組mention（跟既有procurement/cs/supervisor三種通知對象同一套架構）</span>
+      </div>
       <div class="log-item">
         <span class="log-date">8/3</span>
         <div class="log-dot"></div>
