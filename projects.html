@@ -251,6 +251,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">8/13 v0.9.7～v0.9.8</span>
+        <div class="log-dot"></div>
+        <span class="log-text">央廚/總部P&amp;L的COGS改用盤點實際耗用金額（期初已確認盤點+當月進貨-期末已確認盤點），沒有兩期已確認盤點單時退回進貨基礎估算並在畫面標示警示；新增BOM配方表＋輕量製令規劃單模組（成品↔原料配方換算原料需求與預估成本，製令為純規劃單不即時扣庫存，完成後手動連結生產入庫單），生產入庫單成本單價預設值改優先採用BOM試算成本</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/5 v0.9.2</span>
         <div class="log-dot"></div>
         <span class="log-text">品項主檔新增「採購歸屬」欄位（中廚採購／門市採購，可複選，共用品項兩者都勾），供未來採購單分流使用；門市盤點手機 UI 三項優化：操作列（暫存／完成盤點）改定位在底部導覽列上方（不再蓋住按鈕）、修正 iPhone safe-area 底部留空、加入字體大中小切換按鈕（localStorage 記憶）；門市盤點改為類別分頁，每個 tab 顯示已填／總數進度，全部填完標示綠色，告別長頁滑動</span>
@@ -450,6 +455,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">8/12～8/13 v0.7.87～v0.7.96</span>
+        <div class="log-dot"></div>
+        <span class="log-text">奇美轉檔新增辨識結果覆核機制：規則檢查（交貨日期序、料號位數）＋Gemini同模型覆核＋Claude獨立辨識交叉比對，可疑列在核對畫面標紅並列出建議覆核清單，儲存後標記跟著訂單一起存檔，避免使用者忘記還有列沒覆核；修正過程中一路踩到的Claude API相容性問題（temperature參數已棄用、回應內容區塊解析、extended thinking把token budget耗光導致沒輸出）；生產填報頁新增「長按頂部標題解除全螢幕鎖定」的管理/測試逃生口</span>
+      </div>
       <div class="log-item">
         <span class="log-date">8/5～8/7 v0.7.54～v0.7.84</span>
         <div class="log-dot"></div>
