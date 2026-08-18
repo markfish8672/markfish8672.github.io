@@ -456,6 +456,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">8/18 v0.9.10～v0.9.19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「生產看板」卡片式精簡看板，讓生管快速掃視目前生產中品項（工站配色徽章、進度條、每30秒自動更新、字體大小可調）；填報流程修正結束計時畫面缺規格、Step2/3補返回鍵、完成品項後返回看板改回上次類別清單；外箱標籤修正「件」單位訂單跳過KG換算算錯箱數的bug、新增每箱顆數覆寫欄位取代不可靠的品名字串猜測；「標記預作」功能修正奇美轉檔OCR年份誤判混進候選清單、改成一筆製令可拆給多筆訂單品項/客戶欄位（拿掉DB層UNIQUE限制）；修正預作勾稽與原料需求表比對邏輯只看工作日生產日、沒看訂單真實到貨日的落差，兩處算法統一改用訂單備註欄解析出的真實到貨日</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/12～8/13 v0.7.87～v0.7.96</span>
         <div class="log-dot"></div>
         <span class="log-text">奇美轉檔新增辨識結果覆核機制：規則檢查（交貨日期序、料號位數）＋Gemini同模型覆核＋Claude獨立辨識交叉比對，可疑列在核對畫面標紅並列出建議覆核清單，儲存後標記跟著訂單一起存檔，避免使用者忘記還有列沒覆核；修正過程中一路踩到的Claude API相容性問題（temperature參數已棄用、回應內容區塊解析、extended thinking把token budget耗光導致沒輸出）；生產填報頁新增「長按頂部標題解除全螢幕鎖定」的管理/測試逃生口</span>
