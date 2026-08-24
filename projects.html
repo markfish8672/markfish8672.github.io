@@ -476,6 +476,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">8/24 v0.9.26～v0.9.30</span>
+        <div class="log-dot"></div>
+        <span class="log-text">生產看板加類別篩選按鈕與鍵盤快捷鍵（0=全部，1～5對應前處理/機切/清洗/內包裝/原件）；倉庫作業加「今天/明天」日期快選、清單改直向捲軸並固定表頭；倉庫作業待驗收清單改成預設只顯示近期區間（前3天～後14天，跟代理機器同步視窗一致），過磅資料查詢改用IN條件取代整表撈取，避免歷史資料累積後拖慢畫面；採後庫存改用SQL GROUP BY在資料庫端彙總取代整表逐筆迴圈加總，感測器讀值加30天自動清除；修正生產儀表板/看板漏套用品項主檔「免前處理/免機切/免清洗」的過濾邏輯，導致已設定工站免除的品項仍會掛著顯示未完成</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/21 v0.9.25</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正填報暫停功能兩個問題：按暫停/恢復呼叫後端API沒有錯誤處理，網路一抖動整個流程就中斷、畫面看起來像沒按到；多品項看板畫面的計時器沒有理會暫停狀態，暫停中的品項時間照樣跳動也沒有「已暫停」標示，跟單品項畫面（會凍結並變綠色按鈕）行為不一致</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/20 v0.9.20～v0.9.24</span>
+        <div class="log-dot"></div>
+        <span class="log-text">填報本次產量輸入框步進改為整數；新增「帳號綁定工站」——前處理+機切合併為一組（現場同一人操作），清洗截切/內包裝/原件各自獨立，登入後單一站別帳號直接跳過選類別畫面；新增「倉庫作業」分頁取代舊系統OurMartCheck.exe的倉管驗收作業，內網代理機器定期把ERP待驗收清單推進來，倉管在畫面上填過磅重量（抽樣最多10筆估算總重）；跟使用者確認過磅結果不需要寫回ERP後，拿掉原本沒把握正確的寫回SQL，改為對ERP資料庫只讀不寫；新增「倉庫」角色，登入直接進倉庫作業分頁</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/18 v0.9.10～v0.9.19</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「生產看板」卡片式精簡看板，讓生管快速掃視目前生產中品項（工站配色徽章、進度條、每30秒自動更新、字體大小可調）；填報流程修正結束計時畫面缺規格、Step2/3補返回鍵、完成品項後返回看板改回上次類別清單；外箱標籤修正「件」單位訂單跳過KG換算算錯箱數的bug、新增每箱顆數覆寫欄位取代不可靠的品名字串猜測；「標記預作」功能修正奇美轉檔OCR年份誤判混進候選清單、改成一筆製令可拆給多筆訂單品項/客戶欄位（拿掉DB層UNIQUE限制）；修正預作勾稽與原料需求表比對邏輯只看工作日生產日、沒看訂單真實到貨日的落差，兩處算法統一改用訂單備註欄解析出的真實到貨日</span>
@@ -850,6 +865,41 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">8/24 v1.15.10～v1.15.12</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正approval_requests／line_intake_items等表的整表撈取效能問題——報價範本列表、審核歷史列表、確認報價的重複記錄檢查都改用SQL端運算取代整表撈進Python比對，line_intake加保留天數清除機制；審核頁面手機版優化，待審核卡片與已完成列表改可換行堆疊，修好退回原因文字溢出卡片邊界不換行的問題；手機直立版左側NAV改成側滑選單，不再固定佔掉220px寬度</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/20～8/21 v1.15.3～v1.15.9</span>
+        <div class="log-dot"></div>
+        <span class="log-text">步留＋人工大幅擴充：新增計算月份/使用客戶下拉篩選＋只顯示差異提醒、月品規人工與YTD品規人工欄位＋來源明細Modal、使用客戶拆成銷貨客戶/報價客戶並排除重疊、銷貨客戶改以品牌顯示（併門店，標註涵蓋門店數）、搜尋框加排除語法（輸入-關鍵字反向隱藏品項）；修正外購品手動新增/編輯/刪除品項沒有同步寫入當月價格歷史快照的問題；報價單加外購品項時改成即時重抓最新價格，不再用開頁面當下的舊快取</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/17 v1.15.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">酪梨批次銷貨收入回推新增分攤方式切換——先進先出／比例分攤</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/14 v1.14.97～v1.15.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料成本「+新增原料」改走送審流程，修正LINE通知會漏掉新品項的問題；沒有真實價格異動時擋下送審，不浪費LINE通知額度；混合商品拆料配方（比例/步留/人工成本）的所有權搬到production-web生管系統維護，quotation-web算報價時即時查對方API（含短暫記憶體快取），新增原料現價查詢端點供對方混合商品配方頁參考</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/12 v1.14.89～v1.14.96</span>
+        <div class="log-dot"></div>
+        <span class="log-text">通知採購/生產加上回覆期限；酪梨批次銷貨收入回推持續迭代：加選填的進貨明細表輸入、旋即改為必填、修正批號完整性檢查None跟字串比較會出錯的bug、排序改以進貨明細表列順序為主（遠到近）、歷史紀錄加刪除功能、修正下載Excel排序跟畫面不一致、不在進貨明細表裡的批號不列出</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/11 v1.14.81～v1.14.88</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增酪梨批次銷貨收入回推功能——上傳ERP三份匯出檔，自動依批號血緣追溯鏈（到貨批次→催熟令→分裝令→成品）FIFO消耗銷貨、依比例分攤收入回到貨批次，供貼進淨利Excel；隨即迭代成期間區間選擇器（加上月/本月快捷鍵）與完整路徑明細表呈現；原料成本送審異動比對、通知主管的異動清單都改成一律查資料庫真實值，避免用舊快取誤判；月份報價彙整、報價單計算、報價確認頁三處Excel下載都改成帶公式輸出</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/10 v1.14.73～v1.14.80</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正Mail/LINE抓件下載中文檔名編碼失敗的問題；Mail附件與LINE收單（含純文字訊息）都新增批次下載ZIP，並支援「只下載尚未下載過的」一鍵功能，客服不用逐個點；銷貨單統計報表上傳紀錄改按月折頁，預設只展開當月；訂單抓取頁改走動態路由+no-cache header，避免瀏覽器快取到改版前頁面；Mail訂單抓取加信件保留天數設定，超過範圍的舊信件（含附件）自動清除</span>
+      </div>
       <div class="log-item">
         <span class="log-date">8/4～8/7 v1.14.60～v1.14.72</span>
         <div class="log-dot"></div>
