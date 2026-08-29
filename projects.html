@@ -251,6 +251,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">8/29 v0.9.25</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正主管（supervisor）角色實際可操作的按鈕與操作入口（isAdmin/canEdit/canManage 等頁面內部判斷全面補齊 supervisor），共涵蓋品項主檔新增/編輯/刪除、訂單操作、出貨單編輯、採購/生產取消確認、盤點選擇單位等；修正訂購單同品項重複下單時出貨單應合計數量的問題（轉出貨前先 merge 同 productId，明細頁與列印頁同步合計顯示）</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/18 v0.9.23</span>
         <div class="log-dot"></div>
         <span class="log-text">商品主檔採購歸屬新增「總部採購」選項（原有中廚採購／門市採購）；修正 Railway 啟動指令改用 prisma db push 自動同步 DB schema，解決每次加新欄位需手動補 ALTER TABLE 的問題</span>
