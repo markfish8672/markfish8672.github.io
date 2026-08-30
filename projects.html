@@ -251,6 +251,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">8/30 v0.9.26</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增盤點報表頁面：盤點列表的已確認盤點單增加「報表」連結；報表顯示期初庫存、本期進貨、本期出貨、理論庫存、實際盤點、盤差與盤差金額；中廚/總部使用 StockMovement 計算理論庫存，直營店使用出貨單計算進貨量；盤差正/負以綠/紅標示，含列印功能；修正編輯訂單時加盟店 selectedCustomerType 未正確初始化導致組入數限制誤觸發</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/29 v0.9.25</span>
         <div class="log-dot"></div>
         <span class="log-text">修正主管（supervisor）角色實際可操作的按鈕與操作入口（isAdmin/canEdit/canManage 等頁面內部判斷全面補齊 supervisor），共涵蓋品項主檔新增/編輯/刪除、訂單操作、出貨單編輯、採購/生產取消確認、盤點選擇單位等；修正訂購單同品項重複下單時出貨單應合計數量的問題（轉出貨前先 merge 同 productId，明細頁與列印頁同步合計顯示）；修正 mergeOrderItems 型別錯誤（移除無效 Decimal import，改用 number 型別）</span>
