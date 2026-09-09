@@ -507,6 +507,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">9/9 v0.9.85～v0.9.90</span>
+        <div class="log-dot"></div>
+        <span class="log-text">外箱標籤客戶模板擴充：R6 改「到貨日期」（自動從訂單備註解析）、新增 R7／R8 客戶自由文字（公司全名／地址）、R9 承接外箱貼專用；新增「客戶指定原料提醒」——某客戶某品項要用不一樣的原料時，前處理／機切／清洗填報卡與紙本備註掛黃框，並依訂單量在填報與日報表拆成獨立列（現場分開切、分開過磅）；待驗收清單清掉 ERP 已消失的殘留列、卡片顯示項次；真空包裝機設定參數表改版：改為單機六欄格式（真空值／封口時間／冷卻時間），與現場範本 1:1 對齊、程式化逐項比對格式，產品主檔移除第二個真空值欄，只列需真空封口的品項（紙箱／物流箱／沙拉盒自動排除）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/7～9/8 v0.9.73～v0.9.84</span>
+        <div class="log-dot"></div>
+        <span class="log-text">品保待驗收清單漏抓進口採購單修正（國內／進口共用單號，單別沒進 source_key 被國內單蓋掉）；待驗收清單去重複；預作扣抵統一走同一套結餘算法（看交貨日、計畫量、不跨日）；填報產量輸入改回小數點 2 位；混合品項在填報與紙本備註加警示、標「用掉多少 kg」取代趴數；/api/internal/products 補回規格重量供 ERP-Hub 銷貨報表做 KG 換算</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">8/31～9/4 v0.9.52～v0.9.72</span>
+        <div class="log-dot"></div>
+        <span class="log-text">產品主檔新增真空值欄位與「真空包裝機設定參數表」匯出；產品主檔編輯改看細權限不再硬綁角色；品保作業加「進貨原料國別」下拉與管理清單、照片關鍵字搜尋、照片勾選批次刪除；單一功能角色（品保／採後／倉庫／製造）登入後 NAV 只顯示對應分頁、尊重管理者加開的個別權限；本機備援（選項 B）——每日 DB 快照端點＋備援機同步腳本；手機版 NAV 改漢堡選單、生產儀表板手機版優化、加 PWA 圖示與 manifest；外箱標籤預作綁定印得出來、白名單改子字串比對；外購品驗收過濾加「顯示外購品」開關；預作綁定不再因重存訂單／刪 session 變孤兒；奇美訂單上傳相同區間自動覆蓋前一份、重複訂單一併收乾淨</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/28 v0.9.44～v0.9.51</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「品保作業」分頁：品保用手機拍原料驗收的外觀／切片照片直接上傳，照片存 Cloudflare 物件儲存、依採購單號／原料／日期／批號查詢與下載、180 天自動清理，取代原本貼 LINE 群組難查找的做法；新增「品保」「採購」兩個角色（採購為唯讀查閱，看得到照片但不能上傳／刪除），權限也可由管理者逐項設定；倉庫作業驗收重量算法改為「抽樣平均重量 × 到貨箱數」（原本會被固定箱重蓋過），定重改為選填參考值、與抽樣差距過大時提醒，CD-4-020 原料驗收重量紀錄表的進貨數量欄改印實際驗收重量；新增管理者「清除過磅」按鈕（保留品項只清重量重填）；批號提早配發改成管理者開關（倉庫系統正式上線前避免與手動編號順序衝突）；「投產控制」整合進「生產看板」頂部狀態列、移除獨立分頁；採購單裡的外購品從進貨驗收清單自動濾掉</span>
@@ -902,6 +917,16 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">9/9 v1.15.26</span>
+        <div class="log-dot"></div>
+        <span class="log-text">酪梨分頁入口下架：進口成本試算與批次淨利回推已整併進 ERP-Hub（走 COSMOS 即時同步），quotation-web 側欄入口移除、程式碼保留備援</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/1～9/4 v1.15.19～v1.15.25</span>
+        <div class="log-dot"></div>
+        <span class="log-text">步留＋人工成本改從 ERP-Hub 直接同步，不用再匯入製令彙總表；原料成本審核加 override_price fallback 修幽靈異動、新價誤填到過去月份的防呆；原料成本新增品項後整列往右錯位修正；品牌主檔篩選改「顯示停用中」checkbox（預設隱藏停用品牌）；未歸品牌客戶＋自動補建品號的持久化提醒；加 PWA 圖示與 manifest</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/28 v1.15.17～v1.15.18</span>
         <div class="log-dot"></div>
         <span class="log-text">報價單填了報價區間後，若某原料在該區間內沒有維護當期月價，系統原本會靜默改用 ERP 匯入底價，改成一律顯示 N/A（原料價格與最終報價都是），跨月報價缺任一月份月價也一樣判定，讓報價人員知道要請採購補維護；報價區間字串支援跨月只寫一次年份的寫法（如 2026/9/1~10/31）</span>
@@ -1199,6 +1224,62 @@
         GitHub
       </a>
       <a class="proj-link live" href="https://quotation-web.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
+      </a>
+    </div>
+  </div>
+
+  <!-- ERP-Hub -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">🔎</div>
+      <div class="project-title-block">
+        <div class="project-title">ERP-Hub（COSMOS 查詢平台）</div>
+        <div class="project-desc">奧爾瑪的 COSMOS ERP 唯讀查詢平台，獨立專案、只查不寫。內網代理機定期把品號／庫存／採購單／進貨單／銷貨單／製令（步留）／批號異動同步進來，前端行動優先。含角色系統（金額只給特定角色）、品牌對照、主管總覽 Dashboard、銷貨統計與叫貨頻率報表、酪梨批次淨利與品保批號雙向追溯。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">COSMOS ERP</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">9/9 v0.8.51～v0.8.60</span>
+        <div class="log-dot"></div>
+        <span class="log-text">酪梨批次淨利：銷貨運費改 per-銷貨單計算再按批號 KG 佔比拆、售出率改以成品產出量為分母、進貨費用改撈 COSMOS 整筆進貨費用（運費＋關稅＋報關＋雜費）；新增「批號異動追蹤表」上傳建立熟果批號→催熟令對照（同批號對多催熟令時回報衝突），並改直接讀 zip XML 繞過鼎新壞掉的樣式、上傳開放給採購角色；P3 品保批號雙向追溯上線（到貨批號→客戶／銷貨單→原料到貨批號）；批號追溯加「依成品」模式、全品項原料追溯；cosmos_batch_move 同步改單次原子交易，修掉追溯偶爾整批「來源不明」</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/8 v0.8.35～v0.8.50</span>
+        <div class="log-dot"></div>
+        <span class="log-text">酪梨批次淨利（把 quotation-web 那套搬進來走 COSMOS 即時同步）：代理機加抓催熟令／進貨成本／熟果用料，新增批號血緣追溯引擎＋銷貨收入回推＋成本試算＋淨利；進口批件重由到岸成本回推、成本按售出比例分攤；熟果批號→催熟令幾版試錯後定案為「上傳報表建對照、沒對到才估算」；主管總覽 Dashboard 設為登入預設頁；「工具」NAV＋修清原料試算與酪梨進口成本試算（從 quotation-web 搬）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/4 v0.8.12～v0.8.34</span>
+        <div class="log-dot"></div>
+        <span class="log-text">角色系統＋銷貨金額權限（非 admin 角色：主管／客服／採購／生管／生產，只有 admin／主管／客服看得到金額）；品牌對照從 quotation-web 同步；搬 quotation-web 的銷貨單統計報表與門店叫貨頻率分析，加 Excel 下載與銷貨月報表、手機化；製令步留改用 INVLA 實際進出（完工÷淨領料），完工量沒回寫的製令用計畫量估；銷退／進退貨納入報表並排除作廢單；庫齡警示限指定倉別（避開冷凍倉）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/2～9/3 v0.8.0～v0.8.11</span>
+        <div class="log-dot"></div>
+        <span class="log-text">專案初建：批號管理（庫齡／料卡／原料追溯）、採購／進貨／銷貨／製令查詢、品號查詢（設為登入預設頁、可隱藏停用品項）；製令查詢加「步留」欄與區間總步留；批號分頁行動裝置卡片／表格切換；加 PWA 圖示與 manifest</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/erp-hub" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-link live" href="https://web-erp-hub.up.railway.app" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         上線版本
       </a>
