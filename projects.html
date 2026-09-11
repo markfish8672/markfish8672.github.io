@@ -1253,6 +1253,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">9/11 v0.8.95～v0.9.19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">採後處理分頁需求已不合時宜，整個砍掉重練（NAV／角色權限保留，待重新訪談需求後設計）；主管總覽 Dashboard 卡片改分組顯示（營運總覽／銷貨排行／採購原料／酪梨專區／庫存客戶）、解釋性說明文字改可收合；原料報價 vs 進貨價卡片修正比對月份對齊、拆成「買貴了／買便宜了」兩張；酪梨相關重量與單價換算多輪修正，改成優先讀 COSMOS 銷貨單真正的計量單位欄位；粗毛利率的酪梨成本改直接參考「酪梨批次淨利」工具算法；效能優化：重卡片加快取、其餘分組改成折頁展開才載入</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/11 v0.8.84～v0.8.94</span>
+        <div class="log-dot"></div>
+        <span class="log-text">主管總覽 Dashboard 自訂化上線（自選顯示卡片／參數，admin 可設全站預設），陸續加粗毛利率、跨系統原料報價比對、酪梨進貨批次、酪梨銷貨、銷貨 Top 品牌重量等卡片；進貨重量改用單別判斷國內秤重／進口件計，取代猜測換算；粗毛利率改用製令領料的真實批號成本，不再用進貨總額估算；COSMOS 鏡射表加索引解決 Dashboard 載入變慢；採購單／進貨單／銷貨單卡片加顯示單價；採後處理（包裝紀錄／庫存管理）從 production-web 搬過來獨立成頁</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/10 v0.8.61～v0.8.83</span>
+        <div class="log-dot"></div>
+        <span class="log-text">品保批號雙向追溯完工：成品→銷貨改走 COSMOS 動帳直連（不用時序推估）、支援用成品批號查、逆追加成品出貨明細、加 Excel 下載；細顆粒權限系統上線，採購／進貨金額可個別授權；月表單填值子頁從 quotation-web 搬過來放進「工具」，修正人工成本欄位對應與品號比對，加預覽對照診斷；手機版 UI 優化：topbar 改兩排、避開瀏海／動態島安全區、單據查詢面板可收合</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">9/9 v0.8.51～v0.8.60</span>
         <div class="log-dot"></div>
         <span class="log-text">酪梨批次淨利：銷貨運費改 per-銷貨單計算再按批號 KG 佔比拆、售出率改以成品產出量為分母、進貨費用改撈 COSMOS 整筆進貨費用（運費＋關稅＋報關＋雜費）；新增「批號異動追蹤表」上傳建立熟果批號→催熟令對照（同批號對多催熟令時回報衝突），並改直接讀 zip XML 繞過鼎新壞掉的樣式、上傳開放給採購角色；P3 品保批號雙向追溯上線（到貨批號→客戶／銷貨單→原料到貨批號）；批號追溯加「依成品」模式、全品項原料追溯；cosmos_batch_move 同步改單次原子交易，修掉追溯偶爾整批「來源不明」</span>
