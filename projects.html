@@ -507,6 +507,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">9/22 v0.10.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">混合商品配方每個成分新增「參照品項」設定，可指定跟著某個一般品項的步留／人工現值走（配合報價單系統同步調整），取代原本每個成分要手動填死數字、COSMOS 更新也不會連動的做法</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">9/9 v0.9.85～v0.9.90</span>
         <div class="log-dot"></div>
         <span class="log-text">外箱標籤客戶模板擴充：R6 改「到貨日期」（自動從訂單備註解析）、新增 R7／R8 客戶自由文字（公司全名／地址）、R9 承接外箱貼專用；新增「客戶指定原料提醒」——某客戶某品項要用不一樣的原料時，前處理／機切／清洗填報卡與紙本備註掛黃框，並依訂單量在填報與日報表拆成獨立列（現場分開切、分開過磅）；待驗收清單清掉 ERP 已消失的殘留列、卡片顯示項次；真空包裝機設定參數表改版：改為單機六欄格式（真空值／封口時間／冷卻時間），與現場範本 1:1 對齊、程式化逐項比對格式，產品主檔移除第二個真空值欄，只列需真空封口的品項（紙箱／物流箱／沙拉盒自動排除）</span>
@@ -917,6 +922,16 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">9/22 v1.15.44～v1.15.48</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認畫面「最終報價」預設值改一律採用當下依現有成本算出的單價，不再優先套用可能已過期的舊快照（原料價格會變動，舊快照的數字未必還準）；混合商品配方每個成分新增「參照品項」，步留／人工可以指定跟著某個一般品項的現值動態走，COSMOS 那邊資料更新後自動跟著同步，不用再手動逐一維護死數字；混合品項的步留／人工也開放比照一般品項手動覆寫調整</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/21 v1.15.36～v1.15.43</span>
+        <div class="log-dot"></div>
+        <span class="log-text">「銷貨單匯入」功能整批拆除（含銷貨單統計報表／全品牌總表／叫貨頻率分析），改由 ERP-Hub 即時同步取代原本的人工匯出匯入流程；品牌主檔門市新增「標記停業」，不直接刪除門市關聯（刪除會讓已經停業的門市被誤判成新出現的未歸屬品牌客戶、重複觸發通知）；通知採購加「需求時間區間」必填欄位，跟「回覆期限」分開（一個是報價要用在哪段期間、一個是採購該何時回覆）</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">9/9 v1.15.26</span>
         <div class="log-dot"></div>
         <span class="log-text">酪梨分頁入口下架：進口成本試算與批次淨利回推已整併進 ERP-Hub（走 COSMOS 即時同步），quotation-web 側欄入口移除、程式碼保留備援</span>
@@ -1252,6 +1267,16 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">9/22 v0.9.71～v0.9.75</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新報表「銷貨計算表」：1:1 比照財務手工試算表的邏輯，依「這個月賣了多少」反推理論原料／物料／人工成本算毛利，天生跟銷貨同一個月份基礎，結構上避開「月底領料下月才出貨」造成的跨月對帳落差；原料單價改走 COSMOS 批號真實追溯（不是報價快照）；分組改依品牌彙整（原表「客戶簡稱」實際是品牌層級）；補上外購品（無製令、直接轉售）與酪梨（多階段熟果／催熟／進口件重換算）原料成本追溯，原本這兩類品項的原料成本會被誤判成零元、拉高帳面毛利；Excel 匯出改仿財務原表兩層合併表頭＋即時公式版面，下載後在 Excel 裡改運費數字會自動重算，不是算好貼上的死數字</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/18～9/21 v0.9.60～v0.9.70</span>
+        <div class="log-dot"></div>
+        <span class="log-text">「品牌」查詢頁上線：門店清單可折疊、已停業品牌／門店預設隱藏（可勾選顯示）、查看品牌銷貨改依日期＋品項彙整（不是把各門店明細混在一起列）；庫存查詢加「點列展開看批號＋庫齡」、預設篩選改「原料＋301倉」；領料單新增「製令領料」查詢模式，跟原本的一般出入庫領料分開呈現（兩者資料語意不同）；批號雙向追溯銷貨清單加單別欄區分銷貨／銷退／折讓；主管總覽 Dashboard 叫貨異常排除已停業門店</span>
+      </div>
       <div class="log-item">
         <span class="log-date">9/11 v0.8.95～v0.9.19</span>
         <div class="log-dot"></div>
