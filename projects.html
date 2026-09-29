@@ -507,6 +507,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">9/29 v0.10.7～v0.10.8</span>
+        <div class="log-dot"></div>
+        <span class="log-text">品保作業與倉庫作業過磅新增「進貨原料品牌」（可維護清單）與「運輸方式」（預設空運、可切海運），進口單與酪梨原料（含貿易商國內進貨）顯示運輸欄；倉庫上線後以倉庫為準、品保資料保留當輔助；新增內部 API 供 ERP Hub 酪梨庫存卡片依採購單別＋單號＋品號對回 COSMOS 進貨批號</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">9/24 v0.10.6</span>
         <div class="log-dot"></div>
         <span class="log-text">外箱標籤日期顯示模式繼承產品主檔（方案 A，show_pack_date）：一般訂單與奇美預作查詢同步帶出產品主檔日期模式設定，前端 _oneOuterBoxLabelHtml 完整支援 4 種外箱日期模式（0: 標準有效日、1: 包裝日+有效日、2: 製造日+有效日、3: 僅包裝日），外箱貼印出與即時預覽同步對齊</span>
@@ -935,6 +940,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">9/29 v1.15.49～v1.15.56</span>
+        <div class="log-dot"></div>
+        <span class="log-text">步留＋人工頁強化（審核主管直接看直接改）：新增「去年同期」欄（差距大標紅）與「近 12 個月趨勢」小折線，點擊開啟 12 個月資料表（含領料量、產出量、12 個月加權步留與最高／最低／平均）；新增「全部／步留／人工」欄位切換、報價步留與人工改粗體、計算月份併入生管最近值；修正 YTD 品規步留／人工重複計算（舊手動匯入的無年份月份與 ERP Hub 同步資料重疊），YTD 改為今年 1 月起；月步留歷史新增領料量／產出量並依新步留算法重新同步 15 個月</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">9/24</span>
         <div class="log-dot"></div>
         <span class="log-text">全套操作手冊建立上線：涵蓋報價試算、客戶範本、毛利審核、產品品號庫、原料月價、步留人工、複合外購、使用者管理 8 份手冊，具備 14 張線上真實系統操作截圖與 8 支專屬教學影片（文字＋截圖＋影片三位一體規格）</span>
@@ -1288,6 +1298,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">9/29 v0.9.85～v0.10.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">酪梨庫存動態卡片倉別改為品牌＋運輸（空運／海運），資料取自生產管理系統品保／倉庫作業，熟果與催熟令經「熟果批號→催熟令→到貨批號」回推；催熟令預先開單顯示「預排」、在室天數改從實際催熟領料日起算；銷貨計算表原料單價大修（酪梨一律走批號血緣引擎，修正進口件數被當 KG 造成單價高估 11 倍；熟果批號→催熟令估算改精準配對＋3 天週期，對照表驗證準確率 0/98→86/98；外購品單價改元/KG；銷貨淨量全品項依每單位公斤數換算）；步留改只計入有領料也有產出的製令，缺資料製令在製令報表與銷貨計算表標出；銷貨計算表 Excel 加總計列與各欄數字來源註解；進貨／銷貨單查詢加小計列與平均單價；品項 KG 換算表改每 12 小時自動同步；新增管理員用原料單價診斷端點</span>
+      </div>
       <div class="log-item">
         <span class="log-date">9/23 v0.9.76～v0.9.84</span>
         <div class="log-dot"></div>
