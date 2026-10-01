@@ -262,6 +262,26 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/1 v0.9.41</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正加盟對帳月份：原本依 AR 開立日歸月，補開 AR 的出貨單會跑到別的月份；改以出貨日為準（對帳頁、加盟月結總表、整月標記已收款／取消已收款一致）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/16 v0.9.36～v0.9.40</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「領料單」：製令依 BOM 領料並扣原料庫存；BOM 改成批次配方輸入、製令改用「生產批數」驅動原料需要量；BOM 頁新增成本 review（人工工時／能耗工時 × 公司設定常數）並在列表顯示單位成本</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/5 v0.9.35</span>
+        <div class="log-dot"></div>
+        <span class="log-text">商品主檔自製品成本價改可手動輸入，盤點改抓成本價</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">9/3 v0.9.34</span>
+        <div class="log-dot"></div>
+        <span class="log-text">加 PWA 圖示與 web manifest，手機加到主畫面有正常圖示</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">8/31 v0.9.28</span>
         <div class="log-dot"></div>
         <span class="log-text">盤點單已確認後新增「取消確認」按鈕（admin／accounting 限定），可回退為盤點中重新修改品項成本</span>
@@ -940,6 +960,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/1 v1.15.57～v1.15.59</span>
+        <div class="log-dot"></div>
+        <span class="log-text">錯誤訊息改用中文系統名；內部 API 新增「依月份回傳原料報價」與「包裝袋單價表」，供 ERP-Hub 原料報價 vs 進貨價報表與原料批號利潤的包材費計算使用，包裝袋價格只維護在報價系統一處</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">9/29 v1.15.49～v1.15.56</span>
         <div class="log-dot"></div>
         <span class="log-text">步留＋人工頁強化（審核主管直接看直接改）：新增「去年同期」欄（差距大標紅）與「近 12 個月趨勢」小折線，點擊開啟 12 個月資料表（含領料量、產出量、12 個月加權步留與最高／最低／平均）；新增「全部／步留／人工」欄位切換、報價步留與人工改粗體、計算月份併入生管最近值；修正 YTD 品規步留／人工重複計算（舊手動匯入的無年份月份與 ERP Hub 同步資料重疊），YTD 改為今年 1 月起；月步留歷史新增領料量／產出量並依新步留算法重新同步 15 個月</span>
@@ -1298,6 +1323,16 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">10/1 v0.10.9～v0.10.23</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報表新增「原料批號利潤」：每個原料到貨批號 → 領料 → 製令步留 → 成品批號銷貨 → 利潤，一張製令用到多個批號時按領料量比例分攤完工、銷貨收入、人工與包材（不含運費）；標「還有剩」（批號庫存未領完）或「製令未完成」的批號淡化並不計入合計；包材依成品完工量 × 每 KG 包材費計算（包裝袋以生產管理系統品項主檔為正本、單價表向報價管理系統取，取不到退回內建備援）；月份快篩鍵、Excel 下載、製令明細視窗、負數一律紅字，進頁面不自動載入、按查詢才執行。酪梨批次淨利表從「工具」搬到「報表」（權限不變，工具保留批號異動追蹤表上傳與追溯拆解），同樣改為按試算才執行。「原料報價 vs 進貨價」領料量統一成 KG、進貨筆數可點開看該月進貨明細（量與價）、新增買貴／買便宜篩選且 Excel 跟著篩選</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">10/1 v0.10.3～v0.10.8</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正品牌對照同步按鈕無反應（分頁 id 重複）；催熟中改為「領料 − 已完工入庫」、分批完工時剩餘量仍顯示，損耗 ≤ 投入 10% 視為催熟損耗不再掛著；酪梨進貨 by 批次加「品規」欄；報表新增「原料報價 vs 進貨價」可挑月份對照該月報價，並加「當月製令領料量」；缺口計算抽成共用模組與總覽卡片一致</span>
+      </div>
       <div class="log-item">
         <span class="log-date">9/29 v0.9.85～v0.10.2</span>
         <div class="log-dot"></div>
