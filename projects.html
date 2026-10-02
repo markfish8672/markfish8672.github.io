@@ -527,6 +527,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/2 v0.10.9～v0.10.18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">前處理／清洗截切目標量改含包裝容許、留樣耗損與清洗後%（原料需求同一套公式，「已達標」改以目標量判斷）；產品主檔「包裝袋」改下拉並新增「包裝袋類別」維護：名稱固定只能停用、一個類別可掛多個 ERP 料號（例如立袋各顏色）、可設定進貨單位（KG／個／含運費）、每個重量與可裝載量、手動排序，存檔與匯入時驗證，並提供報價管理系統與 ERP-Hub 讀取。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">9/29 v0.10.7～v0.10.8</span>
         <div class="log-dot"></div>
         <span class="log-text">品保作業與倉庫作業過磅新增「進貨原料品牌」（可維護清單）與「運輸方式」（預設空運、可切海運），進口單與酪梨原料（含貿易商國內進貨）顯示運輸欄；倉庫上線後以倉庫為準、品保資料保留當輔助；新增內部 API 供 ERP Hub 酪梨庫存卡片依採購單別＋單號＋品號對回 COSMOS 進貨批號</span>
@@ -960,6 +965,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/2 v1.15.60～v1.15.65</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「包材單價」維護頁：單價存資料庫並留修改紀錄，包裝袋類別、料號、每個重量改由生產管理系統維護後唯讀顯示；單價旁並排顯示 ERP 近 90 天進貨成本、倍數與建議價（成本 × 基準加成，可一鍵帶入），漲價時維護者一眼可見。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/1 v1.15.57～v1.15.59</span>
         <div class="log-dot"></div>
         <span class="log-text">錯誤訊息改用中文系統名；內部 API 新增「依月份回傳原料報價」與「包裝袋單價表」，供 ERP-Hub 原料報價 vs 進貨價報表與原料批號利潤的包材費計算使用，包裝袋價格只維護在報價系統一處</span>
@@ -1323,6 +1333,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">10/2 v0.10.24～v0.10.32</span>
+        <div class="log-dot"></div>
+        <span class="log-text">銷貨計算表：折讓單數量依金額判斷公斤或銷貨單位（修正酪梨折讓被誤乘換算而出現負數量）、物料費包材以生產管理系統的包裝袋為準、畫面與 Excel 註明依銷貨日整月計算（與客戶結帳日可能有差異）；新增報表「包材成本檢視」：報價管理系統單價對照 ERP 進貨成本，依進貨單位（KG／個）換算，容器類攤成每 KG 成本，含在運費的物流箱不比對，可下載 Excel；並提供內部 API 給報價管理系統參考。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">10/1 v0.10.9～v0.10.23</span>
         <div class="log-dot"></div>
