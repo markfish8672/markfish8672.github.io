@@ -532,6 +532,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/7 v0.10.65～v0.10.67</span>
+        <div class="log-dot"></div>
+        <span class="log-text">倉庫與品保的待驗收清單、批號流水改成跟舊系統、現場紙本同一個順序（廠商名稱→採購單號→項次），解決批號對不上紙本的問題；倉庫作業新增「從 ERP 校正批號」：以 ERP 進貨單（採購單號＋品號）的批號預覽比對，勾選後才套用，已發出的批號可一次對齊，對不上、ERP 尚未填批號或會造成重複的品項一律不動；農藥快篩在原料品質不佳直接退貨時，處置選「退貨」即可免填抑制率儲存（統計不計入、清單標「免檢」、驗收表印「—」）</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/5 v0.10.31～v0.10.37</span>
         <div class="log-dot"></div>
         <span class="log-text">品保行事曆提醒新增 Mail 通知：以專用通知信箱寄出，收件人與 Mail／LINE 開關可在「提醒設定」自行維護，附測試信。填報防呆：中斷計時與產量待填改依工站顯示（共用平板不再看到別站項目）、選類別首頁常駐「還有沒做完的項目」提醒與一鍵繼續、計時中離開頁面與跳過產量前先確認、續填畫面改為白話中越雙語。品保驗收表新增「驗收登打」（有機／產銷履歷、追溯條碼、外觀／氣味／重量／大小規格），列印可依範圍分開印有機與產銷履歷。標籤頁新增「門市客製標籤」：上傳 ERP 各分部出貨一覽表 PDF，依各門市包數一包印一張門市標籤，並與訂單、內標張數自動勾稽，對不上時標紅並於列印前確認；門市標籤並加印「門市到貨日」。</span>
@@ -1354,6 +1359,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/7 v0.10.37</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增內部查詢「依採購單號回傳進貨單批號」（唯讀），供生管系統倉庫作業校正批號使用</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/5 v0.10.33</span>
         <div class="log-dot"></div>
         <span class="log-text">批號雙向追溯新增「依原料」模式：填原料品號與進貨期間，列出期間內每個進貨批號的進貨量、生產領用（哪些製令）、退料、原件直接銷貨與結存，再往下看這些製令做出的成品各出貨多少（含客戶與銷貨單）；顯示資料同步涵蓋範圍並在查詢區間超出時提醒，可匯出 Excel。</span>
@@ -2015,6 +2025,16 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">10/7 v1.1.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增意見回報收件匣（數位客服，測試中）：同仁私訊機器人「回報」→ 選系統 → 描述並附截圖，機器人記成單並通知管理員，開發端再整理成開發清單，處理完可回覆提出人；預設關閉、僅限名單內同仁，同仁內容只當資料、不會直接觸發改程式</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">10/6 v1.0.1～v1.0.5</span>
+        <div class="log-dot"></div>
+        <span class="log-text">升級為集中通知服務：生管系統、報價管理系統統一從同一個入口發通知，LINE 私訊失敗或額度用完時自動改寄 Mail；設定頁可依通知類型選 LINE 群組／私訊／Mail，通訊錄可只填姓名與 Mail，通知測試分管道、推播帳號統一設定</span>
+      </div>
       <div class="log-item">
         <span class="log-date">8/7</span>
         <div class="log-dot"></div>
