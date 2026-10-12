@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>不再使用的專案</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#1e293b">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/icon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="專案記事">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Markfish">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #f5f5f7;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      padding: 40px 20px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: #666;
+      text-decoration: none;
+      padding: 6px 0;
+      width: fit-content;
+    }
+    .back:hover { color: #333; }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+    .header-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .header-text h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #111;
+    }
+    .header-text p {
+      font-size: 0.82rem;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* 專案卡片 */
+    .project-card {
+      background: #fff;
+      border: 1px solid #e5e5ea;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .project-emoji {
+      font-size: 1.6rem;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .project-title-block { flex: 1; }
+    .project-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111;
+    }
+    .project-desc {
+      font-size: 0.83rem;
+      color: #555;
+      line-height: 1.55;
+      margin-top: 4px;
+    }
+
+    /* 技術標籤 */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tag {
+      font-size: 0.73rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: #f0f0f5;
+      color: #555;
+    }
+
+    /* 更新歷程 */
+    .changelog-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px 14px;
+      background: #fafafa;
+      border: 1px solid #ebebeb;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #444;
+      transition: background 0.15s;
+    }
+    .changelog-toggle:hover { background: #f3f3f5; }
+    .changelog-toggle .arrow {
+      transition: transform 0.2s;
+      color: #999;
+    }
+    .changelog-toggle.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .changelog {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 4px 0 0 0;
+    }
+    .changelog.open { display: flex; }
+
+    .log-item {
+      display: flex;
+      gap: 12px;
+      padding: 9px 4px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .log-item:last-child { border-bottom: none; }
+
+    .log-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #9ca3af;
+      white-space: nowrap;
+      padding-top: 1px;
+      min-width: 80px;
+    }
+    .log-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d1d5db;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    .log-text {
+      font-size: 0.82rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* 連結列 */
+    .project-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .proj-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .proj-link:hover { opacity: 0.75; }
+    .proj-link.github {
+      background: #f3f3f3;
+      color: #333;
+      border: 1px solid #e0e0e0;
+    }
+    .proj-link.live {
+      background: #6366f1;
+      color: #fff;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #bbb;
+      margin-top: 8px;
+    }
+
+    .section-title { font-size: 1.05rem; font-weight: 700; color: #333; margin: 28px 0 14px; }
+    .section-title span { font-size: 0.75rem; font-weight: 400; color: #999; margin-left: 8px; }
+    .archive-link { display: block; text-align: center; font-size: 0.85rem; color: #6366f1; text-decoration: none; margin: 24px 0 12px; }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <a class="back" href="projects.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    返回專案記事
+  </a>
+
+  <div class="header">
+    <div class="header-icon">🗒️</div>
+    <div class="header-text">
+      <h1>不再使用的專案</h1>
+      <p>已中止或停用，僅留作紀錄</p>
+    </div>
+  </div>
+
+  <!-- 會議紀錄系統 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-emoji">🎙️</div>
+      <div class="project-title-block">
+        <div class="project-title">奧爾瑪會議紀錄系統</div>
+        <div class="project-desc">線上會議紀錄系統。網頁/手機直接錄音或上傳音檔，AI 自動將中文＋台語混雜的會議轉成繁體中文逐字稿，並整理會議重點、決議與待辦事項。</div>
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Gemini API</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="changelog-toggle" onclick="toggleLog(this)">
+      <span>📋 更新歷程</span>
+      <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">7/29～8/7 v0.1.8～v0.1.22</span>
+        <div class="log-dot"></div>
+        <span class="log-text">AI自動整理會議紀錄改預設關閉（省token成本），逐字稿照樣產生供貼到 NotebookLM 另外整理；出席人員從單一文字欄位改成姓/名/職稱結構化多列表單，並可存成多份具名清單跨裝置套用；修復卡在「片段上傳中」的孤兒會議點不進去的問題；逐字稿AI幻覺清洗機制歷經多輪修正——從跨多行整句反覆偵測、到時間戳格式偶爾漏印左括號導致偵測失效、到8/5發現Gemini對聽不懂的台語會自己編中文字硬翻並改prompt明確禁止、再到8/7新增單行異常過長偵測（攔截整段重複＋離題內容塞進同一行的新型幻覺，例如幻覺出跟會議完全無關的內容）</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/23 v0.1.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">修正下載錄音後重新上傳只得最後兩句的問題：MediaRecorder 產生的 webm 缺少 SeekHead 與 Duration，Gemini 重傳時 fallback 只讀最後一個 Cluster；改為上傳後先用 ffmpeg copy-remux 補齊標頭再送 Gemini，不重新編碼、ffmpeg 不可用時自動 fallback 原始格式</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">7/9 v0.1.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">初版上線：網頁錄音（麥克風選擇、即時音量條、無聲警告防呆）與音檔上傳雙模式；Gemini 轉逐字稿（台語自動翻寫成中文、時間戳、講者標記），AI 自動整理會議重點/討論事項/決議/待辦；共用密碼登入；POC 實測台語辨識 Gemini 大勝 Whisper 定案選型</span>
+      </div>
+    </div>
+
+    <div class="project-links">
+      <a class="proj-link github" href="https://github.com/markfish8672/meeting-notes" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-link live" href="https://meeting-note.up.railway.app" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        上線版本
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">© 2026 Markfish8672</div>
+
+</div>
+
+<script>
+  function toggleLog(btn) {
+    btn.classList.toggle('open');
+    const log = btn.nextElementSibling;
+    log.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
