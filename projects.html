@@ -538,6 +538,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/13 v0.10.78～v0.10.88</span>
+        <div class="log-dot"></div>
+        <span class="log-text">門市客製標籤擴充：除出貨一覽表 PDF 外也收圖檔與圖片型 PDF（文字型 PDF 先在本機解析、讀不到文字才交由 AI 辨識，兩個模型交叉比對並警示不一致處），門市名稱支援直排由右到左；卡片改預設收合、列印後自動收合；品名改以品項主檔為準，新增「列印管制表」（沿用標籤列印管制表，整批合成一張）與可調整的品名字級。倉庫過磅新增「尾數重量」（驗收重量＝整件＋尾數，品保表單同步）。新增「主管（唯讀）」角色，只能瀏覽、伺服器端統一擋掉所有修改。修正內包裝填滿目標後仍留在填報清單的小數誤差。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/7 v0.10.65～v0.10.67</span>
         <div class="log-dot"></div>
         <span class="log-text">倉庫與品保的待驗收清單、批號流水改成跟舊系統、現場紙本同一個順序（廠商名稱→採購單號→項次），解決批號對不上紙本的問題；倉庫作業新增「從 ERP 校正批號」：以 ERP 進貨單（採購單號＋品號）的批號預覽比對，勾選後才套用，已發出的批號可一次對齊，對不上、ERP 尚未填批號或會造成重複的品項一律不動；農藥快篩在原料品質不佳直接退貨時，處置選「退貨」即可免填抑制率儲存（統計不計入、清單標「免檢」、驗收表印「—」）</span>
@@ -1639,6 +1644,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">10/13 v1.2.0～v1.2.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">意見回報流程完整化：處理到需要同仁確認時狀態轉「待確認」，系統自動私訊提出人（附「沒問題／還有問題」快速回覆按鈕，按沒問題自動結案、還有問題退回並收補充）；補充說明即時通知管理員；觸發關鍵字可在網頁自訂。管理介面改以意見回報列表為首頁（預設只看未完成），路由與通訊錄設定收進次要入口；網址免帶密碼參數，登入一次瀏覽器記住。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">10/7 v1.1.0</span>
         <div class="log-dot"></div>
