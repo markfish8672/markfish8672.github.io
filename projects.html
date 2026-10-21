@@ -543,6 +543,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/21 v0.11.16～v0.11.35</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增客戶 COA 一整套：布列德 COA 與奇美自主檢驗表（PDF 內嵌正楷體字型、固定品項、批次依製令領用批號取進貨日最晚者）、品保審核蓋章、奇美整份表審核（內容改動後審核自動失效）、品保登打成品檢驗結果、導覽新增「品保」子選單；外箱標籤新增檢驗員下拉，裝箱改以「包」為單位並保留不足一包的尾包（修正尾數被四捨五入掉）；內部 API 新增客訴明細與工站產出／耗時查詢，供 ERP-Hub 週會報告使用。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/19 v0.11.3～v0.11.15</span>
         <div class="log-dot"></div>
         <span class="log-text">內包裝填報新增選填「餘料轉料（kg）」（清洗後進內包裝、包完沒被包裝、之後打成丁的重量；完成時填，或事後從完成清單補填，只記錄、不影響產量，並提供內部查詢供 ERP-Hub 修正步留）；畫面與報表的「清洗截切」統一顯示為「清洗」。客訴／異常單補齊整條流程：通知結果寫進處理歷程並在列表標「已通知／通知未送出」、結案通知客服＋品保（品保判定不成立只通知客服）、協理（唯讀帳號）可簽核、修正提示被對話框蓋住造成按鈕靜默與簽核連結不開到該張單、新增時可一併附照片、異常單 Word 照片改 A4 一頁四張自動縮放、統計 Excel 合計列補上數字、admin 可編輯已結案單內容（歷史匯入有誤時用，修改留紀錄）。</span>
@@ -1385,6 +1390,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/21 v0.10.67～v0.10.71</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「週會報告」頁籤：每週主管會議簡報的客服、採購、生管、生產表格由系統直接產出 .pptx（沿用公司母片，週期固定週四～下週三）。含客訴與異常（新單、未結案舊單、本週結案）、客服銷售（總覽、週趨勢、奇美品項比較、客戶銷額變動重點）、採購單價（進貨均價對月報價、採購成本指數、奇美年度合約價）、生管效能（週別／單日效能、週產量 100KG 以上品項）、生產（月／週加班與產能、奇美步留率追蹤）；數字全由系統資料算出，人工補充（備註、加班時數）會一起印進簡報；銷售與採購頁需對應金額權限。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/19 v0.10.62～v0.10.65</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「品項成本毛利表」（財務）：銷貨成本的原料／人工／製造費用直接取自 ERP 每筆銷貨交易、不再倒推，預作品跨月不再錯位，並扣除催熟庫租金，與財務 Excel 對帳吻合。新增「KPI」報表（2027 策略計畫）：總覽（目標、基準、燈號）、採購（供應商準時交貨率、第二供應來源覆蓋率、價量分析）、步留基準（同產品組合對去年同期、月別警示）、客訴與異常（取自生產管理系統）；步留改以百分比顯示。總覽「原料報價 vs 進貨價」卡片改為即時取當月月價、與報表同一來源（修正牛番茄報價低估漲幅）。</span>
@@ -1669,6 +1679,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">10/20 v1.3.0～v1.4.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「翻譯君」：獨立的 LINE 官方帳號，群組內被 tag 才翻譯（可改為全部翻）、Gemini 翻譯並內建常用片語與術語表，後台可管理設定；先給同仁試用。另新增需求釐清表（純前端，產生回覆文字貼回 LINE）。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">10/16 v1.2.10</span>
         <div class="log-dot"></div>
