@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>需求釐清表</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<style>
+html{color-scheme:light}
+body{margin:0}
+[hidden]{display:none!important}
+/* 版面：單欄表單，章節用國字數字編號（一、二、三…）——順序本身就是填寫順序。 */
+:root{
+  --bg:#F3F6F5; --surface:#FFFFFF; --ink:#172321; --muted:#566663; --line:#D3DDDA;
+  --accent:#0E5A4B; --accent-ink:#FFFFFF; --soft:#E4EEEB; --stamp:#B3261E; --focus:#157F6A;
+  --font-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --font-head:"Noto Serif TC","Songti TC","PMingLiU",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1715; --surface:#16201E; --ink:#E7EFED; --muted:#9FB1AC; --line:#2B3B38;
+    --accent:#5CC2A9; --accent-ink:#06201A; --soft:#1C2B28; --stamp:#FF8F86; --focus:#7FD6C1; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1715; --surface:#16201E; --ink:#E7EFED; --muted:#9FB1AC; --line:#2B3B38;
+  --accent:#5CC2A9; --accent-ink:#06201A; --soft:#1C2B28; --stamp:#FF8F86; --focus:#7FD6C1; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.7;
+  padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:6px}
+.tag{align-self:flex-start;border:1.5px solid var(--stamp);color:var(--stamp);font-size:13px;font-weight:700;letter-spacing:.2em;padding:1px 10px 1px 12px;border-radius:3px}
+h1{font-family:var(--font-head);font-size:clamp(28px,6vw,38px);line-height:1.25;margin:0;text-wrap:balance}
+.lead{margin:0;color:var(--muted)}
+.note{background:var(--soft);border-radius:8px;padding:12px 14px;font-size:14px;color:var(--ink)}
+section{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 18px 8px}
+section>h2{font-family:var(--font-head);font-size:20px;margin:0 0 4px;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+section>h2 .no{color:var(--accent);font-size:17px}
+section>.sub{margin:0 0 14px;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.f{border:0;padding:0;margin:0 0 16px;min-width:0}
+.f>label,.f>legend{display:block;font-weight:500;font-size:15px;margin-bottom:6px;padding:0}
+.req{color:var(--stamp);margin-left:3px}
+.hint{display:block;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.5}
+input[type=text],select,textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);
+  border:1px solid var(--line);border-radius:6px;padding:9px 11px;min-width:0}
+textarea{min-height:84px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,.opt input:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:6px;padding:7px 12px;background:var(--bg);cursor:pointer;font-size:15px;line-height:1.4}
+.opt:has(input:checked){border-color:var(--accent);background:var(--soft)}
+.opt input{accent-color:var(--accent);width:17px;height:17px;margin:0;flex:none}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+button{font:inherit;font-size:16px;font-weight:700;border-radius:8px;padding:11px 22px;cursor:pointer;border:1.5px solid var(--accent)}
+.primary{background:var(--accent);color:var(--accent-ink)}
+.ghost{background:transparent;color:var(--accent)}
+.errs{border:1.5px solid var(--stamp);color:var(--stamp);border-radius:8px;padding:10px 14px;font-size:14px;margin-bottom:12px}
+#result{display:flex;flex-direction:column;gap:10px;padding-bottom:14px}
+#out{min-height:260px;font-size:14px;line-height:1.6;font-family:var(--font-body)}
+.status{font-size:14px;color:var(--accent);min-height:1.4em}
+footer{color:var(--muted);font-size:13px;text-align:center}
+@media (prefers-reduced-motion:no-preference){button{transition:filter .15s}button:hover{filter:brightness(1.08)}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="tag">需求釐清</span>
+    <h1>需求釐清表</h1>
+    <p class="lead">請依實際狀況填寫，不確定的可以留空或寫「不確定」。填完按最下方的「產生回覆內容」，複製後貼到 LINE 傳給我，我會依內容評估做法與工作量，再跟你約時間討論。</p>
+    <p class="note">請不要填入密碼、金鑰或身分證字號。要提供單據或報表樣本時，請先遮住客戶個資與金額再傳。這個頁面不會儲存你填的內容，只會暫存在你自己的瀏覽器。</p>
+  </header>
+
+  <form id="form" autocomplete="off" novalidate></form>
+
+  <section id="result" hidden>
+    <h2><span class="no">完</span>回覆內容</h2>
+    <p class="sub" style="margin:0;color:var(--muted);font-size:14px">按「複製」，再貼到 LINE 傳給我。需要補充的地方，直接回頭修改後重新產生即可。</p>
+    <div id="errs"></div>
+    <textarea id="out" readonly aria-label="整理好的回覆內容"></textarea>
+    <div class="actions"><button type="button" class="primary" id="copyBtn">複製回覆內容</button><span class="status" id="status" role="status"></span></div>
+  </section>
+
+  <footer>回覆內容只在你的裝置上產生，不會自動送出。</footer>
+</div>
+
+<script>
+// ── 題目定義 ────────────────────────────────────────────────────────────────
+const opt = (...a) => a;
+const SECTIONS = [
+  { key:'basic', no:'一', title:'基本資料', grid:true, fields:[
+    { id:'name', label:'姓名或稱呼', type:'text', req:true },
+    { id:'org', label:'公司或店名', type:'text' },
+    { id:'role', label:'你在公司的角色', type:'select', options:opt('負責人','主管','員工','其他') },
+    { id:'contact', label:'方便聯絡的方式', type:'text', req:true, placeholder:'LINE ID 或手機' },
+    { id:'industry', label:'行業與主要業務', type:'text', placeholder:'例：小吃店' },
+    { id:'size', label:'公司規模', type:'select', options:opt('1 人','2～5 人','6～20 人','21～50 人','50 人以上') },
+  ]},
+  { key:'common', no:'二', title:'現況與期望', fields:[
+    { id:'problem', label:'想解決的問題（一兩句話就好）', type:'textarea', req:true,
+      hint:'例：每天要手抄 30 張進貨單，想自動輸入；客人訂位常漏接；想讓舊客人再回來消費。' },
+    { id:'want', label:'想達到什麼（可複選）', type:'checkbox', options:opt('增加新客人','讓舊客人回來','省人工時間','減少錯誤','看到數字或報表','不確定') },
+    { id:'now', label:'現在是怎麼做的', type:'textarea' },
+    { id:'goal', label:'做完之後，理想的樣子', type:'textarea' },
+    { id:'volume', label:'每天或每週大約處理多少量', type:'text', placeholder:'例：每週約 100 張單據、每月 30 份報表、每天 50 則客人訊息' },
+    { id:'users', label:'誰會每天使用、有幾個人', type:'text' },
+    { id:'tools', label:'目前已有的工具', type:'checkbox', options:opt('LINE 官方帳號','Excel 或 Google 試算表','雲端硬碟','進銷存、ERP 或會計軟體','網站或電商','都沒有') },
+    { id:'sample', label:'有沒有可以提供的樣本', type:'radio', options:opt('可以提供','要先確認','不方便','沒有樣本'),
+      hint:'例如單據照片、報表範本、現有 Excel 或系統畫面截圖（請先遮住個資）。有真實樣本，我才能快速判斷做不做得到。' },
+    { id:'pii', label:'會碰到哪些敏感資料', type:'checkbox', options:opt('客戶個資','財務或帳務資料','員工資料','配方或商業機密','都沒有','不確定') },
+  ]},
+  { key:'plan', no:'三', title:'時程、預算與合作方式', fields:[
+    { id:'when', label:'希望多久看到成果', type:'select', options:opt('一個月內','一到三個月','三個月以上','沒有特別期限') },
+    { id:'budget', label:'預算想法', type:'select', options:opt('還沒想過','先小額試做看看','每月固定小額（顧問）','已有專案預算','不方便說') },
+    { id:'mode', label:'合作方式偏好', type:'radio', options:opt('先做一個小的驗證，再決定','長期顧問（每月固定時數）','一次性專案','不確定') },
+    { id:'note', label:'其他想讓我知道的', type:'textarea' },
+  ]},
+];
+
+// ── 工具 ────────────────────────────────────────────────────────────────────
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const DRAFT = 'intake-draft-v1';
+const ALL = SECTIONS.flatMap(s => s.fields);
+
+function fieldHTML(f) {
+  const req = f.req ? '<span class="req" aria-hidden="true">＊</span>' : '';
+  const hint = f.hint ? `<span class="hint">${esc(f.hint)}</span>` : '';
+  const q = 'q_' + f.id;
+  if (f.type === 'text') return `<div class="f"><label for="${q}">${esc(f.label)}${req}</label><input type="text" id="${q}" name="${f.id}" placeholder="${esc(f.placeholder || '')}">${hint}</div>`;
+  if (f.type === 'textarea') return `<div class="f"><label for="${q}">${esc(f.label)}${req}</label><textarea id="${q}" name="${f.id}"></textarea>${hint}</div>`;
+  if (f.type === 'select') return `<div class="f"><label for="${q}">${esc(f.label)}${req}</label><select id="${q}" name="${f.id}"><option value="">請選擇</option>${f.options.map(o => `<option>${esc(o)}</option>`).join('')}</select>${hint}</div>`;
+  const kind = f.type === 'radio' ? 'radio' : 'checkbox';
+  const items = f.options.map((o, i) => {
+    const [val, label, sub] = Array.isArray(o) ? o : [o, o, ''];
+    return `<label class="opt" for="${q}_${i}"><input type="${kind}" id="${q}_${i}" name="${f.id}" value="${esc(val)}"><span>${esc(label)}${sub ? `<small>${esc(sub)}</small>` : ''}</span></label>`;
+  }).join('');
+  return `<fieldset class="f ${f.cls || ''}"><legend>${esc(f.label)}${req}</legend><div class="opts">${items}</div>${hint}</fieldset>`;
+}
+
+function render() {
+  $('#form').innerHTML = SECTIONS.map(s => `<section data-key="${s.key}">
+    <h2><span class="no">${s.no}、</span>${esc(s.title)}</h2>${s.sub ? `<p class="sub">${esc(s.sub)}</p>` : '<div style="height:10px"></div>'}
+    <div class="${s.grid ? 'grid' : ''}">${s.fields.map(fieldHTML).join('')}</div></section>`).join('') +
+    `<div class="actions"><button type="button" class="primary" id="gen">產生回覆內容</button><button type="button" class="ghost" id="clear">清除重填</button></div>`;
+}
+
+function read() {
+  const v = {};
+  for (const f of ALL) {
+    const els = [...document.querySelectorAll(`[name="${f.id}"]`)];
+    if (f.type === 'checkbox') v[f.id] = els.filter(e => e.checked).map(e => e.value);
+    else if (f.type === 'radio') v[f.id] = (els.find(e => e.checked) || {}).value || '';
+    else v[f.id] = els[0] ? els[0].value.trim() : '';
+  }
+  return v;
+}
+
+function write(v) {
+  for (const f of ALL) {
+    const els = [...document.querySelectorAll(`[name="${f.id}"]`)];
+    const val = v[f.id];
+    if (f.type === 'checkbox') els.forEach(e => { e.checked = Array.isArray(val) && val.includes(e.value); });
+    else if (f.type === 'radio') els.forEach(e => { e.checked = e.value === val; });
+    else if (els[0] && typeof val === 'string') els[0].value = val;
+  }
+}
+
+function saveDraft() { try { localStorage.setItem(DRAFT, JSON.stringify(read())); } catch (e) {} }
+function loadDraft() { try { const d = localStorage.getItem(DRAFT); if (d) write(JSON.parse(d)); } catch (e) {} }
+
+// ── 產生回覆文字 ────────────────────────────────────────────────────────────
+function summary(v) {
+  const lines = ['【需求釐清回覆】'];
+  for (const s of SECTIONS) {
+    const rows = [];
+    for (const f of s.fields) {
+      const val = v[f.id];
+      if (!val || (Array.isArray(val) && !val.length)) continue;
+      let text = Array.isArray(val) ? val.join('、') : val;
+      rows.push(`${f.label}：${text}`);
+    }
+    if (rows.length) lines.push('', `${s.no}、${s.title}`, ...rows);
+  }
+  return lines.join('\n');
+}
+
+function generate() {
+  const v = read();
+  const missing = ALL.filter(f => f.req && !v[f.id]).map(f => f.label);
+  $('#errs').innerHTML = missing.length ? `<div class="errs" role="alert">還有必填（＊）沒填：${missing.map(esc).join('、')}。可以先產生內容，但建議補上再傳給我。</div>` : '';
+  $('#out').value = summary(v);
+  $('#result').hidden = false;
+  $('#status').textContent = '';
+  $('#result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+async function copyOut() {
+  const ta = $('#out');
+  try { await navigator.clipboard.writeText(ta.value); $('#status').textContent = '已複製，請貼到 LINE 傳給我。'; }
+  catch (e) { ta.focus(); ta.select(); $('#status').textContent = '無法自動複製，內容已選取，請長按或按 Ctrl+C 複製。'; }
+}
+
+// ── 啟動 ────────────────────────────────────────────────────────────────────
+render();
+loadDraft();
+let armed = false;
+document.addEventListener('change', e => { if (e.target.closest('#form')) saveDraft(); });
+document.addEventListener('input', e => { if (e.target.closest('#form')) saveDraft(); });
+document.addEventListener('click', e => {
+  if (e.target.id === 'gen') generate();
+  if (e.target.id === 'copyBtn') copyOut();
+  if (e.target.id === 'clear') {
+    const b = e.target;
+    if (!armed) { armed = true; b.textContent = '再按一次確定清除'; setTimeout(() => { armed = false; b.textContent = '清除重填'; }, 4000); return; }
+    armed = false; b.textContent = '清除重填';
+    write({}); saveDraft(); $('#result').hidden = true;
+  }
+});
+</script>
+</body>
+</html>
