@@ -543,6 +543,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/23 v0.11.40～v0.11.48</span>
+        <div class="log-dot"></div>
+        <span class="log-text">驗收數量提示分辨「超收」與「分批」（到貨比採購單多＝超收），過磅畫面新增「確認超收／確認無誤」按鈕，確認後清單不再標待確認；奇美 COA 改成同一原料只列最後一批（修正重複與漏列）、新增「上週（一～六）」快選，並把「品保主管」改稱「品保人員」、新增「製表人員」姓名；客訴／異常單新增防重複送出（送出防連點＋24 小時內相同內容攔截確認）與「重發通知」（通知沒送出時補發，已結案的單也支援）；內部 API 改為不霸佔事件迴圈，修正 ERP-Hub 週會報告間歇逾時。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/22～10/23 v0.11.36～v0.11.39</span>
         <div class="log-dot"></div>
         <span class="log-text">客戶 COA：品保專用章換成重掃的清晰版，新增「品保主管」姓名設定（COA 頁可維護）；布列德 COA 的「品保審核」、檢驗員，以及奇美自主檢驗表的「主管」都印上日期，格式統一為「姓名＋空格＋日期」；驗收清單同步排除已作廢的採購單（內網代理查詢加上確認碼過濾，查詢失敗自動退回舊查詢）。</span>
@@ -1026,6 +1031,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/23 v1.15.80～v1.15.81</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料成本審核加上「上月報價」與「ERP 上月實際進貨加權均價（附最近一筆）」，採購送審漲價品項前須填漲價原因並一併顯示給協理；「混合商品」分頁新增唯讀「組成總覽」，直接看 BOM 拆分、各成分原料報價、步留＋人工及其參照品項與數值（配方仍由生產管理系統維護）。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/2 v1.15.60～v1.15.65</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「包材單價」維護頁：單價存資料庫並留修改紀錄，包裝袋類別、料號、每個重量改由生產管理系統維護後唯讀顯示；單價旁並排顯示 ERP 近 90 天進貨成本、倍數與建議價（成本 × 基準加成，可一鍵帶入），漲價時維護者一眼可見。</span>
@@ -1395,6 +1405,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/23 v0.10.74～v0.10.78</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增內部 API 提供各原料某月實際進貨加權均價與最近一筆，供報價系統審核原料成本；週會報告改為按「查詢」才載入並只跑有勾選的單元，連生產管理系統的逾時放寬並自動重試。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/22 v0.10.72～v0.10.73</span>
         <div class="log-dot"></div>
         <span class="log-text">COSMOS 同步排除已作廢的單據：採購單、進貨單、製令、催熟令、領料單的查詢加上確認碼過濾（欄位對不上時自動退回舊查詢、不中斷同步），作廢單不再混進報表、採購待辦與進價分析。</span>
@@ -1694,6 +1709,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">10/23 v1.4.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">備援 LINE 官方帳號新增選填的 Channel Secret，webhook 可驗證並把備援帳號收到的事件（含使用者 UID）記進日誌，方便新增同仁；不回覆、不影響主帳號。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">10/20 v1.3.0～v1.4.1</span>
         <div class="log-dot"></div>
