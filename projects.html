@@ -543,6 +543,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/22～10/23 v0.11.36～v0.11.39</span>
+        <div class="log-dot"></div>
+        <span class="log-text">客戶 COA：品保專用章換成重掃的清晰版，新增「品保主管」姓名設定（COA 頁可維護）；布列德 COA 的「品保審核」、檢驗員，以及奇美自主檢驗表的「主管」都印上日期，格式統一為「姓名＋空格＋日期」；驗收清單同步排除已作廢的採購單（內網代理查詢加上確認碼過濾，查詢失敗自動退回舊查詢）。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/21 v0.11.16～v0.11.35</span>
         <div class="log-dot"></div>
         <span class="log-text">新增客戶 COA 一整套：布列德 COA 與奇美自主檢驗表（PDF 內嵌正楷體字型、固定品項、批次依製令領用批號取進貨日最晚者）、品保審核蓋章、奇美整份表審核（內容改動後審核自動失效）、品保登打成品檢驗結果、導覽新增「品保」子選單；外箱標籤新增檢驗員下拉，裝箱改以「包」為單位並保留不足一包的尾包（修正尾數被四捨五入掉）；內部 API 新增客訴明細與工站產出／耗時查詢，供 ERP-Hub 週會報告使用。</span>
@@ -1390,6 +1395,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/22 v0.10.72～v0.10.73</span>
+        <div class="log-dot"></div>
+        <span class="log-text">COSMOS 同步排除已作廢的單據：採購單、進貨單、製令、催熟令、領料單的查詢加上確認碼過濾（欄位對不上時自動退回舊查詢、不中斷同步），作廢單不再混進報表、採購待辦與進價分析。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/21 v0.10.67～v0.10.71</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「週會報告」頁籤：每週主管會議簡報的客服、採購、生管、生產表格由系統直接產出 .pptx（沿用公司母片，週期固定週四～下週三）。含客訴與異常（新單、未結案舊單、本週結案）、客服銷售（總覽、週趨勢、奇美品項比較、客戶銷額變動重點）、採購單價（進貨均價對月報價、採購成本指數、奇美年度合約價）、生管效能（週別／單日效能、週產量 100KG 以上品項）、生產（月／週加班與產能、奇美步留率追蹤）；數字全由系統資料算出，人工補充（備註、加班時數）會一起印進簡報；銷售與採購頁需對應金額權限。</span>
@@ -1519,6 +1529,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">10/22 v1.2.85</span>
+        <div class="log-dot"></div>
+        <span class="log-text">銷貨單、在途採購單、進貨單同步一併排除已作廢單據（查詢失敗自動退回舊查詢）。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">6/12 v1.2.49</span>
         <div class="log-dot"></div>
