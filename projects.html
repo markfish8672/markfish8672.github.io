@@ -543,6 +543,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/29 v0.11.66</span>
+        <div class="log-dot"></div>
+        <span class="log-text">填報數量（產量、餘料轉料、機切產出）統一只到小數一位（輸入步進 0.1、後端四捨五入），避免浮點誤差顯示成一長串小數；生產儀表板不再顯示免前處理、機切、清洗工站的空殼填報紀錄</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/27 v0.11.49～v0.11.64</span>
         <div class="log-dot"></div>
         <span class="log-text">內包裝工站現場回饋一次處理：計時畫面新增「中途改人數」按鈕（同一次生產內分段計工時，不必結束計時、不用填包數）、餘料轉料改在結單後才填、休息中計時凍結並扣除休息時間、修正從品項確認畫面返回後切換類別會把前處理品項變成機切（記錄存錯站、從機切清單消失）、免前處理的機切品項結束後可另填產出重量；新增「包裝封口檢查紀錄表」（CD-2-001-03）：內包裝每填完一筆就記一筆（真空值／純封口／封口／冷卻時間、合格與否、檢查人員），平板介面（卡片、大按鈕、檢查人員點選與名單維護），下載 Excel 沿用原範本格式列印；奇美自主檢驗表補製表日期、品保章改蓋在備註框右下角；新增「員購」頁籤（截切餘料裝袋當天賣給同仁）：依工站資料推算餘料袋數、品項主檔新增「餘料包裝重量」欄位（含 Excel 匯出入）、客服每日登記上架／下架（賣出＝上架−下架）、定價取 5 的倍數並依賣出率自動升降、價格牌列印、銷售報表與升降價建議；內部 API 新增工站投入量與員購登記，供 ERP-Hub ESG 報表使用。</span>
@@ -1036,6 +1041,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/29 v1.16.0～v1.18.1</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增原料品名對照表（採購可直接點報價品名維護）；混合品項的步留率與人工一律由成分自動計算、不吃覆寫，組裝人工保留；修正同名原料（如去籽南瓜與南瓜）被誤抓成同一筆價格；客戶資料與報價確認新增「含稅外加」選項，單價可改以未稅價計算並另列含稅價，Excel、PDF、月彙整、審核詳情與報價單同步註記</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/28 v1.15.82～v1.15.92</span>
         <div class="log-dot"></div>
         <span class="log-text">步留＋人工頁客服也能看來源明細並新增「上月核准」欄；混合商品組成總覽可下載帶公式的 Excel；品號資料庫編輯時可「只顯示待補資料」（代工品與混合商品不用填原料）、原料品名選項只列 ERP 有品號的原料並在填入 ERP 查無的名稱時警示、新增「ERP 查無的原料品名」清單附相近名稱一鍵套用；原料成本頁新增「原料品名（ERP）」欄且可直接改名／移除</span>
@@ -1415,6 +1425,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">10/29 v0.11.1～v0.11.6</span>
+        <div class="log-dot"></div>
+        <span class="log-text">叫貨異常自動同步品牌對照並排除已停用門市；庫存查詢可下載 Excel；新增庫存快照（每 30 分鐘記錄成品、半成品、原料，並記下銷貨確認與完工入庫的單據首次出現時間，供日後比對各單據過帳時間）；採購大表收信改以郵件編號去重（不再依賴未讀狀態），寄件者不在白名單時於面板警示；全站統一台灣時區，修正匯入時間慢 8 小時</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/28 v0.10.87～v0.11.0</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「缺料」分頁：已開立製令的原料缺口（庫存＋在途依生產日滾動，A／B 級開工時間分級與「晚到」判斷）；採購大表（Teams 原料請購 Excel）自動匯入——Power Automate 每天 8／12／16／20 點寄信、ERP-Hub 讀專屬信箱解析，含格式檢查、內容去重與「Excel 差異」報表；預估缺料（客服預估訂單量＋採購進貨數量，沒涵蓋的日子用近 4 週同星期銷貨推估、大表步留與生管實際步留差異提醒、預估回測、供應商與最早可買日）；缺料頁可下載「採購大表檢查報告」Excel 給採購維護；酪梨預設隱藏</span>
@@ -1729,6 +1744,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">10/29 v1.5.0～v1.7.4</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增個人收藏整理助理（獨立 LINE 官方帳號，只回覆主人）：貼連結即自動抓取內容，由 Gemini 優先（失敗退回 Claude）分類、摘要並給可行性評估；網頁收件匣專為手機設計（篩選、一鍵改狀態、可加到主畫面）；抓不到內容的社群貼文獨立放進「待補充」，提示補上留言重點後重新評估；另有素材庫，傳圖後 5 分鐘內連續上傳的圖片自動歸為同一案件</span>
+      </div>
       <div class="log-item">
         <span class="log-date">10/23 v1.4.1</span>
         <div class="log-dot"></div>
