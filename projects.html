@@ -268,6 +268,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/2 v0.9.50～v0.9.51</span>
+        <div class="log-dot"></div>
+        <span class="log-text">盤點作業新增批次產生當月盤點單；撿貨板列印時不再印出「未設定撿貨板格位」警示（畫面上仍保留提示）。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/13 v0.9.48～v0.9.49</span>
         <div class="log-dot"></div>
         <span class="log-text">廠商資料維護開放給會計：會計帳號可在「採購管理」選單直接進廠商管理，新增或編輯廠商、勾選供應品項、Excel 匯入；刪除廠商仍限管理員與主管，品項主檔維持原權限。操作手冊同步補上會計入口與「新廠商要先新增、再綁供應品項採購單才選得到品項」的說明。</span>
@@ -542,6 +547,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/2 v0.11.67～v0.11.71</span>
+        <div class="log-dot"></div>
+        <span class="log-text">內包裝產量（單位：包）改為只收整數，但奇美的包數可到小數一位（例 33.7 包）；奇美自主檢驗表修正「韭菜（韭黃）」原料名去括號後撞名、被去重吃掉的漏列；客訴／異常單統計新增彙整區間（受理日起迄＋本月／上月／本季／上季／今年／近12個月快選），匯出 Excel 依區間並開放客服下載（供經管會議、回報協理）；新增內部 API 提供奇美週訂單轉檔的需求給 ERP-Hub 缺料一起判斷。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">10/29 v0.11.66</span>
         <div class="log-dot"></div>
@@ -1041,6 +1051,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/2 v1.18.2～v1.18.5</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認頁、送審快照與月彙整的「原料」欄改顯示報價品名；原料成本頁手動新增的報價品名也顯示對照表裡的 ERP 原料品名、可直接維護；修正內部 raw-costs 介面缺少 import 而一直回 500 的問題（自 v1.16.0 起，造成 ERP-Hub 與採購估算系統讀不到報價品名與原料品名的對照）。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">10/29 v1.16.0～v1.18.1</span>
         <div class="log-dot"></div>
         <span class="log-text">新增原料品名對照表（採購可直接點報價品名維護）；混合品項的步留率與人工一律由成分自動計算、不吃覆寫，組裝人工保留；修正同名原料（如去籽南瓜與南瓜）被誤抓成同一筆價格；客戶資料與報價確認新增「含稅外加」選項，單價可改以未稅價計算並另列含稅價，Excel、PDF、月彙整、審核詳情與報價單同步註記</span>
@@ -1424,6 +1439,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/2 v0.11.8～v0.11.37</span>
+        <div class="log-dot"></div>
+        <span class="log-text">缺料看板大改版：合併成單一缺料表；需求今天用製令未領、之後取製令總應領與預估較大者再扣已領；在途以採購大表藍色（確定下單）與採購單為準、黃色（預計）只標示；依報價品名合併同類原料並新增「替代用料」群組（含依品號編碼原則的同品項候選、生管分組比對表）；混合商品依配方拆成各成分原料；奇美傳真轉檔併入需求；新增倉庫庫存報表（備料）匯入與倉庫檢查報告（漏批號、手寫疑點、備註提醒）；採購大表檢查報告步留差異分低估／高估並加生管實際月份；頁面分成缺料／倉庫／替代用料／警示四個分頁，手機凍結原料欄。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">10/30 v0.11.7</span>
         <div class="log-dot"></div>
