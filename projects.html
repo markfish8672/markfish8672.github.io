@@ -268,6 +268,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/7 v0.9.52～v0.9.58</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增財務報表 5 張：時段營業額報表（POS 依日×時段彙總、來客／客單、平日假日統計，假日依人事行政總處行事曆）、產品銷售統計表（以 POS 品名為準，含上月與去年同月比較、單位成本與毛利、員工餐分列、PD 促銷折讓）、支付方式報表（現金／信用卡／LINE Pay 店內與線上／悠遊卡／Food Panda／Uber Eats）、活動成效（POS 品名關鍵字自動統計份數×成本、手動活動、LINE 會員數、熊貓促銷增加業績與毛利）、月損益表（門市、中廚、總部三張；上傳對帳單活頁簿與盤點表，搭配 POS 與出貨單自動計算，已與 2026-5 月人工 Excel 逐項比對一致）；有活動成效的月份，行銷回補自動併入損益表；各報表可下載 Excel；修正 POS CSV 日期為 YYYY-MM-DD 格式時被當成匯入當下時間的問題</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/2 v0.9.50～v0.9.51</span>
         <div class="log-dot"></div>
         <span class="log-text">盤點作業新增批次產生當月盤點單；撿貨板列印時不再印出「未設定撿貨板格位」警示（畫面上仍保留提示）。</span>
@@ -2190,6 +2195,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/7 V1.19.1～V1.19.2</span>
+        <div class="log-dot"></div>
+        <span class="log-text">Sunmi T2 內建熱感印表機列印穩定性：服務斷線自動重連、印前檢查缺紙／過熱、印完回報失敗、自動接單列印失敗會提示；新增單店本機版桌面原型（Service Worker＋sqlite-wasm，免網路、免 PIN、手動匯出還原）；新增 PWA／APK 圖示（紅底「收」字）；正式站更新至 V1.19.2（設定 PIN 認證、補資料庫索引）；T2 的 APK 建置環境（JDK 17、Gradle、Android SDK）已在開發機建好，待 T2 實機驗證列印與 WebView 版本</span>
+      </div>
       <div class="log-item">
         <span class="log-date">7/9 V1.19.0</span>
         <div class="log-dot"></div>
