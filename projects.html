@@ -2196,6 +2196,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/8 V1.19.3～V1.19.11</span>
+        <div class="log-dot"></div>
+        <span class="log-text">Sunmi T2 實機上線：查出列印異常（方塊、亂切刀、走紙亂序）的根因是 App 與印表機服務的指令編號不一致（比對原本在 T2 上運作的 POS 的官方列印元件修正），收據改為原生置中／粗體／字級列印並自動裁紙；T2 系統時間錯誤會讓 HTTPS 載入失敗（白畫面）已記錄；結帳完成自動出單；小結／關帳從後台搬到前台（「訂單管理」與「銷售紀錄」之間的「班結」按鈕，含現金清點、補印），後台改為班結歷史查詢與補印；新增「收款方式」設定（名稱／啟用／排序／自訂，現金固定啟用，前台收款按鈕與小結、關帳、收據依方式分列，目前僅開現金，LINE Pay／信用卡串接待研究）；新增設定資料匯入匯出（品項、口味、桌號、收款方式、系統設定打包成單一檔案，匯入先預覽再確認、失敗全還原）；App 補上網頁對話框與檔案選擇／儲存支援；另整理原 POS 的介面與功能流程作為後續參考</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/7 V1.19.1～V1.19.2</span>
         <div class="log-dot"></div>
         <span class="log-text">Sunmi T2 內建熱感印表機列印穩定性：服務斷線自動重連、印前檢查缺紙／過熱、印完回報失敗、自動接單列印失敗會提示；新增單店本機版桌面原型（Service Worker＋sqlite-wasm，免網路、免 PIN、手動匯出還原）；新增 PWA／APK 圖示（紅底「收」字）；正式站更新至 V1.19.2（設定 PIN 認證、補資料庫索引）；T2 的 APK 建置環境（JDK 17、Gradle、Android SDK）已在開發機建好，待 T2 實機驗證列印與 WebView 版本</span>
