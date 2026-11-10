@@ -553,6 +553,16 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/9～11/10 v0.12.28～v0.12.33</span>
+        <div class="log-dot"></div>
+        <span class="log-text">倉庫缺料請領：「最近處理」改成折疊、不佔版面；發料時多批號改成一批一列各自填重量並自動合計，卡片分批顯示；各系統通知帶「提出人」登入帳號（缺料請領、客訴各關卡、回籃回板提醒）並新增內部帳號清單 API 給 Line-Bot 通訊錄下拉用；蔬果原料驗收表追溯條碼多組碼改一組一行；產品主檔「包裝袋」更名為「內包裝」（Excel 匯入新舊欄名皆可）。</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">11/6 v0.12.24～v0.12.27</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料重量驗收紀錄表調整：採購數量先新增獨立欄、後併入「進貨數量(kg)」欄；列印置中、批號字級加大。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/5 v0.12.18～v0.12.22</span>
         <div class="log-dot"></div>
         <span class="log-text">品保 COA 新增瓦城格式：不需檢驗數字、品保人工核可後蓋章，一個生產日一頁、品項串接生產資料，數量依預計產量換算包數；畫面下拉選的格式優先於客戶設定。</span>
@@ -1071,6 +1081,16 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/10 v1.18.12～v1.18.16</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報價確認的「物流籃」改成外包裝二選一（物流籃預設 1.47、紙箱預設 2.9 元/KG，可手動改），報價參數、審核摘要與 Excel 同步，舊報價單不受影響；畫面「包裝袋」更名為「內包裝」（資料欄位不變、品號資料庫 Excel 匯入新舊欄名皆可）；內包裝下拉與即時試算改讀資料庫單價表，生管停用的類別不再出現在新選項、舊品項保留並標「已停用」；修正報價確認頁內包裝欄過窄導致選項文字顯示空白。</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">11/6～11/9 v1.18.10～v1.18.11</span>
+        <div class="log-dot"></div>
+        <span class="log-text">通知帶「提出人」：原料報價詢問、特殊報價單送出時依 Line-Bot 路由同時通知提出的人；新增內部帳號清單 API。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/4 v1.18.6～v1.18.9</span>
         <div class="log-dot"></div>
         <span class="log-text">打樣報價的手動原料可帶出已維護的原料價格（含黃地瓜等），找不到時顯示提示；修正管銷空白造成的 #DIV/0! 與匯出審核表公式</span>
@@ -1465,6 +1485,16 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/10 v0.11.58～v0.11.73</span>
+        <div class="log-dot"></div>
+        <span class="log-text">報表大量擴充：酪梨批次淨利新增 Excel 下載、血緣對照表上傳搬到報表頁並加「每月先上傳」提醒；KPI→採購新增原料佔銷售比、進貨退貨率、第二供應商占比（改看進貨金額占比 ≥10%）、供應商評分卡、修清／削皮進貨占比；每可用公斤進價排除酪梨；客戶預警改依叫貨頻率＋叫貨量並新增新客／新品清單。銷貨計算表：Excel 與網頁新增「原料耗用明細」（看跨原料品項的單價組成）、進貨運費併入原料單價的開關、客戶粗外框與小計（淨量／淨額／毛利率）、負數紅字、包材拆內外包裝（外包裝物流籃／紙箱依品牌設定，淨利扣除）；包材成本檢視分內包裝與外包裝二選一。報表→成本分析新增「客戶原料成本率」：依品牌看原料成本率，含涵蓋率、與公司整體差、較上月、年度累計、品項展開，並有高於／低於整體與跟上月比的快篩及 Excel。</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">11/9 v0.11.53～v0.11.57</span>
+        <div class="log-dot"></div>
+        <span class="log-text">內網 agent 批號動帳同步納入 9 開頭客供／代工原料；KPI→採購新增每可用公斤進價（進貨均價 ÷ 步留率）；依原料追溯 Excel 加表頭、A4 橫向；新增內部帳號清單 API。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/6 v0.11.49～v0.11.52</span>
         <div class="log-dot"></div>
         <span class="log-text">報表新增「採購」分類與「原料進貨量彙總」（供採購跟供應商談年度合約用）：輸入品名關鍵字與月份區間，依品名分組列出各廠商每月進貨公斤數、合計、佔比與去年同期增減，扣除進貨退貨；品名預設「關鍵字前面不能緊接中文字」（高麗菜不會比到紫高麗菜）、另有「包含比對」與「排除關鍵字」；有採購金額權限者每個月公斤數旁多一欄月均價（Excel 同步，另附逐筆明細）。總覽的銷貨類卡片資料日期改標到銷貨資料實際有的最後一天，今天還沒有資料時提示「今日尚無資料」、已有資料時標同步時間（客戶上午才給單，早晚看同一段日期數字不同的誤判）。</span>
@@ -1804,6 +1834,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/9～11/10 v1.8.5～v1.8.6</span>
+        <div class="log-dot"></div>
+        <span class="log-text">通訊錄「各專案帳號」改下拉選單（向各系統取帳號清單）；共用帳號可綁多個人（例如採購共用一個生管系統帳號），通知提出人時所有綁定的人都收到副本，舊資料表啟動時自動升級。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/6 v1.8.0～v1.8.4</span>
         <div class="log-dot"></div>
