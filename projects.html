@@ -553,6 +553,21 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/12 v0.12.69～v0.12.82</span>
+        <div class="log-dot"></div>
+        <span class="log-text">倉庫選單新增獨立的「發料」分頁（缺料請領＋加領單查詢，可依日期、製令篩選並匯出 Excel）；已發料單可用藍牙熱感印表機印出標籤，一個批號一張，內容比照紙本「原料加領單」那一列（日期、製令簡寫、品項、原因、需求／領料、批號），直接貼在製令工單上；用過一次的印表機下次免重選、斷線自動重連；倉庫與發料按鈕顯示待發料張數。</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">11/12 v0.12.59～v0.12.68</span>
+        <div class="log-dot"></div>
+        <span class="log-text">品保新增「供應商客訴單」（ISO 表單 CD-2-012-02）：品保提出→採購回覆→採購主管覆核→歸檔，各關卡自動通知，可從驗收紀錄一鍵建單、向 ERP-Hub 判斷退貨／領用現況；統計分頁含異常原因分類、供應商評分卡與整體進貨退貨率（對標 1.5%），可列印與匯出 Excel；不良率由系統自動計算。</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">11/12 v0.12.44～v0.12.58</span>
+        <div class="log-dot"></div>
+        <span class="log-text">資安與穩定性整理：登入失敗 5 次鎖 15 分鐘、停用帳號立即生效、內部 API 金鑰未設一律拒絕、未設加密金鑰拒絕啟動；SQLite 開 WAL（多人同時填報不再偶發鎖定）、上傳與內部 API 改由執行緒池處理（不再卡住全部人）、套件與 Python 版本鎖定與正式環境一致；移除自架時期的 update.bat／backup.bat。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/11～11/12 v0.12.34～v0.12.43</span>
         <div class="log-dot"></div>
         <span class="log-text">從 ERP-Hub 拉製令與銷貨單（保留 Excel 備援）：拉取日期預設為製令作業日期，奇美客戶依備註分號後的標記顯示為「奇美-包子」等；客服下午一點先匯的是訂購單、銷貨單下班前才匯，拉取在該日還沒有銷貨單時改拉訂購單，銷貨單匯入後用「追加拉取」更新批號與數量。標籤：內標「使用說明」專屬客戶可跨行、樣品標籤存檔可一鍵帶入產品主檔。缺料請領：倉庫端新增「取消」鍵，超過 24 小時沒人處理的待發料自動取消。非 ISO 下載表單統一千分位、格線與欄位說明。</span>
@@ -1489,6 +1504,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/12 v0.11.83～v0.11.96</span>
+        <div class="log-dot"></div>
+        <span class="log-text">KPI→採購新增「⬇ Excel」下載：整頁各區塊一個分頁（總覽、原料佔銷售比、進貨退貨率、準時交貨率、第二供應商占比、價量分析、每可用公斤進價、供應商評分卡、修清削皮占比），附欄位說明，條件同畫面；新增內部查詢「供應商進貨退貨率」與「採購單退貨／領用現況」（供生管供應商客訴單使用，唯讀）；資安與穩定性整理（登入鎖定、帳號即時生效、金鑰與加密設定、SQLite WAL、agent 空資料防呆）。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/11～11/12 v0.11.74～v0.11.82</span>
         <div class="log-dot"></div>
@@ -2475,6 +2495,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/6～11/12 1.6.27～1.6.78</span>
+        <div class="log-dot"></div>
+        <span class="log-text">加班單與打卡工時大幅補強：待我簽核可批次簽核、新增篩選與排序（預設依申請人，同一人再依加班日）、「我已簽核」頁與每日 08:00 彙整通知；人事確認關恢復並在電子檔蓋日期圓章（章面文字與日期格式可自訂）；管理員可復原單據上一步與批次復原；加班時數改依跨到的休息時間扣除、只算到 0.5 小時；新增「打卡工時」（門禁打卡→製造課工時，依班別貼齊、午休扣除、報表快篩）與排班；系統更名為「奧爾瑪HR輔助系統」。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/5 1.6.22～1.6.26</span>
         <div class="log-dot"></div>
