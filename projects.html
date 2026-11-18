@@ -553,6 +553,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/18 v0.14.5～v0.14.18</span>
+        <div class="log-dot"></div>
+        <span class="log-text">原料盤點一次升級：新增「客供料」（311 客供物料倉）與「熟成酪梨」（採後處理在盤，預設不盤）範圍，客供包材不盤、冷凍品排到最後；每個批號可填備註，常用備註做成快選鍵（使用者自己新增／刪除）；下載的差異表與列印盤點表新增原料產地（取到貨驗收倉庫選的產地）、批齡與「庫存超過 7 天」。生產儀表板新增「ERP 製令檢查」折頁：前一天的製令有沒有未領料、未 KEY 工時，導覽列顯示需處理張數。到貨驗收修正追加規格（同批不同定重）沒填抽測時整組被算成 0 的問題，改依定重 × 箱數計入；倉庫收發料單修正多餘格線、流水帳增加 2 列、供應商長名只留簡稱，採購單備註的採收日支援 8 碼寫法。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/17 v0.12.97～v0.14.4</span>
         <div class="log-dot"></div>
         <span class="log-text">瓦城 COA 補上「原料採收日/批號」欄：品保可在預覽表直接輸入（改完自動儲存），也會從採購單單身備註的關鍵字（採收日、許可批號）自動帶入，進口許可批號含斜線也能印；新增「倉庫收發料單 CD-2-008-01」，倉庫在生產報表依日期查詢、勾選批號，一次下載 PDF 批次列印或 Excel 修改（版面以正式電子檔為範本，每個批號一頁）；原料需求總表 Excel 小數不補零、說明可選擇不附；客戶 COA 頁加寬免橫向捲軸、下方「日期」改「生產日期」。</span>
@@ -1514,6 +1519,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/17～11/18 v0.12.0～v0.12.7</span>
+        <div class="log-dot"></div>
+        <span class="log-text">同步進貨單與採購單備註（供瓦城 COA 帶出採收日／許可批號）；製令與批號庫存同步納入 9 開頭客供料（修正只有客供料用料的製令整張看不到、311 客供物料倉沒有批號庫存）；庫存查詢新增「客供料」類別並可展開批號；新增內部查詢提供生管系統「ERP 製令檢查」（未領料、未 KEY 工時）；製令報表新增「KG/人時」（產量 ÷ 人時）。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/13～11/16 v0.11.97～v0.11.99</span>
         <div class="log-dot"></div>
