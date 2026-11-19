@@ -553,6 +553,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/19 v0.14.19</span>
+        <div class="log-dot"></div>
+        <span class="log-text">倉庫收發料單（CD-2-008-01）Excel 版改為一張一頁：範本原本是「寬 1 頁、高不限」，流水帳加長後每張多印出第 2 頁，改成寬高都縮成 1 頁；頁首改兩行（公司名／表單編號）與 PDF 及原件一致，頁首換行寫成真換行，LibreOffice、WPS 也正常；補上一頁與頁首兩行的測試。ISO 表單一律與原件 1:1。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/18 v0.14.5～v0.14.18</span>
         <div class="log-dot"></div>
         <span class="log-text">原料盤點一次升級：新增「客供料」（311 客供物料倉）與「熟成酪梨」（採後處理在盤，預設不盤）範圍，客供包材不盤、冷凍品排到最後；每個批號可填備註，常用備註做成快選鍵（使用者自己新增／刪除）；下載的差異表與列印盤點表新增原料產地（取到貨驗收倉庫選的產地）、批齡與「庫存超過 7 天」。生產儀表板新增「ERP 製令檢查」折頁：前一天的製令有沒有未領料、未 KEY 工時，導覽列顯示需處理張數。到貨驗收修正追加規格（同批不同定重）沒填抽測時整組被算成 0 的問題，改依定重 × 箱數計入；倉庫收發料單修正多餘格線、流水帳增加 2 列、供應商長名只留簡稱，採購單備註的採收日支援 8 碼寫法。</span>
@@ -1116,6 +1121,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/19 v1.18.26～v1.18.29</span>
+        <div class="log-dot"></div>
+        <span class="log-text">品號資料庫新增「從 ERP 挑選新品」：ERP 已建料號的成品（1 開頭）可勾選轉入，先維護步留＋人工；預設包含已有銷貨單的成品（有開過銷貨單的品號都應在系統裡），可取消勾選只看完全沒單據的；轉入時列出略過原因（不是成品／已在品號資料庫／已有銷貨紀錄／ERP 查無此品號），品名一律取 ERP-Hub。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/10 v1.18.12～v1.18.16</span>
         <div class="log-dot"></div>
         <span class="log-text">報價確認的「物流籃」改成外包裝二選一（物流籃預設 1.47、紙箱預設 2.9 元/KG，可手動改），報價參數、審核摘要與 Excel 同步，舊報價單不受影響；畫面「包裝袋」更名為「內包裝」（資料欄位不變、品號資料庫 Excel 匯入新舊欄名皆可）；內包裝下拉與即時試算改讀資料庫單價表，生管停用的類別不再出現在新選項、舊品項保留並標「已停用」；修正報價確認頁內包裝欄過窄導致選項文字顯示空白。</span>
@@ -1519,6 +1529,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/19 v0.12.8～v0.12.14</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增報表→人事「出勤總工時與加班」（資料來自奧爾瑪HR輔助系統內部 API）：總覽（每人區間合計）、加班時數明細（日期×姓名）、出勤總工時（每人每天／依工時組合），可匯出 Excel，權限 hr_report（主管預設有）。總覽分頁新增折頁「人事」：出勤工時與加班、加班時數警戒（>30／46／54 小時人數）、單位生產力（出貨量／總工時、銷貨額／總工時），皆附上月同期，工時與銷貨取同一段日期對齊；修正離開報表頁後面板跑到別的分頁底下。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/17～11/18 v0.12.0～v0.12.7</span>
         <div class="log-dot"></div>
@@ -2530,6 +2545,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/19 1.6.82～1.6.89</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「出勤總工時報表」：匯入門禁打卡紀錄，依勞基法（平日加班下班滿 60 分起算、休息日、國定假日分段）產出每月三張表（出勤總工時、加班時數明細、每人每天明細），內建 2026～2027 國定假日；範圍為員工資料部門＝製造課，並依打卡資料替未建檔同仁建檔；上傳紀錄改折頁；總工時日期只顯月／日；新增 /api/internal/attendance-report 內部 API 供 ERP-Hub 顯示。以 11/03 真實打卡對照樣本 43 人逐欄一致。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/6～11/12 1.6.27～1.6.78</span>
         <div class="log-dot"></div>
