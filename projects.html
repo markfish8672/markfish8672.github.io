@@ -553,6 +553,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/23 v0.14.23～v0.14.24</span>
+        <div class="log-dot"></div>
+        <span class="log-text">倉庫發料改用藍牙標籤機（愛思 B23S，50×70mm 標籤紙）：按「已發料」同時自動印出標籤（一個批號一張），字體盡量放大、品項自動找最大字級；印不出來時不影響發料，可到最近處理補印；發料頁新增標籤機連線狀態。倉庫收發料單邊界依現場使用情形調整。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/20 v0.14.20～v0.14.22</span>
         <div class="log-dot"></div>
         <span class="log-text">倉庫收發料單 PDF 左右邊界加到 0.6 吋、明細改 30 列並移除底部多餘空白列，避免印表機不可列印區切掉右邊格線；內部 API 的品項資料多帶「清洗後%、前處理後%、步留率」，供 ERP-Hub 物質流分析依品項推估。</span>
@@ -1535,6 +1540,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/23 v0.12.28</span>
+        <div class="log-dot"></div>
+        <span class="log-text">總覽「人事」新增「非生產工時」卡：打卡總工時（含加班）扣掉製令生產工時，並排 ERP 製令工時與生管工站工時兩種口徑，顯示佔比與上月同期；日期只算到最後一天有登打製令工時的那天，避免尚未登打的日子讓數字偏高。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/20 v0.12.15～v0.12.27</span>
         <div class="log-dot"></div>
         <span class="log-text">ESG 新增「物質流分析」（高麗菜，品項可選）：依原料收支（期初＋進貨−領料−銷售−報廢＝推算期末）、製令與現場平板填報的各站重量，算出投入、帳面成品、步留率與廢菜（前處理、機切、內包裝推估），差額扣除廢菜後列為「其他差額（待查）」；成品去向（銷貨、銷退、員購、報廢）、菜渣清運期間對照、成品品號對照、製令與銷貨逐日對照（查入帳問題），可匯出 Excel；水分增減依品項清洗後%推估。</span>
@@ -1914,6 +1924,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/23 v1.9.0</span>
+        <div class="log-dot"></div>
+        <span class="log-text">個人助理新增「待辦／備忘」：在 LINE 或手機後台都能記下事情（誰、什麼事、時間、地點、物品），並以公司標籤分類；工作日早上 6:30 自動推送當天待辦摘要（逾期、今天、未來 7 天）；後台新增待辦分頁，也提供內部介面讓 Claude Code 讀寫。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/16 v1.8.7</span>
         <div class="log-dot"></div>
