@@ -553,6 +553,16 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/26～11/27 v0.14.68～v0.14.81</span>
+        <div class="log-dot"></div>
+        <span class="log-text">新增「產地直送標籤」：供應商（產地）貼好標直接出貨給客戶（先做瓦城高麗菜原件），生管建單或由 ERP 採購單自動帶入（白名單品項，公斤÷每袋公斤＝張數）→ 品保線上審標 → 供應商用專屬帳號登入、連藍牙標籤機（芯燁 XP-420B，傳統藍牙）列印；標籤內容與流水號跟「標籤列印」一樣。新增「供應商」角色，後端只放行自己的功能。新增「站間缺料通知」：清洗截切缺料通知機切／前處理、內包裝缺料通知上一站（依品項實際路徑），上一站平板跳出橫幅並響鈴，按已收到／已補料，不發 LINE。外購品停用退場：拿掉外購品清單與從報價系統同步，倉庫待驗收改為不顯示 1 開頭成品，製令／訂單勾稽改排除產地直送白名單。</span>
+      </div>
+      <div class="log-item">
+        <span class="log-date">11/26 v0.14.46～v0.14.67</span>
+        <div class="log-dot"></div>
+        <span class="log-text">11/25 生產＋倉庫會議 18 項需求全數完成：首末件檢查改填數值並依規格帶預設（0.1cm／1g 步進）、缺料請領入口移進品項作業中、計時畫面置頂、改人數按數字、補填與查看入口移到看板、按錯結束可改結束時間、內包裝預設帶剩餘量、封口檢查紀錄表自動打 V、客訴單 Word 頁尾簽核姓名與日期、倉庫加領通知修正。新增斷線處理（連線中斷橫幅、自動重試、倉庫驗收與發料離線暫存補傳）與新版本提示橫幅。新增瓦城預作：上傳瓦城週訂購單 Excel 綁預作，勾稽、外箱標籤、原料需求沿用奇美做法，導覽列改名「預作轉檔」。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/24 v0.14.35～v0.14.41</span>
         <div class="log-dot"></div>
         <span class="log-text">外箱標籤「包裝數量」新增印法「1KG/12包/箱」（產品主檔改為三選一：公斤／包數／每包公斤＋包數），並在標籤前面加上製單號；產品主檔欄位太多的「標籤」頁拆成「標籤文字」與「效期與外箱」兩頁，填報順延為第 5 頁；修正外購品項清單與補登製令項目查品號時會出錯的舊問題；拿掉沒人使用的產品主檔快速鍵與填報藍芽鍵盤操作（現場一律用防水平板觸控），畫面更乾淨。</span>
@@ -1136,6 +1146,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/26～11/27 v1.18.43～v1.18.49</span>
+        <div class="log-dot"></div>
+        <span class="log-text">品牌主檔新增「門市改名」功能（連動歷史資料），原料報價下拉改關鍵字搜尋與筆畫排序；外購品已停用，移除外購品管理分頁與報價單的「＋外購品」按鈕（歷史報價單內的外購品項照常顯示）。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/24 v1.18.30～v1.18.42</span>
         <div class="log-dot"></div>
         <span class="log-text">原料成本維護改為新增而非覆蓋，已送審的原料成本可下載檔案；主管審核流程改為理級主管先審、協理最後確認，採購漲價需填寫原因；新增價格預警入口（採購填寫，系統無進貨資料時也能警示）、北農／西螺市價與去年同期進貨價對照（含換算比），原料成本下載檔與審核明細都帶這三組參考數字；「月價未維護」提示改為列出缺價的成分與月份。</span>
@@ -1549,6 +1564,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/26～11/27 v0.12.38～v0.12.44</span>
+        <div class="log-dot"></div>
+        <span class="log-text">人事儀表板「單位生產力」改用製令工時計算並與原算法並列、卡片版面精簡；所有下載 Excel 的「欄位說明」預設不附，勾「附說明」才附；製令頁（彙總、用料明細、卡片、Excel）新增人工成本、人時、機時、KG/人時；新增內部查詢「採購單明細」供生管系統產地直送標籤自動建單使用。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/24 v0.12.29～v0.12.37</span>
         <div class="log-dot"></div>
