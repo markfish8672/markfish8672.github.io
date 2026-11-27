@@ -553,6 +553,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/27 v0.14.82～v0.14.97</span>
+        <div class="log-dot"></div>
+        <span class="log-text">倉庫與生管現場回饋一次處理：原料盤點加入製令發料、今日發料與應剩提示（預作不算），實盤預設與「✓」確認照帳上數，下載的盤點 Excel 實盤數欄加色加粗；缺料通知改成可收合並能一鍵轉給上一站；前處理工站人數快選到 20、單號顯示末兩碼；瓦城週訂單可編輯、下載 Excel，出貨日即生產日；包裝袋領用表不再扣預作量；COA 以客戶訂購量為準、追溯抓不到時改用製令預估。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/26 v0.14.68～v0.14.81</span>
         <div class="log-dot"></div>
         <span class="log-text">新增「產地直送標籤」：供應商（產地）貼好標直接出貨給客戶（先做瓦城高麗菜原件），生管建單或由 ERP 採購單自動帶入（白名單品項，公斤÷每袋公斤＝張數）→ 品保線上審標 → 供應商用專屬帳號登入、連藍牙標籤機（芯燁 XP-420B，傳統藍牙）列印；標籤內容與流水號跟「標籤列印」一樣。新增「供應商」角色，後端只放行自己的功能。新增「站間缺料通知」：清洗截切缺料通知機切／前處理、內包裝缺料通知上一站（依品項實際路徑），上一站平板跳出橫幅並響鈴，按已收到／已補料，不發 LINE。外購品停用退場：拿掉外購品清單與從報價系統同步，倉庫待驗收改為不顯示 1 開頭成品，製令／訂單勾稽改排除產地直送白名單。</span>
@@ -1146,6 +1151,11 @@
     </div>
     <div class="changelog">
       <div class="log-item">
+        <span class="log-date">11/27 v1.18.50</span>
+        <div class="log-dot"></div>
+        <span class="log-text">「價格預警」新增從採購單自動偵測漲價（依報價品名對照 ERP 原料，漲幅門檻可自訂、預設 10%，可略過已處理），不再只靠人工輸入。</span>
+      </div>
+      <div class="log-item">
         <span class="log-date">11/25～11/26 v1.18.43～v1.18.49</span>
         <div class="log-dot"></div>
         <span class="log-text">品牌主檔新增「門市改名」功能（連動歷史資料），原料報價下拉改關鍵字搜尋與筆畫排序；外購品已停用，移除外購品管理分頁與報價單的「＋外購品」按鈕（歷史報價單內的外購品項照常顯示）。</span>
@@ -1564,6 +1574,11 @@
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="changelog">
+      <div class="log-item">
+        <span class="log-date">11/27 v0.12.45～v0.12.48</span>
+        <div class="log-dot"></div>
+        <span class="log-text">內部查詢介面新增：製令預計用料、採購單價格明細、各原料今天起各生產日的製令應領／已領／未領（含每張製令明細），供生管、報價系統做盤點與價格預警。</span>
+      </div>
       <div class="log-item">
         <span class="log-date">11/25～11/26 v0.12.38～v0.12.44</span>
         <div class="log-dot"></div>
